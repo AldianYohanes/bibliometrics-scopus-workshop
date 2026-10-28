@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Sensitivity of the search strings. ``New'' counts records not in the cleaned baseline of 708 (it includes the 93 records that were removed as duplicates or Zenodo items in the baseline run).}
+\label{tab:J}
+\begin{tabularx}{\textwidth}{Yrlr}
+\toprule
+\textbf{Variant} & \textbf{Unique results} & \textbf{Final 485 retained} & \textbf{New outside the cleaned baseline} \\
+\midrule
+Baseline & 801 & 485 of 485 (100\%) & 93 \\
+V1: broader LLM terms (+generative AI, GPT, ChatGPT, foundation model) & 1220 & 485 of 485 (100\%) & 512 \\
+V2: block C without the stock-market exclusion & 810 & 485 of 485 (100\%) & 102 \\
+V3: title only instead of title and abstract & 71 & 61 of 485 (13\%) & 8 \\
+V4: broader device terms (+TinyML, local LLM, smartphone, mobile device) & 1284 & 485 of 485 (100\%) & 576 \\
+V5: broader inventory terms (+SKU, stockout, warehouse management) & 808 & 485 of 485 (100\%) & 100 \\
+\bottomrule
+\end{tabularx}
+\end{table}

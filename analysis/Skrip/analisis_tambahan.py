@@ -34,7 +34,7 @@ def louvain(G):
 # Referensi yang dibuang dari co-citation karena diduga artefak data (bukan karya yang sebenarnya dikutip):
 # - W4385245566 dikutip 22 dokumen edge-LLM padahal judulnya tentang sistem tutor cerdas; dugaan salah tautan OpenAlex.
 # - jilid prosiding ("Proceedings of ...", tipe proceedings) bukan satu karya.
-CURIGA = {"https://openalex.org/W4385245566"}
+CURIGA = {"https://openalex.org/W4385245566", "https://openalex.org/W4292779060", "https://openalex.org/W4384918448"}
 TIPE = {}
 
 
@@ -106,7 +106,7 @@ cm = plt.get_cmap("tab10")
 nx.draw_networkx_edges(C, pos, alpha=0.1, width=0.4, ax=ax)
 nx.draw_networkx_nodes(C, pos, node_size=[30 + 14 * cit[n] for n in C], node_color=[cm((C.nodes[n]["cluster"] - 1) % 10) for n in C], alpha=0.85, ax=ax)
 nx.draw_networkx_labels(C, pos, labels={n: lab.get(n, "")[:28] for n in sorted(C, key=lambda n: -cit[n])[:25]}, font_size=6.5, ax=ax)
-ax.set_title("Peta co-citation (referensi dikutip bareng oleh >=3 dokumen)"); ax.axis("off")
+ax.set_title("Co-citation map (references co-cited by at least 3 articles)"); ax.axis("off")
 fig.tight_layout(); fig.savefig(f"{OUT}/peta_cocitation.png", dpi=130); plt.close(fig)
 idx = {n: i for i, n in enumerate(C, 1)}
 with open(f"{OUT}/vos_cocitation_map.txt", "w", encoding="utf-8") as f:
@@ -144,8 +144,8 @@ fig, ax = plt.subplots(figsize=(13, 9))
 nx.draw_networkx_edges(G, pos, alpha=0.1, width=0.4, ax=ax)
 sc = nx.draw_networkx_nodes(G, pos, node_size=[40 + 14 * G.nodes[n]["n"] for n in G], node_color=[G.nodes[n]["y"] for n in G], cmap="viridis", alpha=0.9, ax=ax)
 nx.draw_networkx_labels(G, pos, font_size=7, ax=ax)
-plt.colorbar(sc, ax=ax, shrink=0.6, label="rata-rata tahun terbit")
-ax.set_title("Peta tren co-word: warna = rata-rata tahun terbit (kuning = lebih baru)"); ax.axis("off")
+plt.colorbar(sc, ax=ax, shrink=0.6, label="mean publication year")
+ax.set_title("Co-word map, colour = mean publication year (yellow = more recent)"); ax.axis("off")
 fig.tight_layout(); fig.savefig(f"{OUT}/peta_tren.png", dpi=130); plt.close(fig)
 idx = {k: i for i, k in enumerate(G, 1)}
 com = {k: i for i, c in enumerate(louvain(G), 1) for k in c}
@@ -176,7 +176,7 @@ fig, ax = plt.subplots(figsize=(9, 7))
 nx.draw_networkx_edges(CG, pos, width=[0.3 + 0.35 * CG[u][v]["weight"] for u, v in CG.edges], alpha=0.35, ax=ax)
 nx.draw_networkx_nodes(CG, pos, node_size=[60 + 9 * CG.nodes[n]["n"] for n in CG], node_color="#2b8cbe", alpha=0.85, ax=ax)
 nx.draw_networkx_labels(CG, pos, font_size=8, ax=ax)
-ax.set_title("Kolaborasi antar negara (negara dengan >=8 paper)"); ax.axis("off")
+ax.set_title("Collaboration between countries (countries with at least 8 articles)"); ax.axis("off")
 fig.tight_layout(); fig.savefig(f"{OUT}/peta_kolaborasi_negara.png", dpi=130); plt.close(fig)
 
 au = [[x for x in s.split("; ") if x] for s in d.authors]

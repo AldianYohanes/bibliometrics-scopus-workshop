@@ -1,0 +1,62 @@
+{
+ "dasar": [
+  "The Blue Synergy Cognitive Ecosystem: Architectural Paradigms for Deterministic Enterprise AI",
+  "DH on the Edge?",
+  "Jarvis: A Browser-Based Bilingual AI Voice Assistant with Multi-Model LLM Selection and HUD-Style Interface Design",
+  "CPU–Vulkan Performance Characteristics of Quantized GGUF LLMs on an Android Edge Device A Mali-G710 Case Study Across Model Scale and Architecture",
+  "An agentic LLM-powered recommendation system using tools, templates and prompt engineering",
+  "Smart outbound scheduling for textile warehousing: an integrated ALNS optimisation algorithm and LLM-based fuzzy decision-making framework",
+  "Neuromantix: A Spiking Neuro-Symbolic Cognitive Architecture for Autonomous General Intelligence",
+  "The Sovereign Intelligence Paradigm: Shifting from Data Exploitative Models to Autonomous Personal AI Architectures"
+ ],
+ "V1 istilah LLM lebih luas (+generative AI, GPT, ChatGPT, foundation model)": [
+  "SecureRAG: Offline Document Analysis using Local Large Language Models",
+  "EXPLORING THE TRANSFORMATIVE POWER OF GENERATIVE AI IN PERSONALIZED E-COMMERCE AND OPERATIONAL OPTIMIZATION",
+  "Agentic AI Security & Autonomous Red-Teaming",
+  "Thematic editorial: edge computing, fog computing, and internet of things",
+  "Artificial Intelligence and Its Role in Increasing Companies' Profitability",
+  "Intelligence Density at the Edge: Two-Nanometre Mobile Silicon, Open Small Language Models, and the Relocation of Agentic Capability",
+  "Artificial Intelligence and Machine Learning In Commerce: A Comprehensive Study on Adoption, Challenges, And Future Prospects",
+  "Automated Code Generation System for Arduino based on Device Registry"
+ ],
+ "V2 blok C tanpa pengecualian saham": [
+  "Slow-Wave Sleep as the Optimal Biological Window for Artificial Intelligence Cognitive Maintenance: A Survey of N3 Sleep-Dependent Memory Consolidation and Its Implications for On-Device AI Architecture",
+  "Smart outbound scheduling for textile warehousing: an integrated ALNS optimisation algorithm and LLM-based fuzzy decision-making framework",
+  "Efficient Deployment of Transformer-Based Large Language Models on Edge Computing Devices: Strategies, Challenges, Optimization Techniques, and Future Research Directions",
+  "Selective Retention Under Constraint: Engineering Principles Unifying KV-Cache Compression Across Layer, Sequence, and Storage Dimensions",
+  "A Survey of Natural-Language Driven Command-Line Assistants and Intelligent Shell Systems",
+  "AI Chip Studio: A Cloud-Native, AI-Assisted Platform for Browser-Based RTL-to-GDSII Digital Design Automation",
+  "Agentic LLMs in the supply chain: towards autonomous multi-agent consensus-seeking",
+  "Preprint"
+ ],
+ "V3 hanya judul (bukan abstrak)": [
+  "QKVShare: Quantized KV-Cache Handoff for Multi-Agent On-Device LLMs",
+  "LLM and Foundation-Model Distillation: Scaling Response- and Relation-Based Knowledge Distillation to Trillion-Parameter Teachers for On-Device LLMs, Incorporating Reinforcement-Learning-Assisted Pipelines and Neural-Collapse Phenomena (Vol-IV)",
+  "Parameter-Level Conditional Computation Does Not Buy Quality on Phones: Three Negative Results for On-Device LLMs",
+  "Hardware-Adaptive Inference Orchestration: Zero-Overhead Local LLM Agents on Resource-Constrained Edge Devices",
+  "On Device Large Language Model Inference: A Review of Efficiency Techniques",
+  "CPU–Vulkan Performance Characteristics of Quantized GGUF LLMs on an Android Edge Device A Mali-G710 Case Study Across Model Scale and Architecture",
+  "LLM-Assisted Business Process Discovery: Combining Multi-Agent Extraction with Sound Process Mining for Automated BPMN Reconstruction",
+  "Jarvis: A Browser-Based Bilingual AI Voice Assistant with Multi-Model LLM Selection and HUD-Style Interface Design"
+ ],
+ "V4 sinonim perangkat lebih luas (+TinyML, local LLM, smartphone, mobile device)": [
+  "Multimodal Human–Robot Interaction Using Human Pose Estimation and Local Large Language Models",
+  "R-SPEAK, an AI-Based Smartphone App to Enhance Communication in People With Expressive Aphasia: Qualitative Acceptability and Usability Study",
+  "Mindbench.ai: an actionable platform to evaluate the profile and performance of large language models in a mental healthcare context",
+  "Parameter-Level Conditional Computation Does Not Buy Quality on Phones: Three Negative Results for On-Device LLMs",
+  "Fine-tuning LLMs in behavioral psychology for scalable health coaching",
+  "Deep convolutional models for robust multi-crop disease recognition in real-world conditions",
+  "RAG-Based MCA AI Agent for Document-Grounded College Information Assistance Using Retrieval-Augmented Generation, Vector Search and a Locally Hosted Large Language Model",
+  "Local LLM"
+ ],
+ "V5 sinonim inventori lebih luas (+SKU, stockout, warehouse management)": [
+  "Conversational AI Interface Transforming Complex Supply Chain Pricing Data into Actionable Insights for Warehouse Management",
+  "Towards AI-Driven Adaptive Reading: Gaze-Aware Support in Digital Environments",
+  "Neuromantix: A Spiking Neuro-Symbolic Cognitive Architecture for Autonomous General Intelligence",
+  "NLP-Digitox: An NLP and LLM-Driven Mobile Application for Managing Smartphone Overuse Among Students",
+  "AI-NATIVE DLP: REPLACING REGEX-BASED CONTENT INSPECTION WITH LLM-DRIVEN SEMANTIC UNDERSTANDING FOR ENTERPRISE DATA EXFILTRATION DETECTION",
+  "Raw Episodic Memory Preservation, Temporal Memory Management, and Delayed Canonicalization for Cloud-Local AI Personality Continuity",
+  "Context Is Geometry",
+  "rmt-llm-research — Random Matrix Theory meets Large Language Models: spectral analysis of activations and the mathematical inevitability of hallucinations"
+ ]
+}

@@ -8,7 +8,9 @@ The study has the following limitations, each linked to a direction for future w
   \item \textbf{Search sensitivity.} Search is limited to titles and abstracts, and variations of the keywords were not tested. A sensitivity check with alternative terms is needed.
   \item \textbf{Model-assisted screening.} Screening used language models; \todo{report the manual validation and its agreement}. Low-confidence decisions remain.
   \item \textbf{Keywords.} Keywords come from OpenAlex's automatic assignment, not from the authors.
-  \item \textbf{Cluster labels and layout.} Cluster membership depends on the algorithm and thresholds; the robustness check shows stable membership but low modularity.
+  \item \textbf{Cluster stability and labels.} Co-word membership was stable but modularity was low. The co-citation partition changed when two references were removed and varied between three and six clusters across runs, and only the small supply chain group was consistent. Cluster labels are model-assisted proposals from reading representative articles and are not yet confirmed.
+  \item \textbf{Search breadth.} Widening the language-model or device terms adds about five hundred records each; they were not screened, so the baseline favours precision and the effect on the maps is unknown.
+  \item \textbf{Metadata errors.} Three references had titles that do not fit their citing articles and were removed; other OpenAlex metadata errors may remain. A part of the author, institution, and country data is missing (country data for 24\% of articles).
 \end{itemize}
 
 \section{Future research avenues}

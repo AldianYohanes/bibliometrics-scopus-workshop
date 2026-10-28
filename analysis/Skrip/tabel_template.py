@@ -19,12 +19,38 @@ OUT = os.path.join(ROOT, "Hasil")
 KEY = open(os.path.expanduser("~/Tools/openalex.key")).read().strip()
 SEED = 42
 WARNA = {1: "merah", 2: "hijau", 3: "biru", 4: "kuning", 5: "ungu", 6: "cyan", 7: "oranye"}
-CURIGA = {"https://openalex.org/W4385245566"}
+CURIGA = {"https://openalex.org/W4385245566", "https://openalex.org/W4292779060", "https://openalex.org/W4384918448"}
 d = pd.read_csv(os.path.join(ROOT, "Data", "dataset_lolos.csv"), encoding="utf-8-sig").fillna("")
 ex = pd.read_csv(os.path.join(ROOT, "Data", "referensi_tambahan.csv"), encoding="utf-8-sig").fillna("")
 e = dict(zip(ex.id, ex.referenced_works))
 d["refs_all"] = [r if r else e.get(i, "") for i, r in zip(d.id, d.referenced_works)]
 tt = d.set_index("id")
+
+
+
+# Label kluster usulan (pembacaan abstrak artikel representatif oleh model, lalu diperiksa; HARUS disetujui penulis).
+# Kunci = tuple ukuran kluster; jika ukuran berubah (data atau algoritma berubah) label tidak dipakai lagi supaya tidak salah tempel.
+LABEL = {
+    "coupling": {(43, 38, 35, 24, 14, 8, 5, 5): [
+        "Surveys of LLM-based edge intelligence", "Edge-cloud collaborative inference and deployment reviews", "On-device LLM compression and system optimisation",
+        "On-device fine-tuning and federated personalisation", "Pruning-based compression for edge devices", "Reliability and governance of LLM decision agents",
+        "Security and threat detection for LLM-IoT systems", "LLM agents for supply chain and demand forecasting"]},
+    "cocit": {(128, 95, 58, 57, 6): [
+        "Edge LLM surveys, collaborative serving, and NLP benchmarks", "Quantisation, pruning, and serving efficiency, with foundation models",
+        "Mixed background: efficient inference, federated and parameter-efficient tuning, early applications", "General background: reasoning, edge computing visions, LLM agents, compression basics",
+        "Generative AI in supply chain and operations management"]},
+    "coword": {(24, 23, 21): [
+        "Agentic AI and RAG for enterprise applications (with an inventory sub-theme)", "Compression and optimisation for edge LLM deployment",
+        "Small language models and privacy-preserving on-device learning"]},
+}
+
+
+def nama_kluster(kind, comms, i):
+    sizes = tuple(len(c) for c in comms)
+    for key, names in LABEL[kind].items():
+        if sizes[:len(key)] == key and i <= len(names):
+            return names[i - 1]
+    return "[BELUM DIBERI NAMA]"
 
 
 def louvain(G):
@@ -59,11 +85,11 @@ teks = ["# Tabel dan gambar artikel (format template workshop)\n",
 # ---------- Gambar 1: publikasi dan sitasi per tahun ----------
 g = d.groupby("year").agg(dokumen=("id", "size"), sitasi=("cited_by", "sum"))
 fig, ax = plt.subplots(figsize=(7, 4))
-ax.bar(g.index.astype(str), g.dokumen, color="#2b8cbe"); ax.set_ylabel("Jumlah publikasi")
+ax.bar(g.index.astype(str), g.dokumen, color="#2b8cbe"); ax.set_ylabel("Publications")
 for x, y in zip(g.index.astype(str), g.dokumen):
     ax.text(x, y, str(y), ha="center", va="bottom", fontsize=8)
-ax2 = ax.twinx(); ax2.plot(g.index.astype(str), g.sitasi, color="#e6550d", marker="o"); ax2.set_ylabel("Jumlah sitasi")
-ax.set_title("Publikasi dan sitasi per tahun (OpenAlex, artikel; 2026 belum selesai)", fontsize=9)
+ax2 = ax.twinx(); ax2.plot(g.index.astype(str), g.sitasi, color="#e6550d", marker="o"); ax2.set_ylabel("Citations")
+ax.set_title("Publications and citations per year (OpenAlex articles; 2026 is incomplete)", fontsize=9)
 fig.tight_layout(); fig.savefig(f"{OUT}/gambar1_tren_publikasi.png", dpi=150); plt.close(fig)
 teks += ["## Gambar 1. Publikasi dan sitasi per tahun\n", "File: `Hasil/gambar1_tren_publikasi.png`\n", md(g.reset_index().rename(columns={"year": "tahun"})), ""]
 
@@ -92,7 +118,7 @@ for i, c in enumerate(bc, 1):
     if len(c) < 5:
         continue
     rep = sorted(c, key=lambda n: -tls[n])[:2]
-    rows.append({"Kluster (warna)": f"{i} ({WARNA.get(i, '?')})", "Label kluster": "[BELUM DIBERI NAMA]", "Jumlah publikasi": len(c),
+    rows.append({"Kluster (warna)": f"{i} ({WARNA.get(i, '?')})", "Label kluster": nama_kluster("coupling", bc, i), "Jumlah publikasi": len(c),
                  "Blok asal": dict(Counter(tt.loc[n, 'blok'] for n in c)), "Publikasi representatif": "; ".join(pub(n) for n in rep)})
 teks += ["### Tabel C. Ringkasan kluster bibliographic coupling (kluster ≥5 dokumen)\n", md(pd.DataFrame(rows)), ""]
 
@@ -131,7 +157,7 @@ teks += ["### Tabel D. Top 10 dokumen dengan co-citation dan TLS tertinggi\n", m
 rows = []
 for i, c in enumerate(cc, 1):
     rep = sorted(c, key=lambda n: -cit[n])[:2]
-    rows.append({"Kluster (warna)": f"{i} ({WARNA.get(i, '?')})", "Label kluster": "[BELUM DIBERI NAMA]", "Jumlah artikel": len(c), "Publikasi representatif": "; ".join(rf(n) for n in rep)})
+    rows.append({"Kluster (warna)": f"{i} ({WARNA.get(i, '?')})", "Label kluster": nama_kluster("cocit", cc, i), "Jumlah artikel": len(c), "Publikasi representatif": "; ".join(rf(n) for n in rep)})
 teks += ["### Tabel E. Kluster co-citation\n", md(pd.DataFrame(rows)), ""]
 
 # ---------- Co-word ----------
@@ -154,8 +180,43 @@ teks += ["### Tabel F. Top 15 kata kunci dalam analisis co-occurrence\n", md(t),
 rows = []
 for i, c in enumerate(kc, 1):
     rep = sorted(c, key=lambda k: -cnt[k])[:8]
-    rows.append({"Kluster (warna)": f"{i} ({WARNA.get(i, '?')})", "Label kluster": "[BELUM DIBERI NAMA]", "Jumlah kata kunci": len(c), "Kata kunci representatif": ", ".join(rep)})
+    rows.append({"Kluster (warna)": f"{i} ({WARNA.get(i, '?')})", "Label kluster": nama_kluster("coword", kc, i), "Jumlah kata kunci": len(c), "Kata kunci representatif": ", ".join(rep)})
 teks += ["### Tabel G. Ringkasan analisis co-word\n", md(pd.DataFrame(rows)), "",
          "Catatan: warna kluster mengikuti urutan standar VOSviewer (1 merah, 2 hijau, 3 biru, 4 kuning, 5 ungu); cocokkan dengan gambar yang kamu ekspor.\n"]
 open(f"{OUT}/tabel_artikel.md", "w", encoding="utf-8").write("\n".join(teks))
 print("ok | coupling", [len(c) for c in bc][:9], "| cocit", [len(c) for c in cc], "| coword", [len(c) for c in kc], "| kata unik", len(cnt))
+
+# ---------- anggota kluster (untuk penamaan kluster dan pengecekan) ----------
+json.dump({
+    "coupling": [{"kluster": i, "docs": sorted(c, key=lambda n: -tls[n])} for i, c in enumerate(bc, 1)],
+    "cocitation": [{"kluster": i, "refs": [{"id": n, "label": rf(n), "cit": cit[n]} for n in sorted(c, key=lambda n: -cit[n])]} for i, c in enumerate(cc, 1)],
+    "coword": [{"kluster": i, "kw": sorted(c, key=lambda k: -cnt[k]), "cnt": {k: cnt[k] for k in c}} for i, c in enumerate(kc, 1)],
+}, open(f"{OUT}/kluster_anggota.json", "w", encoding="utf-8"), ensure_ascii=False)
+
+# ---------- ketahanan co-citation: 20 seed Louvain + greedy; apakah referensi rantai pasok tetap satu kelompok terpisah? ----------
+SUPPLY = {n for n in C if any(k in rf(n) for k in ("Jackson", "Wamba", "AlMahri")) and "supply" in rf(n).lower() + tipe.get(n, {}).get("judul", "").lower() or (n in C and "supply chain" in tipe.get(n, {}).get("judul", "").lower())}
+hasil = []
+for seed in list(range(20)) + ["greedy"]:
+    parts = list(nx.community.greedy_modularity_communities(C, weight="weight")) if seed == "greedy" else nx.community.louvain_communities(C, weight="weight", seed=seed)
+    parts = sorted(parts, key=len, reverse=True)
+    where = Counter(next(i for i, p in enumerate(parts) if n in p) for n in SUPPLY)
+    k, jumlah = where.most_common(1)[0]
+    kelompok = parts[k]
+    hasil.append({"seed": seed, "jumlah_kluster": len(parts), "ukuran": str([len(p) for p in parts]), "ref_rantai_pasok": len(SUPPLY), "dalam_satu_kluster": jumlah,
+                  "ukuran_kluster_itu": len(kelompok), "persen_rantai_pasok_di_kluster": round(100 * len(SUPPLY & kelompok) / len(kelompok), 1)})
+pd.DataFrame(hasil).to_csv(f"{OUT}/ketahanan_cocitation.csv", index=False, encoding="utf-8-sig")
+hh = pd.DataFrame(hasil)
+print("co-citation ketahanan | referensi rantai pasok:", sorted(rf(n)[:45] for n in SUPPLY))
+print(hh.groupby("jumlah_kluster").size().to_dict(), "| semua rantai pasok satu kluster di", int((hh.dalam_satu_kluster == hh.ref_rantai_pasok).sum()), "dari", len(hh), "| ukuran kluster rantai pasok:", sorted(hh.ukuran_kluster_itu.unique()))
+
+# ---------- ketahanan coupling: dokumen blok A/C (bisnis) tetap berkelompok sendiri? ----------
+bis = {n for n in B if tt.loc[n, "blok"] in ("A", "C", "A+C")}
+hasil = []
+for seed in list(range(20)) + ["greedy"]:
+    parts = list(nx.community.greedy_modularity_communities(B, weight="weight")) if seed == "greedy" else nx.community.louvain_communities(B, weight="weight", seed=seed)
+    di_bisnis = sum(len(bis & p) for p in parts if len(bis & p) / len(p) >= 0.5)
+    hasil.append({"seed": seed, "jumlah_kluster": len(parts), "dokumen_bisnis": len(bis), "di_kluster_bisnis": di_bisnis,
+                  "persen": round(100 * di_bisnis / len(bis), 1), "kluster_terbesar": len(max(parts, key=len))})
+hb = pd.DataFrame(hasil)
+hb.to_csv(f"{OUT}/ketahanan_coupling.csv", index=False, encoding="utf-8-sig")
+print(f"coupling ketahanan | dokumen bisnis terhubung: {len(bis)} dari {B.number_of_nodes()} | persen di kluster bisnis: min {hb.persen.min()}, median {hb.persen.median()}, maks {hb.persen.max()} | jumlah kluster: {sorted(hb.jumlah_kluster.unique())}")

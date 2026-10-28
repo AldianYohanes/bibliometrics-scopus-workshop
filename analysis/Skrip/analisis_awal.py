@@ -65,7 +65,7 @@ cmap = plt.get_cmap("tab10")
 nx.draw_networkx_edges(G, pos, alpha=0.12, width=[0.3 + 0.15 * G[u][v]["weight"] ** 0.5 for u, v in G.edges], ax=ax)
 nx.draw_networkx_nodes(G, pos, node_size=[40 + 14 * G.nodes[n]["n"] for n in G], node_color=[cmap((G.nodes[n]["cluster"] - 1) % 10) for n in G], alpha=0.85, ax=ax)
 nx.draw_networkx_labels(G, pos, font_size=7, ax=ax)
-ax.set_title("Peta co-word (kata kunci OpenAlex), warna = kluster"); ax.axis("off")
+ax.set_title("Co-word map (OpenAlex keywords), colour = cluster"); ax.axis("off")
 fig.tight_layout(); fig.savefig(f"{OUT}/peta_coword.png", dpi=130); plt.close(fig)
 # masukan VOSviewer: file peta + file jaringan (tab)
 idx = {k: i for i, k in enumerate(G, 1)}
