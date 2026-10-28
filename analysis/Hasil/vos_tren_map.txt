@@ -1,0 +1,69 @@
+id	label	x	y	cluster	weight<Occurrences>	score<Avg. pub. year>
+1	agentic ai	-0.4386	0.0874	1	26	2025.58
+2	ai agents	-0.2402	0.6012	1	14	2025.64
+3	ai governance	-0.6843	0.0859	1	13	2025.00
+4	anomaly detection	-0.3599	0.2113	1	9	2025.56
+5	business process automation	-0.5438	0.6450	1	11	2025.91
+6	chatbots	-0.6608	0.2900	1	8	2025.25
+7	cloud-edge collaboration	0.4920	-0.0537	2	13	2025.46
+8	conversational ai	-0.7034	-0.0449	1	8	2025.75
+9	customer service automation	-0.6386	0.5386	1	9	2025.44
+10	data privacy	-0.0468	-0.1890	3	24	2025.54
+11	demand forecasting	-0.8877	-0.2796	1	16	2025.25
+12	differential privacy	0.2518	-0.6374	3	10	2025.30
+13	edge ai	0.0084	0.0893	3	19	2025.47
+14	edge computing	0.2122	-0.0103	2	86	2025.47
+15	edge deployment	0.1085	-0.0736	2	51	2025.43
+16	edge devices	0.0523	-0.0340	3	40	2025.38
+17	edge inference	0.3851	0.4717	2	13	2025.46
+18	energy consumption	0.8405	0.1747	3	8	2025.38
+19	energy efficiency	0.1485	0.1118	2	38	2025.47
+20	explainable ai	-0.3749	-0.2904	1	10	2025.40
+21	federated learning	0.1496	-0.2395	3	24	2025.25
+22	generative ai	-0.2455	0.2267	1	18	2025.28
+23	hallucination mitigation	-0.0688	0.3497	1	12	2025.92
+24	hallucinations	-0.5933	0.1960	1	8	2025.50
+25	home automation	0.7468	-0.1419	3	8	2025.75
+26	human-ai collaboration	-0.3079	0.6193	1	9	2025.67
+27	inference latency	0.1877	0.2147	2	26	2025.46
+28	internet of things	0.4549	0.1890	2	13	2024.92
+29	inventory management	-1.0000	-0.0997	1	22	2025.27
+30	inventory optimization	-0.8367	-0.4425	1	9	2025.22
+31	knowledge distillation	0.3037	-0.1358	2	22	2025.64
+32	knowledge graphs	-0.3262	-0.1702	1	9	2025.00
+33	large language model inference	-0.1907	0.4865	2	10	2025.20
+34	latency	0.5489	0.2757	3	9	2025.89
+35	latency reduction	0.3961	0.3299	2	12	2025.75
+36	llama 3.2	0.2986	-0.5602	3	9	2025.78
+37	llm agents	-0.4586	-0.0435	1	24	2025.58
+38	low-rank adaptation	0.4336	-0.4165	2	13	2025.31
+39	mixture of experts	0.7993	-0.3814	2	8	2025.88
+40	mobile devices	0.3373	-0.2092	2	15	2025.40
+41	model compression	0.2779	-0.0110	2	51	2025.37
+42	model quantization	0.5841	0.0498	3	11	2025.36
+43	multi-agent systems	-0.5804	0.0278	1	36	2025.64
+44	multimodal large language models	0.7842	-0.0208	3	8	2025.62
+45	ollama	-0.1049	-0.3241	3	10	2025.90
+46	on-device ai	-0.0076	-0.4832	3	11	2025.18
+47	on-device deployment	0.4987	-0.2237	3	15	2025.67
+48	on-device inference	0.3454	-0.0710	3	55	2025.42
+49	on-device large language models	0.3038	0.1053	2	18	2025.56
+50	parameter-efficient fine-tuning	0.3039	-0.3289	3	17	2025.53
+51	post-training quantization	0.0021	0.3195	2	8	2025.62
+52	privacy	0.6362	0.1577	3	13	2025.46
+53	privacy preservation	0.0407	0.1656	3	16	2025.25
+54	privacy-preserving ai	0.2203	0.3794	3	12	2025.42
+55	privacy-preserving inference	0.4367	-0.2939	2	13	2025.23
+56	prompt engineering	-0.5380	-0.1867	1	12	2025.58
+57	quantization	0.3114	0.1664	2	16	2025.31
+58	raspberry pi	0.1452	0.3024	2	15	2025.47
+59	regulatory compliance	-0.2791	-0.3822	1	8	2025.38
+60	reinforcement learning	0.0761	-0.3941	2	9	2025.11
+61	resource-constrained devices	0.1399	0.0302	2	37	2025.35
+62	resource-constrained edge devices	0.0489	-0.6303	2	8	2025.12
+63	retrieval-augmented generation	-0.2663	-0.0306	1	47	2025.70
+64	small and medium-sized enterprises	-0.6675	0.4125	1	12	2026.00
+65	small language models	0.1768	-0.1019	3	55	2025.55
+66	supply chain management	-0.8998	-0.0481	1	9	2025.56
+67	transformer models	-0.1614	0.0919	2	10	2025.50
+68	vision-language models	0.6237	-0.4192	3	9	2025.44

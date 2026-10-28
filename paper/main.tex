@@ -1,0 +1,52 @@
+% Kompilasi: xelatex main; bibtex main; xelatex main; xelatex main  (lihat README.md)
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{fontspec}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{booktabs,tabularx,array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage[authoryear,round]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage{setspace}
+\onehalfspacing
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+% Penanda pekerjaan yang belum selesai (merah). Hapus semua \todo sebelum submit.
+\newcommand{\todo}[1]{\textcolor{red}{[#1]}}
+
+\title{Mapping the Thematic Structure and Emerging Trends of Large Language Model Research Across Multi-Agent Systems, On-Device Deployment, and Inventory Management: A Bibliometric Analysis}
+\author{Aldian Yohanes\thanks{Faculty of Information Technology, Universitas Tarumanagara, Jakarta, Indonesia. \todo{co-authors, supervisor, e-mail}}}
+\date{\todo{date}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+\textbf{Background.} Research on large language models (LLMs) has grown quickly, but it is spread over separate streams, such as LLM-based agents, models that run on the device or in the browser, and applications in inventory management for small businesses.
+\textbf{Aim.} This study maps how these three streams are structured, and where they connect, using bibliometric methods.
+\textbf{Data.} We analyse 485 journal articles published between 2023 and 2026, retrieved from OpenAlex on 28 October 2026 and screened with language-model assistance.
+\textbf{Methods.} We combine performance analysis, bibliographic coupling, co-citation analysis, and co-word analysis.
+\textbf{Findings.} Co-word analysis yields three clusters: one around agents, retrieval-augmented generation, and business applications, and two around edge deployment and small language models. The business-oriented cluster is loosely separated from the edge clusters in all 63 robustness runs, but about a fifth to a half of the link weight crosses clusters. In the co-citation network, the business-related stream is reduced to a group of four references on generative AI in supply chains, while efficient-inference work dominates the foundations of the field.
+\textbf{Contribution.} The study provides a first science map across these streams, shows that evidence on LLMs for inventory management is thin, and sets out a research agenda. \todo{check the claims against the final screened dataset and the manual validation}
+\end{abstract}
+
+\noindent\textbf{Keywords:} large language models; multi-agent systems; on-device inference; inventory management; bibliometric analysis; science mapping
+
+\input{sections/01_introduction}
+\input{sections/02_methodology}
+\input{sections/03_findings}
+\input{sections/04_discussion_implications}
+\input{sections/05_limitations_future_conclusion}
+
+\section*{Declarations}
+\noindent\textbf{Use of AI tools.} Claude (Anthropic) assisted with record screening (title and abstract), data processing scripts, and drafting of the text. The author reviewed the outputs \todo{state the extent of manual validation once the sample check is complete} and takes responsibility for the content. \todo{check the target journal's policy on AI disclosure}
+
+\noindent\textbf{Data and code availability.} Search strings, scripts, and the screened dataset are in the accompanying repository (folder \texttt{analysis}). Records come from OpenAlex. \todo{add repository URL or archive DOI}
+
+\bibliographystyle{apalike}
+\bibliography{refs}
+
+\end{document}

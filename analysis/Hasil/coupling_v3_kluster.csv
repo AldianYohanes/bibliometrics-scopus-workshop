@@ -1,0 +1,14 @@
+﻿kluster,jumlah_dokumen,blok,contoh_judul
+1,43,"{'B': 39, 'A': 2, 'C': 1, 'A+C': 1}","Mobile Edge Intelligence for Large Language Models: A Contemporary Sur || EdgeShard: Efficient LLM Inference via Collaborative Edge Computing || LLM-Based Edge Intelligence: A Comprehensive Survey on Architectures, "
+2,38,"{'B': 37, 'C': 1}","Pushing Large Language Models to the 6G Edge: Vision, Challenges, and  || Sustainable LLM Inference for Edge AI: Evaluating Quantized LLMs for E || Toward Edge General Intelligence via Large Language Models: Opportunit"
+3,35,"{'B': 34, 'A': 1}","AWQ: Activation-aware Weight Quantization for On-Device LLM Compressio || A Review on Edge Large Language Models: Design, Execution, and Applica || A Comprehensive Survey of Small Language Models in the Era of Large La"
+4,24,{'B': 24},Federated Transfer Learning for On-Device LLMs Efficient Fine Tuning O || ROFED-LLM: Robust Federated Learning for Large Language Models in Adve || TeleOracle: Fine-Tuned Retrieval-Augmented Generation With Long-Contex
+5,14,{'B': 14},HAPE: Hardware-Aware LLM Pruning For Efficient On-Device Inference Opt || Mosaic: Composite projection pruning for resource-efficient LLMs || Lightweight and Post-Training Structured Pruning for On-Device Large L
+6,8,"{'A': 4, 'C': 1, 'B': 3}","Real-time tracking railway intruders using multiple-agent cooperated l || Neuro-symbolic constraint verification for LLM-driven internet finance || Benchmarking Reference-Free LLM Agent Robustness Under Schema, Policy,"
+7,5,{'B': 5},"Malware Detection at the Edge with Lightweight LLMs: A Performance Eva || Securing the Cognitive Layer: A Survey on Security Threats, Defenses,  || On-Device Intent Reasoning for Smart Home Agents Via Ontology-Augmente"
+8,5,"{'C': 3, 'A': 1, 'A+C': 1}",IIoT-enabled digital twin for legacy and smart factory machines with L || Agentic LLMs in the supply chain: towards autonomous multi-agent conse || Full automation or just a copilot? A study of large language models on
+9,3,"{'A': 2, 'B': 1}",Agent technologies in smart manufacturing: A comprehensive review of e || BPMN DMN decision table generation based on agentic AI for critical ap || An Intelligent Agent-Based System for Automated Seat Assignment in Ent
+10,2,{'A': 2},Large Language Models for Process Knowledge Acquisition || A modular large language model agent architecture for adaptive and aut
+11,2,{'C': 2},A conformal LLM-guided random forest–LSTM forecaster for uncertainty-a || LLM Sentiment Analysis-Integrated Sales Forecasting for E-Commerce—A C
+12,2,{'B': 2},Profile-aided distillation framework for personalized sleep analysis w || Knowledge Accuracy and Response Characteristics of an On-Device Large 
+13,2,{'B': 2},Cost-Effective Extension of DRAM-PIM for Group-Wise LLM Quantization || Enabling Computation and Communication Overlap in PIMs for On-Device L

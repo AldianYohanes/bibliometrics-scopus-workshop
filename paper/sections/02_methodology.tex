@@ -1,0 +1,46 @@
+\section{Methodology}
+
+\subsection{Bibliometric approach}
+Bibliometric analysis is a quantitative method that studies bibliographic data through performance analysis and science mapping \citep{donthu2021,zupic2015}. We used performance analysis, bibliographic coupling, co-citation analysis, and co-word analysis, so that the field is described from its foundations (co-citation), its current streams (coupling), and its concepts (co-word).
+
+\subsection{Research design and data collection}
+We retrieved records from OpenAlex through its public interface on 28 October 2026. \todo{cite the OpenAlex paper after verification: arXiv 2205.01833 was not verified} The search covered titles and abstracts, was limited to document type ``article'', and covered publication years 2023 to 2026 (2026 is a partial year). OpenAlex was chosen because it is open and the queries can be repeated. We did not use Scopus or Web of Science, which are the databases named in most bibliometric guidance \citep{donthu2021}; \citet{zhu2020}, \citet{mongeon2016}, and \citet{echchakoui2020} discuss the choice between them. The consequences for coverage are discussed in Section~\ref{sec:limitations}.
+
+Three search blocks represent the three streams (Table~\ref{tab:search}). Terms within a concept block are joined with OR, and blocks are joined with AND. In block C, the exclusion of stock-market terms removes records where ``stock'' refers to share prices.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Search blocks (keywords and justification). LLM terms: ``large language model'', LLM, LLMs. LM terms: LLM terms plus ``small language model'' and SLM.}
+\label{tab:search}
+\begin{tabularx}{\textwidth}{lYY}
+\toprule
+\textbf{Block} & \textbf{Search string} & \textbf{Justification} \\
+\midrule
+A & LLM terms AND (``multi-agent'' OR multiagent OR agentic OR ``LLM agent'' OR ``LLM agents'') AND (``inventory management'' OR ``inventory control'' OR ``supply chain management'' OR SME OR SMEs OR ``small business'' OR ``small businesses'' OR retail OR MSME OR ``business process'') & Multi-agent and agentic LLM work in operational or business settings \\
+B & LM terms AND (WebLLM OR WebGPU OR ``in-browser'' OR ``browser-based'' OR ``on-device'' OR ``edge device'' OR ``edge devices'') & Language models that run in the browser, on the device, or at the edge \\
+C & LM terms AND (inventory OR stock) AND (retail OR SME OR SMEs OR ``small business'' OR ``small businesses'' OR MSME OR warehouse OR ``supply chain management'' OR procurement OR ``demand forecasting'' OR ``sales forecasting'' OR replenishment OR ``point of sale'' OR e-commerce) NOT (``stock market'' OR ``stock price'' OR ``stock prices'' OR ``stock exchange'' OR ``stock trading'' OR ``stock returns'') & Language-model work on inventory, stock, and demand in business settings \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Screening and final dataset}
+The three blocks returned 149, 584, and 87 records (820 in total), which formed 801 unique records. We removed 16 records that shared a normalised title with another record, keeping the version with a journal source, reference data, and a DOI. We then excluded 77 records hosted on Zenodo, because it is a repository without a guaranteed peer-review process. The remaining 708 records were screened on title and abstract.
+
+Screening was assisted by language models in two passes. In the first pass, eight Claude Haiku instances judged about 89 records each as relevant, not relevant, or uncertain. A record was relevant when a language model and at least one of the three topics were a main or important part of the work. This pass gave 430 relevant, 150 not relevant, and 128 uncertain records. In the second pass, three Claude Sonnet instances re-judged the 128 uncertain records with longer abstracts and a confidence level, resolving 55 as relevant and 72 as not relevant, and leaving one uncertain. The final dataset has \textbf{485 records} (Figure~\ref{fig:prisma}). \todo{human validation: report agreement on the 20-record sample; 97 of 128 second-pass decisions had low model confidence}
+
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox{0.9\textwidth}{\centering\small
+820 records retrieved $\rightarrow$ 801 unique $\rightarrow$ 785 after title de-duplication $\rightarrow$ 708 after excluding Zenodo $\rightarrow$ 485 included (222 excluded, 1 unresolved)}}
+\caption{Record flow (PRISMA-style counts). \todo{replace with a proper flow diagram}}
+\label{fig:prisma}
+\end{figure}
+
+\subsection{Analysis}
+Performance analysis counted publications per year, source, country (author affiliations), and author, together with citations. For science mapping we used two techniques \citep{donthu2021,zupic2015}:
+\begin{itemize}
+  \item \textbf{Co-word analysis} used the keywords assigned by OpenAlex. Synonyms were merged (for example ``LLM'' and ``large language models''), and ``large language model'' and ``artificial intelligence'' were removed because they occur in nearly all records. We kept keywords with at least eight occurrences (68 keywords).
+  \item \textbf{Bibliographic coupling and co-citation} used reference lists. OpenAlex had reference data for 255 of the 485 records; we added Crossref data through DOIs, which brought the total to 278 records (57.3\%). Two records were linked when they shared at least two references. For co-citation we kept references cited by at least three records in the dataset and removed eight items that were data artefacts: proceedings volumes, which are not single works, and one reference that was cited by 22 edge-LLM papers although its title concerns intelligent tutoring systems (a suspected linking error in OpenAlex, not verified).
+\end{itemize}
+Clusters were found with the Louvain algorithm \citep{blondel2008}, computed in Python (networkx, fixed random seed) and displayed with VOSviewer 1.6.21 \citep{vaneck2010} through its map and network file formats. The cluster membership in the figures is therefore the one computed in Python. To test robustness, we repeated the co-word clustering with minimum occurrences of 5, 8, and 12, with 20 random seeds, and with a greedy modularity algorithm. The target of 200 to 1{,}000 records follows the sample-size guidance attributed to \citet{rogers2020} \todo{read the paper to confirm the range}; the record flow follows the PRISMA statement \citep{page2021}.

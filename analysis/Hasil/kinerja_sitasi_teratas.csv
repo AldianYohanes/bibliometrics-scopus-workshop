@@ -1,0 +1,16 @@
+title,year,source,cited_by,blok
+AWQ: Activation-aware Weight Quantization for On-Device LLM Compression and Acceleration,2025,GetMobile Mobile Computing and Communications,273,B
+Mobile Edge Intelligence for Large Language Models: A Contemporary Survey,2025,IEEE Communications Surveys & Tutorials,240,B
+EdgeShard: Efficient LLM Inference via Collaborative Edge Computing,2024,IEEE Internet of Things Journal,227,B
+"LLM-Based Edge Intelligence: A Comprehensive Survey on Architectures, Applications, Security and Trustworthiness",2024,IEEE Open Journal of the Communications Society,194,B
+"A Review on Edge Large Language Models: Design, Execution, and Applications",2025,ACM Computing Surveys,168,B
+"A Comprehensive Survey of Small Language Models in the Era of Large Language Models: Techniques, Enhancements, Applications, Collaboration with LLMs, and Trustworthiness",2025,ACM Transactions on Intelligent Systems and Technology,105,B
+"Pushing Large Language Models to the 6G Edge: Vision, Challenges, and Opportunities",2025,IEEE Communications Magazine,92,B
+Beyond the Cloud: Edge Inference for Generative Large Language Models in Wireless Networks,2024,IEEE Transactions on Wireless Communications,77,B
+A review of AI edge devices and lightweight CNN and LLM deployment,2024,Neurocomputing,72,B
+EdgeMoE: Empowering Sparse Large Language Models on Mobile Devices,2025,IEEE Transactions on Mobile Computing,68,B
+EdgeLLM: A Highly Efficient CPU-FPGA Heterogeneous Edge Accelerator for Large Language Models,2025,IEEE Transactions on Circuits and Systems I Regular Papers,63,B
+IIoT-enabled digital twin for legacy and smart factory machines with LLM integration,2025,Journal of Manufacturing Systems,53,A
+EdgeLLM: Fast On-Device LLM Inference With Speculative Decoding,2024,IEEE Transactions on Mobile Computing,50,B
+Toward Democratized Generative AI in Next-Generation Mobile Edge Networks,2025,IEEE Network,49,B
+Efficient GPT-4V level multimodal large language model for deployment on edge devices,2025,Nature Communications,47,B

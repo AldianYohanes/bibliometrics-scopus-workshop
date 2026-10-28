@@ -1,0 +1,55 @@
+\section{Findings and discussion}
+
+\subsection{Publication and citation trends (RQ1)}
+The dataset has 485 articles. Output grows quickly: 4 articles in 2023, 37 in 2024, 151 in 2025, and 293 in 2026, where 2026 is a partial year (Figure~\ref{fig:trend}). Citation counts follow the age of the articles (2 citations for 2023 articles in the dataset, 844 for 2024, 1{,}902 for 2025, and 157 for 2026), so the low figure for 2026 reflects time, not weak influence.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.75\textwidth]{figures/gambar1_tren_publikasi.png}
+\caption{Publications and citations per year (OpenAlex, articles; 2026 is incomplete). \todo{redraw in the final journal style and in English}}
+\label{fig:trend}
+\end{figure}
+
+The most cited documents are all about LLMs at the edge or small language models (Table~\ref{tab:A}); none concerns inventory or business operations. Authors are affiliated mostly with China (112 of the 485 articles have at least one Chinese affiliation), the United States (89), and India (43). Only 86 articles (18\%) have authors from two or more countries; the most frequent pairs are Hong Kong--China (15 articles), the United States--China (11), and China--Singapore (9). The dataset has 1{,}789 distinct author names, 3.92 authors per article on average, and only 14 names with three or more articles; name variants were not merged, so these figures are indicative.
+
+\input{tables/tabel_A}
+
+\subsection{Bibliographic coupling (RQ2)}
+Of the 485 articles, 278 have reference data; 183 of them share at least two references with another article, forming 13 clusters of 43, 38, 35, 24, 14, 8, 5, 5, 3, 2, 2, 2, and 2 articles. Table~\ref{tab:B} lists the ten articles with the highest total link strength; they are surveys on edge and federated LLMs. Table~\ref{tab:C} summarises the clusters with at least five articles. \todo{label the clusters by revisiting representative articles (inductive interpretation) and replace the placeholders}
+
+The five largest clusters consist almost entirely of articles from the on-device and edge block. The business-related articles form two small groups: one of eight articles whose representative items concern governed agentic process automation and reasoning applications, and one of five articles whose representative items concern LLMs for spare-parts demand forecasting and supply chain optimisation \todo{verify by reading the clusters' articles}. The business stream therefore exists in the reference network, but it is small and separate from the edge stream.
+
+\input{tables/tabel_B}
+\input{tables/tabel_C}
+
+\subsection{Co-citation (RQ2, foundations)}
+Among 7{,}293 unique cited references, 346 were cited by at least three articles of the dataset (after removing eight artefacts, see Section~2.4), and they form four clusters of 133, 124, 85, and 4 references. The most strongly linked references (Table~\ref{tab:D}) are foundations of efficient LLM inference: LLaMA, structured pruning, quantisation, memory management for serving, and parameter-efficient fine-tuning. The three large clusters mix general LLM foundations with edge computing work, so they should not be labelled before the representative references are read. The fourth cluster has only four references, on generative AI in supply chain and operations management (Table~\ref{tab:E}). The business-related stream thus has no broad shared foundation in this dataset yet, but four references are a thin basis for a strong claim. \todo{verify the four references and read them before interpreting}
+
+\input{tables/tabel_D}
+\input{tables/tabel_E}
+
+\subsection{Co-word analysis (RQ3)}
+Among 2{,}133 distinct keywords, 68 occurred at least eight times and formed three clusters of 24, 23, and 21 keywords (Tables~\ref{tab:F} and \ref{tab:G}, Figure~\ref{fig:coword}). Cluster~1 groups retrieval-augmented generation, multi-agent systems, agentic AI, LLM agents, inventory management, and demand forecasting; clusters 2 and 3 are about edge computing, model compression, and energy efficiency, and about small language models, on-device inference, and privacy. \todo{label clusters after reading representative articles}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/peta_coword.png}
+\caption{Co-word map (keywords assigned by OpenAlex, at least eight occurrences; colours show clusters). \todo{replace with the VOSviewer export with readable labels}}
+\label{fig:coword}
+\end{figure}
+
+\input{tables/tabel_F}
+\input{tables/tabel_G}
+
+\paragraph{Robustness.}
+The agent and business keywords stayed in a cluster separate from the edge keywords in all 63 runs (minimum occurrences of 5, 8, and 12; 20 random seeds; and a greedy algorithm). However, modularity was low (0.18 to 0.26) and between 21\% and 54\% of the link weight crossed clusters. The clusters are therefore loosely separated groups with limited links, not disconnected fields.
+
+\paragraph{Emerging topics.}
+Colouring keywords by their mean publication year (Figure~\ref{fig:trendmap}) shows that business-oriented keywords such as small and medium-sized enterprises (mean year 2026.0), business process automation (2025.9), and hallucination mitigation (2025.9) are newer than inventory management and demand forecasting, which appear earlier in the dataset. On the edge side, local runtimes such as Ollama (2025.9) and mixture of experts (2025.9) are newer than the Internet of Things (2024.9) and privacy-preserving inference. The range of mean years is only about one year (2024.9 to 2026.0) and 2026 is incomplete, so we read this as an early trend, not as a firm finding. \todo{check the means against tren\_kata\_kunci.csv after the final dataset}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/peta_tren.png}
+\caption{Co-word map coloured by mean publication year (yellow is more recent). \todo{replace with the VOSviewer overlay export}}
+\label{fig:trendmap}
+\end{figure}

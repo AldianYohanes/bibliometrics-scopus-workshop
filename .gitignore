@@ -1,0 +1,18 @@
+# build LaTeX
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.xdv
+paper/build/
+# rahasia dan sampah Python
+openalex.key
+*.key
+__pycache__/
+*.pdf
+!analysis/**/*.pdf

@@ -1,0 +1,31 @@
+﻿referensi,dikutip_oleh_dokumen,kluster
+"Zhang 2024, EdgeShard: Efficient LLM Inference via Collaborative Edge Computing",22,1
+"Lin 2025, AWQ: Activation-aware Weight Quantization for On-Device LLM Compressio",20,2
+"Dettmers 2023, QLoRA: Efficient Finetuning of Quantized LLMs",20,2
+"Kwon 2023, Efficient Memory Management for Large Language Model Serving with Page",19,2
+"Wei 2022, Chain-Of-Thought Prompting Elicits Reasoning in Large Language Models",19,3
+"B. 2020, Language Models are Few-Shot Learners",16,2
+"Zheng 2025, A Review on Edge Large Language Models: Design, Execution, and Applica",15,1
+"Ma 2023, LLM-Pruner: On the Structural Pruning of Large Language Models",15,2
+"Shi 2016, Edge Computing: Vision and Challenges",14,3
+"Chang 2024, A Survey on Evaluation of Large Language Models",14,1
+"Friha 2024, LLM-Based Edge Intelligence: A Comprehensive Survey on Architectures, ",14,1
+"Zellers 2019, HellaSwag: Can a Machine Really Finish Your Sentence?",13,1
+"Devlin 2019, BERT: Pre-training of Deep Bidirectional Transformers for Language Und",13,3
+"Touvron 2023, LLaMA: Open and Efficient Foundation Language Models",13,2
+"Qu 2025, Mobile Edge Intelligence for Large Language Models: A Contemporary Sur",13,1
+"Vaswani 2025, Attention Is All You Need",12,2
+"Ding 2023, Parameter-efficient fine-tuning of large-scale pre-trained language mo",12,1
+"Thirunavukarasu 2023, Large language models in medicine",12,3
+"Alizadeh 2024, LLM in a flash: Efficient Large Language Model Inference with Limited ",12,3
+"Yu 2024, EDGE-LLM: Enabling Efficient Large Language Model Adaptation on Edge D",12,1
+"Song 2024, PowerInfer: Fast Large Language Model Serving with a Consumer-grade GP",12,2
+"Dionysios 2018, AI-Assisted Pipeline for Dynamic Generation of Trustworthy Health Supp",11,3
+"Wolf 2020, Transformers: State-of-the-Art Natural Language Processing",11,2
+"Lester 2021, The Power of Scale for Parameter-Efficient Prompt Tuning",11,1
+"Sakaguchi 2021, WinoGrande",11,1
+"Frantar 2022, GPTQ: Accurate Post-Training Quantization for Generative Pre-trained T",11,3
+"Shen 2024, Large Language Models Empowered Autonomous Edge AI for Connected Intel",11,3
+"Wang 2024, A survey on large language model based autonomous agents",11,3
+"Hao 2024, Hybrid SLM and LLM for Edge-Cloud Collaborative Inference",11,1
+"Cai 2024, Edge-LLM: A Collaborative Framework for Large Language Model Serving i",11,1

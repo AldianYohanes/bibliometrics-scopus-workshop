@@ -1,0 +1,37 @@
+# bibliometrics-scopus-workshop
+
+Artikel bibliometrik (LaTeX) tentang penelitian LLM di tiga arus: agen multi-agent, LLM di browser/perangkat, dan inventori usaha kecil. Data dari OpenAlex (artikel jurnal 2023-2026, dicari 28 Okt 2026). Proyek dari workshop publikasi Scopus dengan bibliometrik.
+
+Status: **draf awal**. Yang selesai: metode, hasil dengan angka dari skrip, tabel. Yang belum: pendahuluan, diskusi, kesimpulan, nama kluster, validasi manusia atas penyaringan. Semua yang belum selesai ditandai `\todo{...}` (merah di PDF).
+
+## Struktur
+```
+paper/       naskah LaTeX (main.tex, sections/, tables/, figures/, refs.bib)
+analysis/    skrip Python, data, dan hasil analisis
+  Skrip/     unduh_openalex.py, lengkapi_referensi.py, analisis_awal.py, analisis_tambahan.py,
+             uji_ketahanan.py, tabel_template.py, md2tex.py
+  Data/      dataset_lolos.csv (485 paper), referensi_tambahan.csv, penyaringan_gabungan.csv
+  Hasil/     tabel, gambar, dan file masukan VOSviewer
+```
+
+## Kompilasi
+Pakai XeLaTeX (MiKTeX). Jika `latexmk` gagal karena PATH memuat `claude.exe`, saring PATH dulu.
+```bash
+cd paper
+xelatex main && bibtex main && xelatex main && xelatex main
+```
+
+## Mengulang analisis
+Dari folder `analysis/Skrip`:
+```bash
+python -I tabel_template.py   # tabel dan gambar dari dataset_lolos.csv
+python -I md2tex.py           # tabel ke LaTeX di paper/tables, gambar ke paper/figures
+```
+`unduh_openalex.py` dan `lengkapi_referensi.py` butuh kunci API OpenAlex di `~/Tools/openalex.key` (jangan dimasukkan ke repo).
+Hasil pengelompokan diulang dengan urutan simpul yang diurutkan dan seed tetap, jadi sama antar jalankan.
+
+## Catatan
+- Catatan kerja lengkap (keputusan, angka, masalah) ada di vault Obsidian, folder `SCOPUS Bibliometrics`.
+- Rujukan di `paper/refs.bib` baru dicek ada (judul, penulis pertama, DOI), belum dicek volume dan halaman.
+- Gambar peta di `paper/figures` dibuat dengan Python; ganti dengan ekspor VOSviewer sebelum submit.
+- Penyaringan dibantu model bahasa (Claude); pengungkapan AI ada di bagian Declarations.
