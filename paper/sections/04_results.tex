@@ -1,0 +1,111 @@
+\section{Result and Analysis}
+
+The initial search returned 820 records, which formed 801 unique records. After removing duplicate titles, excluding Zenodo items, and screening on title and abstract, 485 journal articles published between 2023 and 2026 remained (Table~\ref{tab:flow}). Together they have 2{,}905 citations (global OpenAlex counts), an average of 5.99 citations per article, and an h-index of 24 (Figure~\ref{fig:summary}). Output grows quickly: 4 articles in 2023, 37 in 2024, 151 in 2025, and 293 in 2026, where 2026 is a partial year. Citation counts follow the age of the articles (2 citations for the 2023 articles, 844 for 2024, 1{,}902 for 2025, and 157 for 2026), so the low figure for 2026 reflects time, not weak influence.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/gambar1_ringkasan.png}
+\par\vspace{2pt}Source: Authors' analysis of OpenAlex data.
+\caption{Summary of publications and citations in the dataset}
+\label{fig:summary}
+\end{figure}
+
+\subsection{Citation Analysis}
+The most cited documents are all about LLMs at the edge or small language models (Table~\ref{tab:A}); none concerns inventory or business operations.
+
+\input{tables/tabel_A}
+
+Authors and sources were counted by OpenAlex identifiers, not by names. The 485 articles have 1{,}664 distinct author identifiers against 1{,}789 distinct author names, so name variants would have inflated the author count by 125. The most productive authors have four or five articles (Table~\ref{tab:H}), and only 12 authors have three or more, so no small group dominates the field. The articles appear in 317 distinct sources; the most frequent are \textit{IEEE Transactions on Mobile Computing} (20 articles), \textit{IEEE Access} (14), and \textit{IEEE Internet of Things Journal} (10) (Table~\ref{tab:I}). The leading institutions are Tsinghua University (10 articles), South China University of Technology (9), and the Beijing University of Posts and Telecommunications and Nanyang Technological University (8 each).
+
+\input{tables/tabel_H}
+\input{tables/tabel_I}
+
+Country data are missing for 115 articles (24\%). Among the others, China (112 articles), the United States (89), India (43), South Korea (31), and Hong Kong (28) lead. Only 86 articles (18\%) have authors from two or more countries; the most frequent pairs are Hong Kong--China (15 articles), the United States--China (11), and China--Singapore (9).
+
+\subsection{Co-citation Analysis}
+Among 7{,}293 unique cited references, 344 were cited by at least three articles of the dataset (after removing ten data artefacts, see Section~3.4), and they form five clusters of 128, 95, 58, 57, and 6 references (Table~\ref{tab:E}, Figure~\ref{fig:cocit}). The most strongly linked references (Table~\ref{tab:D}) are foundations of efficient LLM inference: LLaMA, structured pruning, quantisation, memory management for serving, and GPT-3. The clusters are labelled from the titles of their most co-cited references. \todo{the author should confirm the labels}
+
+\input{tables/tabel_D}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/peta_cocitation.png}
+\par\vspace{2pt}Source: Author interpretation based on VOSviewer analysis.
+\caption{Co-citation analysis of LLM research \todo{replace with the VOSviewer export with readable labels}}
+\label{fig:cocit}
+\end{figure}
+
+Cluster 1 (red) is \textit{edge LLM surveys, collaborative serving, and NLP benchmarks}. Its most co-cited references are EdgeShard and surveys of edge and mobile-edge LLMs, together with standard benchmarks (HellaSwag, WinoGrande, GLUE, PIQA) and work on prompt tuning and federated fine-tuning.
+
+Cluster 2 (green) is \textit{quantisation, pruning, and serving efficiency, with foundation models}. It is dominated by efficiency methods (QLoRA, AWQ, PagedAttention, LLM-Pruner, PowerInfer, GPTQ, FlashAttention), with foundation papers such as GPT-3 and LLaMA as a smaller layer.
+
+Clusters 3 (blue) and 4 (yellow) are heterogeneous backgrounds. Cluster 3 mixes efficient inference with limited memory, parameter-efficient and federated tuning, the Transformers library, early sequence models, and a few application studies (for example LLMs in medicine and cyber threat detection). Cluster 4 mixes chain-of-thought prompting, BERT, edge computing visions, quantisation basics, and federated learning with the only agent-related references (a survey of LLM-based autonomous agents and Reflexion). They should be read as general background, not as topics.
+
+Cluster 5 (purple) is \textit{generative AI in supply chain and operations management}. It has six references: Jackson (2024), Wamba (2023), Jackson (2023), Kosasih (2023), AlMahri (2025), and a machine-monitoring study with LLMs (Jeon, 2025). \todo{read and verify these references before interpreting}
+
+\input{tables/tabel_E}
+
+The overall co-citation partition is not stable. Removing two further suspect references changed the result from four clusters (133, 124, 85, and 4 references) to the five clusters above, and in 21 repeated runs (20 seeds and a greedy algorithm) the number of clusters was between three and six. The network is also very dense (about 14{,}000 links among 344 references), because articles with long reference lists create many pairs. We therefore do not rely on the exact composition of the large clusters. One feature is more robust: four references on generative AI and AI in supply chains (Jackson 2024, Wamba 2023, AlMahri 2025, and Kosasih 2023) had at least three of the four in the same small cluster of four to eleven references in 17 of the 21 runs; in the other four runs (three seeds and the greedy algorithm) they were absorbed into a large mixed cluster of 70 to 156 references. The data therefore support a modest statement: references on generative AI in supply chains are co-cited mainly with each other and rarely with the efficient-inference literature, so the business stream has no broad shared foundation yet, but it is a very small group.
+
+\subsection{Co-word Analysis}
+Among 2{,}133 distinct keywords, 68 occurred at least eight times and formed three clusters of 24, 23, and 21 keywords (Tables~\ref{tab:F} and \ref{tab:G}, Figure~\ref{fig:coword}). We labelled them provisionally after reading the ten most representative articles of each cluster. \todo{the author should confirm the labels}
+
+\input{tables/tabel_F}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/peta_coword.png}
+\par\vspace{2pt}Source: Author interpretation based on VOSviewer analysis.
+\caption{Co-word analysis of LLM research \todo{replace with the VOSviewer export with readable labels}}
+\label{fig:coword}
+\end{figure}
+
+Cluster 1 (red) is \textit{agentic AI and RAG for enterprise applications}. It groups retrieval-augmented generation, multi-agent systems, agentic AI, and LLM agents, with applications such as customer service, database querying, and business process automation, and, as a smaller strand, inventory management and demand forecasting.
+
+Cluster 2 (green) is \textit{compression and optimisation for edge LLM deployment}. Its articles are mostly surveys and frameworks about running LLMs under resource limits, and its keywords include model compression, energy efficiency, inference latency, knowledge distillation, and quantisation.
+
+Cluster 3 (blue) is \textit{small language models and privacy-preserving on-device learning}. It has two strands, small models on the device and federated learning with differential privacy. It overlaps strongly with cluster 2, so the difference is emphasis.
+
+\input{tables/tabel_G}
+
+The agent and business keywords stayed in a cluster separate from the edge keywords in all 63 robustness runs (minimum occurrences of 5, 8, and 12; 20 random seeds; and a greedy algorithm). However, modularity was low (0.18 to 0.26) and between 21\% and 54\% of the link weight crossed clusters. The clusters are therefore loosely separated groups with limited links, not disconnected fields.
+
+\subsection{Bibliographic Coupling}
+Of the 485 articles, 278 have reference data; 183 of them share at least two references with another article, forming 13 clusters of 43, 38, 35, 24, 14, 8, 5, 5, 3, 2, 2, 2, and 2 articles. Table~\ref{tab:B} lists the ten articles with the highest total link strength; they are surveys on edge and federated LLMs. Table~\ref{tab:C} summarises the eight clusters with at least five articles. The labels are proposals from reading the abstracts of the eight highest-linked articles in each cluster. \todo{the author should confirm or change every label; clusters 2 and 6 had low labelling confidence}
+
+\input{tables/tabel_B}
+
+The five largest clusters are about LLMs at the edge and differ in emphasis: architectural surveys (cluster 1), edge--cloud collaborative inference (cluster 2), on-device compression and runtime optimisation (cluster 3), on-device fine-tuning and federated personalisation (cluster 4), and pruning (cluster 5). Clusters 1 to 3 are close to each other, and the distinction between clusters 1 and 2 in particular is weak. Cluster 7 concerns security and threat detection for LLM-IoT systems. The business-related articles form two small groups: cluster 6 (eight articles) on reliability and governance of LLM decision agents, which also contains a few edge application cases and is therefore mixed, and cluster 8 (five articles) on LLM agents for supply chain and demand forecasting, which is built from the inventory block and is separate from every edge cluster.
+
+\input{tables/tabel_C}
+
+Only 22 of the 183 connected articles come from the agent or inventory blocks. We repeated the Louvain clustering with 20 random seeds and a greedy algorithm. The number of clusters varied from 11 to 15, and between 50\% and 73\% of these 22 articles (median 73\%) fell in clusters in which business-related articles were the majority. The business stream is therefore a small and partly stable feature of the coupling network, not a robust cluster with fixed membership.
+
+\subsection{Thematic Map and Emerging Topics}
+We placed each co-word cluster on a centrality--density map (Figure~\ref{fig:tema}, Table~\ref{tab:L}). With the eight-occurrence threshold, the compression cluster has high density and high centrality (a well-developed, central theme), the small-model and privacy cluster has high centrality and lower density (a transversal, basic theme), and the agent and business cluster has the lowest centrality (213) and a middle density: it is the least connected to the rest of the field. At a threshold of five occurrences the business-oriented cluster again has the lowest centrality. With only three clusters this is a coarse picture, and the quadrant labels depend on the cut-off.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/peta_tema.png}
+\par\vspace{2pt}Source: Authors' analysis of OpenAlex data.
+\caption{Thematic maps from the co-word clusters (left: at least eight occurrences; right: at least five)}
+\label{fig:tema}
+\end{figure}
+\input{tables/tabel_L}
+
+Between 2025 and 2026 the share of articles that carry agent and retrieval keywords rises, while the share with generic edge keywords falls (Table~\ref{tab:K}): retrieval-augmented generation rises from 4.6\% to 12.6\% of articles, small and medium-sized enterprises from 0\% to 4.1\%, multi-agent systems from 5.3\% to 8.9\%, and LLM agents from 2.6\% to 5.8\%, whereas resource-constrained devices fall from 13.2\% to 5.1\% and edge computing from 21.2\% to 16.0\%. Because 2026 is a partial year, this is a shift in composition, not a change in absolute numbers. Colouring keywords by their mean publication year (Figure~\ref{fig:trendmap}) gives the same direction: business-oriented keywords such as small and medium-sized enterprises (mean year 2026.0) and business process automation (2025.9) are newer than inventory management and demand forecasting, and local runtimes such as Ollama (2025.9) are newer than the Internet of Things (2024.9). The range of mean years is only about one year, so we read this as an early trend. \todo{check the means against tren\_kata\_kunci.csv after the final dataset}
+
+\input{tables/tabel_K}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/peta_tren.png}
+\par\vspace{2pt}Source: Author interpretation based on VOSviewer analysis.
+\caption{Co-word map coloured by mean publication year (yellow is more recent) \todo{replace with the VOSviewer overlay export}}
+\label{fig:trendmap}
+\end{figure}
+
+\subsection{Sensitivity of the Search Strings}
+We re-ran the searches with five variations (Table~\ref{tab:J}). All variations that only widen the strings retained all 485 articles of the final dataset; the title-only variant retained just 61 (13\%), so searching abstracts is necessary. Narrow changes (dropping the stock-market exclusion, adding inventory synonyms such as SKU or stockout) changed the result by fewer than ten records. Widening the language-model terms (generative AI, GPT, ChatGPT, foundation models) or the device terms (TinyML, local LLM, smartphone, mobile device) added 512 and 576 records outside the cleaned baseline; a part of them are the 93 baseline records removed as duplicates or Zenodo items. We read eight added titles for each of the four widened variants: most were marginal (for example generic generative AI in commerce, or smartphone applications), but a few were relevant, such as work on offline document analysis with local language models. So the core of the dataset is stable, the boundary of the field is wide, and our baseline favours precision over recall. The added records were not screened, so we cannot say how the maps would change. \todo{screen the records added by V1 and V4 and repeat the co-word analysis}
+
+\input{tables/tabel_J}

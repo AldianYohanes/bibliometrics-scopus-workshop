@@ -1,0 +1,60 @@
+\section{Methodology}
+
+\subsection{Bibliometric approach}
+Bibliometric analysis is a quantitative method that studies bibliographic data through performance analysis and science mapping \parencite{donthu2021,zupic2015}. We used citation analysis, co-citation analysis, bibliographic coupling, and co-word analysis, so that the field is described through its most influential documents, its foundations (co-citation), its current streams (coupling), and its concepts (co-word).
+
+\subsection{Search string}
+We retrieved records from OpenAlex through its public interface on 28 October 2026. \todo{cite the OpenAlex paper after verification: arXiv 2205.01833 was not verified} The search covered titles and abstracts, was limited to the document type ``article'', and covered publication years 2023 to 2026 (2026 is a partial year). OpenAlex was chosen because it is open and the queries can be repeated. We did not use Scopus or Web of Science, the databases named in most bibliometric guidance \parencite{donthu2021}; \textcite{zhu2020}, \textcite{mongeon2016}, and \textcite{echchakoui2020} discuss the choice between them. The consequences for coverage are discussed in the Discussion section.
+
+We employed the following search strings (Table~\ref{tab:search}) to identify publications on three streams. Block A (LLM agents in business settings) is rows 1, 3, and 4 joined with AND. Block B (LLMs in the browser or on the device) is rows 2 and 5 joined with AND. Block C (LLMs for inventory) is rows 2, 6, and 7 joined with AND, without the records matching row 8. Terms inside a row are synonyms joined with OR.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Search string in OpenAlex database}
+\label{tab:search}
+\begin{tabularx}{\textwidth}{|c|Y|Y|}
+\hline
+\textbf{No} & \textbf{Keywords} & \textbf{Justification} \\ \hline
+1 & ``large language model'' OR LLM OR LLMs & To identify literature related to LLMs (block A) \\ \hline
+2 & ``large language model'' OR LLM OR LLMs OR ``small language model'' OR SLM & To identify literature related to language models, including small ones (blocks B and C) \\ \hline
+3 & ``multi-agent'' OR multiagent OR agentic OR ``LLM agent'' OR ``LLM agents'' & To identify literature related to multi-agent and agentic LLM systems \\ \hline
+4 & ``inventory management'' OR ``inventory control'' OR ``supply chain management'' OR SME OR SMEs OR ``small business'' OR ``small businesses'' OR retail OR MSME OR ``business process'' & To restrict block A to business and operational settings \\ \hline
+5 & WebLLM OR WebGPU OR ``in-browser'' OR ``browser-based'' OR ``on-device'' OR ``edge device'' OR ``edge devices'' & To identify literature related to models that run in the browser, on the device, or at the edge \\ \hline
+6 & inventory OR stock & To identify literature related to inventory and stock \\ \hline
+7 & retail OR SME OR SMEs OR ``small business'' OR ``small businesses'' OR MSME OR warehouse OR ``supply chain management'' OR procurement OR ``demand forecasting'' OR ``sales forecasting'' OR replenishment OR ``point of sale'' OR e-commerce & To place inventory in a business context \\ \hline
+8 & NOT (``stock market'' OR ``stock price'' OR ``stock prices'' OR ``stock exchange'' OR ``stock trading'' OR ``stock returns'') & To exclude studies about share prices, where ``stock'' has a different meaning \\ \hline
+\end{tabularx}
+\par\vspace{2pt}Source: Authors' construction.
+\end{table}
+
+\subsection{Screening and final dataset}
+The three blocks returned 149, 584, and 87 records (820 in total), which formed 801 unique records (Table~\ref{tab:flow}). We removed 16 records that shared a normalised title with another record, keeping the version with a journal source, reference data, and a DOI. We then excluded 77 records hosted on Zenodo, because it is a repository without a guaranteed peer-review process. The remaining 708 records were screened on title and abstract.
+
+Screening was assisted by language models in two passes. In the first pass, eight Claude Haiku instances judged about 89 records each as relevant, not relevant, or uncertain. A record was relevant when a language model and at least one of the three topics were a main or important part of the work. This pass gave 430 relevant, 150 not relevant, and 128 uncertain records. In the second pass, three Claude Sonnet instances re-judged the 128 uncertain records with longer abstracts and a confidence level, resolving 55 as relevant and 72 as not relevant, and leaving one uncertain. The final dataset has 485 records. \todo{human validation: report agreement on the 20-record sample; 97 of 128 second-pass decisions had low model confidence}
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Record flow}
+\label{tab:flow}
+\begin{tabularx}{\textwidth}{|Y|c|Y|}
+\hline
+\textbf{Step} & \textbf{Records} & \textbf{Note} \\ \hline
+Retrieved (blocks A, B, C) & 820 & 149, 584, and 87 records \\ \hline
+Unique records & 801 & 19 records matched more than one block \\ \hline
+After removing duplicate titles & 785 & 16 removed \\ \hline
+After excluding Zenodo & 708 & 77 removed \\ \hline
+Included after screening & 485 & 222 not relevant, 1 unresolved \\ \hline
+\end{tabularx}
+\par\vspace{2pt}Source: Authors' analysis of OpenAlex data.
+\end{table}
+
+\subsection{Analysis}
+Performance analysis counted publications per year, source, institution, country (author affiliations), and author, together with citations. Authors, sources, and institutions were counted by OpenAlex identifiers. For science mapping we used three techniques \parencite{donthu2021,zupic2015}:
+
+Co-word analysis used the keywords assigned by OpenAlex. Synonyms were merged (for example ``LLM'' and ``large language models''), and ``large language model'' and ``artificial intelligence'' were removed because they occur in nearly all records. We kept keywords with at least eight occurrences (68 keywords).
+
+Bibliographic coupling and co-citation used reference lists. OpenAlex had reference data for 255 of the 485 records; we added Crossref data through DOIs, which brought the total to 278 records (57.3\%). Two records were linked when they shared at least two references. For co-citation we kept references cited by at least three records in the dataset and removed ten items that were data artefacts: proceedings volumes, which are not single works, and three references whose OpenAlex titles do not fit the articles that cite them (one cited by 22 edge-LLM papers although its title concerns intelligent tutoring systems, and two cited by 9 and 7 edge-LLM papers although their titles concern AI consciousness and behavioural safety; suspected linking errors in OpenAlex, not verified).
+
+Clusters were found with the Louvain algorithm \parencite{blondel2008}, computed in Python (networkx, fixed random seed) and displayed with VOSviewer 1.6.21 \parencite{vaneck2010} through its map and network file formats. The cluster membership in the figures is therefore the one computed in Python. To test robustness, we repeated the co-word clustering with minimum occurrences of 5, 8, and 12, with 20 random seeds, and with a greedy modularity algorithm; we repeated the coupling and co-citation clustering with 20 seeds and the greedy algorithm. We also ran five variations of the search strings. Cluster labels are proposals from reading the abstracts of the representative articles of each cluster (the titles of the references for co-citation), done with language-model assistance and to be confirmed by the author. The target of 200 to 1{,}000 records follows the sample-size guidance attributed to \textcite{rogers2020} \todo{read the paper to confirm the range}; the record flow follows the PRISMA statement \parencite{page2021}.

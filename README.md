@@ -2,6 +2,8 @@
 
 Artikel bibliometrik (LaTeX) tentang penelitian LLM di tiga arus: agen multi-agent, LLM di browser/perangkat, dan inventori usaha kecil. Data dari OpenAlex (artikel jurnal 2023-2026, dicari 28 Okt 2026). Proyek dari workshop publikasi Scopus dengan bibliometrik.
 
+Format mengikuti `Template Bibliometric_citation, co-citation, co-word.docx` dari workshop (A4, margin 2,54 cm, Times New Roman 12 pt, tabel kisi penuh, keterangan tabel di atas, keterangan gambar di bawah, APA 7). Bagian tambahan di luar template: Methodology 3.3-3.4, Result 4.4-4.6, Limitations, Future research, Conclusion, Declarations.
+
 Status: **draf awal**. Yang selesai: metode, hasil dengan angka dari skrip, tabel. Yang belum: pendahuluan, diskusi, kesimpulan, nama kluster, validasi manusia atas penyaringan. Semua yang belum selesai ditandai `\todo{...}` (merah di PDF).
 
 ## Struktur
@@ -15,17 +17,19 @@ analysis/    skrip Python, data, dan hasil analisis
 ```
 
 ## Kompilasi
-Pakai XeLaTeX (MiKTeX). Jika `latexmk` gagal karena PATH memuat `claude.exe`, saring PATH dulu.
+Pakai XeLaTeX + biber (MiKTeX); daftar pustaka APA 7 lewat biblatex. Jika `latexmk` gagal karena PATH memuat `claude.exe`, saring PATH dulu.
 ```bash
 cd paper
-xelatex main && bibtex main && xelatex main && xelatex main
+xelatex main && biber main && xelatex main && xelatex main
 ```
 
 ## Mengulang analisis
 Dari folder `analysis/Skrip`:
 ```bash
 python -I tabel_template.py   # tabel dan gambar dari dataset_lolos.csv
-python -I md2tex.py           # tabel ke LaTeX di paper/tables, gambar ke paper/figures
+python -I md2tex.py           # tabel ke LaTeX di paper/tables (gaya template), gambar ke paper/figures
+python -I csv2tex.py          # tabel penulis, sumber, sensitivitas, tren, peta tema
+python -I gambar_ringkasan.py # Gambar 1 (ringkasan publikasi, sitasi, h-index)
 ```
 `unduh_openalex.py` dan `lengkapi_referensi.py` butuh kunci API OpenAlex di `~/Tools/openalex.key` (jangan dimasukkan ke repo).
 Hasil pengelompokan diulang dengan urutan simpul yang diurutkan dan seed tetap, jadi sama antar jalankan.

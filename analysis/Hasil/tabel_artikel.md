@@ -56,14 +56,14 @@ Dari 485 dokumen, 278 punya data referensi; 183 terhubung (≥2 referensi sama) 
 
 | Kluster (warna) | Label kluster | Jumlah publikasi | Blok asal | Publikasi representatif |
 |---|---|---|---|---|
-| 1 (merah) | Surveys of LLM-based edge intelligence | 43 | {'B': 39, 'A': 2, 'A+C': 1, 'C': 1} | Friha et al. (2024), LLM-Based Edge Intelligence: A Comprehensive Survey on Architectures,...; Piccialli et al. (2024), Federated and edge learning for large language models |
+| 1 (merah) | Surveys of LLM-based edge intelligence | 43 | {'B': 39, 'A': 2, 'C': 1, 'A+C': 1} | Friha et al. (2024), LLM-Based Edge Intelligence: A Comprehensive Survey on Architectures,...; Piccialli et al. (2024), Federated and edge learning for large language models |
 | 2 (hijau) | Edge-cloud collaborative inference and deployment reviews | 38 | {'B': 37, 'C': 1} | Semerikov et al. (2025), Edge intelligence unleashed: a survey on deploying large language models in...; Jiang et al. (2026), Edge large language models: a comprehensive survey |
 | 3 (biru) | On-device LLM compression and system optimisation | 35 | {'B': 34, 'A': 1} | Wang et al. (2025), Empowering large language models to edge intelligence: A survey of edge...; Zheng et al. (2025), A Review on Edge Large Language Models: Design, Execution, and Applications |
 | 4 (kuning) | On-device fine-tuning and federated personalisation | 24 | {'B': 24} | Duan et al. (2026), SoK: Towards a user-centric, privacy-preserving, and reliable AI agent via...; Zhuang et al. (2026), Resource-Efficient LLM Customization on Mobile Devices Through Proxy Submodel... |
-| 5 (ungu) | Pruning-based compression for edge devices | 14 | {'B': 14} | Luo et al. (2026), CALSI: Context-Aware Layer Skipping Inference for On-Device LLM Serving; Eccles et al. (2025), Mosaic: Composite projection pruning for resource-efficient LLMs |
+| 5 (ungu) | Pruning-based compression for edge devices | 14 | {'B': 14} | Eccles et al. (2025), Mosaic: Composite projection pruning for resource-efficient LLMs; Luo et al. (2026), CALSI: Context-Aware Layer Skipping Inference for On-Device LLM Serving |
 | 6 (cyan) | Reliability and governance of LLM decision agents | 8 | {'A': 4, 'C': 1, 'B': 3} | Bhattacharyya et al. (2026), The economics of accuracy for medical reasoning with large language models; Pacella et al. (2026), Governed Agentic Process Automation: A Floor-Safety Guarantee for... |
 | 7 (oranye) | Security and threat detection for LLM-IoT systems | 5 | {'B': 5} | Joshi et al. (2026), Securing the Cognitive Layer: A Survey on Security Threats, Defenses, and...; Jeong et al. (2025), On-Device Intent Reasoning for Smart Home Agents Via Ontology-Augmented sLLMs |
-| 8 (?) | LLM agents for supply chain and demand forecasting | 5 | {'C': 3, 'A': 1, 'A+C': 1} | Nakhost et al. (2025), Full automation or just a copilot? A study of large language models on spare...; Hamdan et al. (2026), Evaluating large language models for complex supply chain optimisation: a focus... |
+| 8 (?) | LLM agents for supply chain and demand forecasting | 5 | {'C': 3, 'A+C': 1, 'A': 1} | Nakhost et al. (2025), Full automation or just a copilot? A study of large language models on spare...; Hamdan et al. (2026), Evaluating large language models for complex supply chain optimisation: a focus... |
 
 
 ## Co-citation
@@ -78,7 +78,7 @@ Dari 7293 referensi unik, 344 memenuhi ambang 3 sitasi oleh dokumen kita (setela
 | 2 | Ma (2023), LLM-Pruner: On the Structural Pruning of Large Language Models | 15 | 386 | 2 |
 | 3 | Shen (2024), Agile-Quant: Activation-Guided Quantization for Faster Inference of LLMs on the... | 10 | 379 | 3 |
 | 4 | Kwon (2023), Efficient Memory Management for Large Language Model Serving with PagedAttention | 19 | 369 | 2 |
-| 5 | B. (2020), Language Models are Few-Shot Learners | 16 | 358 | 2 |
+| 5 | Brown (2020), Language Models are Few-Shot Learners | 16 | 358 | 2 |
 | 6 | Liu (2024), LLM-QAT: Data-Free Quantization Aware Training for Large Language Models | 10 | 332 | 2 |
 | 7 | Dettmers (2023), QLoRA: Efficient Finetuning of Quantized LLMs | 20 | 306 | 2 |
 | 8 | Alizadeh (2024), LLM in a flash: Efficient Large Language Model Inference with Limited Memory | 12 | 299 | 3 |
@@ -91,10 +91,10 @@ Dari 7293 referensi unik, 344 memenuhi ambang 3 sitasi oleh dokumen kita (setela
 | Kluster (warna) | Label kluster | Jumlah artikel | Publikasi representatif |
 |---|---|---|---|
 | 1 (merah) | Edge LLM surveys, collaborative serving, and NLP benchmarks | 128 | Zhang (2024), EdgeShard: Efficient LLM Inference via Collaborative Edge Computing; Zheng (2025), A Review on Edge Large Language Models: Design, Execution, and Applications |
-| 2 (hijau) | Quantisation, pruning, and serving efficiency, with foundation models | 95 | Dettmers (2023), QLoRA: Efficient Finetuning of Quantized LLMs; Lin (2025), AWQ: Activation-aware Weight Quantization for On-Device LLM Compression and... |
-| 3 (biru) | Mixed background: efficient inference, federated and parameter-efficient tuning, early applications | 58 | Alizadeh (2024), LLM in a flash: Efficient Large Language Model Inference with Limited Memory; Thirunavukarasu (2023), Large language models in medicine |
+| 2 (hijau) | Quantisation, pruning, and serving efficiency, with foundation models | 95 | Lin (2025), AWQ: Activation-aware Weight Quantization for On-Device LLM Compression and...; Dettmers (2023), QLoRA: Efficient Finetuning of Quantized LLMs |
+| 3 (biru) | Mixed background: efficient inference, federated and parameter-efficient tuning, early applications | 58 | Thirunavukarasu (2023), Large language models in medicine; Ding (2023), Parameter-efficient fine-tuning of large-scale pre-trained language models |
 | 4 (kuning) | General background: reasoning, edge computing visions, LLM agents, compression basics | 57 | Wei (2022), Chain-Of-Thought Prompting Elicits Reasoning in Large Language Models; Shi (2016), Edge Computing: Vision and Challenges |
-| 5 (ungu) | Generative AI in supply chain and operations management | 6 | Jackson (2024), Generative artificial intelligence in supply chain and operations management: a...; Kosasih (2023), A review of explainable artificial intelligence in supply chain management... |
+| 5 (ungu) | Generative AI in supply chain and operations management | 6 | Jackson (2024), Generative artificial intelligence in supply chain and operations management: a...; Jeon (2025), ChatCNC: Conversational machine monitoring via large language model and... |
 
 
 ## Co-word

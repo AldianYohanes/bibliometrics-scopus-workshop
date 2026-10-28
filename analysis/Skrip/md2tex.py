@@ -1,9 +1,11 @@
-"""Ubah tabel di Hasil/tabel_artikel.md menjadi file LaTeX (paper/tables/tabel_X.tex) dan salin gambar ke paper/figures/.
+"""Ubah tabel di Hasil/tabel_artikel.md menjadi file LaTeX bergaya template (paper/tables/tabel_X.tex) dan salin gambar ke paper/figures/.
 
-Jalankan setelah tabel_template.py: python -I md2tex.py
-Judul kolom dan keterangan diterjemahkan ke bahasa Inggris (artikel berbahasa Inggris).
+Kolom dipilih dan diberi judul mengikuti template workshop. Jalankan setelah tabel_template.py: python -I md2tex.py
 """
 import os, re, shutil, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from texlib import grid_table  # noqa: E402
 
 sys.stdout.reconfigure(encoding="utf-8")
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # analysis/
@@ -11,47 +13,35 @@ PAPER = os.path.join(os.path.dirname(ROOT), "paper")
 os.makedirs(f"{PAPER}/tables", exist_ok=True)
 os.makedirs(f"{PAPER}/figures", exist_ok=True)
 
-HEADER = {"Peringkat": "Rank", "Penulis": "Author", "Judul": "Title", "Tahun": "Year", "Sitasi": "Citations", "Publikasi": "Publication",
-          "Kluster": "Cluster", "Kluster (warna)": "Cluster (colour)", "Label kluster": "Cluster label", "Jumlah publikasi": "No. of publications",
-          "Blok asal": "Source block", "Publikasi representatif": "Representative publications", "Dokumen": "Document",
-          "Sitasi (oleh dokumen kita)": "Citations (within dataset)", "Jumlah artikel": "No. of articles", "Kata kunci": "Keyword",
-          "Kemunculan": "Occurrences", "Jumlah kata kunci": "No. of keywords", "Kata kunci representatif": "Representative keywords", "TLS": "TLS"}
 WARNA = {"merah": "red", "hijau": "green", "biru": "blue", "kuning": "yellow", "ungu": "purple", "cyan": "cyan", "oranye": "orange"}
-CAPTION = {
-    "A": "Top 10 documents by citations (global OpenAlex citation counts).",
-    "B": "Top 10 documents in the bibliographic coupling analysis, ranked by total link strength (TLS).",
-    "C": "Summary of bibliographic coupling clusters (clusters with at least five documents).",
-    "D": "Top 10 documents by co-citation total link strength (TLS); citations are counted within the dataset.",
-    "E": "Co-citation clusters.",
-    "F": "Top 15 keywords in the co-occurrence analysis.",
-    "G": "Summary of the co-word analysis.",
+# letter: (caption, [(kolom sumber, judul baru)], sumber/keterangan di bawah tabel)
+SRC_V = r"Source: Author interpretation based on VOSviewer analysis."
+SRC_A = r"Source: Authors' analysis of OpenAlex data."
+SPEC = {
+    "A": ("Top 10 document citation analysis", [("Peringkat", "Rank"), ("Penulis", "Author"), ("Judul", "Title"), ("Sitasi", "Citation")], SRC_A),
+    "B": ("Top 10 documents in the bibliographic coupling analysis", [("Peringkat", "Rank"), ("Publikasi", "Publication"), ("Sitasi", "Citation"), ("TLS", "Total link strength")], SRC_V),
+    "C": ("Bibliographic coupling analysis (clusters with at least five documents)", [("Kluster (warna)", "Cluster No and colour"), ("Label kluster", "Cluster label"), ("Jumlah publikasi", "Number of publications"), ("Publikasi representatif", "Representative publication")], SRC_V),
+    "D": ("Top 10 documents with the highest co-citation and total link strength", [("Dokumen", "Documents"), ("Sitasi (oleh dokumen kita)", "Citation"), ("TLS", "Total link strength")], SRC_V),
+    "E": ("Co-citation clusters on LLM research", [("Kluster (warna)", "Cluster No and colour"), ("Label kluster", "Cluster label"), ("Jumlah artikel", "Number of articles"), ("Publikasi representatif", "Representative publication")], SRC_V),
+    "F": ("Top 15 keywords in the co-occurrence of keywords analysis", [("Peringkat", "Rank"), ("Kata kunci", "Keyword"), ("Kemunculan", "Occurrences"), ("TLS", "Total link strength")], SRC_V),
+    "G": ("Co-word analysis on LLM research", [("Kluster (warna)", "Cluster No and colour"), ("Label kluster", "Cluster label"), ("Jumlah kata kunci", "Number of keywords"), ("Kata kunci representatif", "Representative keywords")], SRC_V),
 }
-SPECIAL = {"\\": r"\textbackslash{}", "&": r"\&", "%": r"\%", "$": r"\$", "#": r"\#", "_": r"\_", "{": r"\{", "}": r"\}", "~": r"\textasciitilde{}", "^": r"\textasciicircum{}"}
 
 
-def esc(s):
+def cell(s):
     s = s.strip()
-    if s == "[BELUM DIBERI NAMA]":
-        return r"\todo{to be labelled}"
-    s = re.sub(r"^\{(.*)\}$", r"\1", s)  # {'B': 3} -> 'B': 3
-    s = s.replace("'", "")
+    s = re.sub(r"^\{(.*)\}$", r"\1", s).replace("'", "")
     for k, v in WARNA.items():
         s = s.replace(f"({k})", f"({v})")
-    return "".join(SPECIAL.get(c, c) for c in s)
+    return s
 
 
-def table(letter, rows):
-    head = [HEADER.get(h.strip(), h.strip()) for h in rows[0]]
-    body = rows[2:]
-    num = [all(re.fullmatch(r"[\d.,]+", r[i].strip()) for r in body) for i in range(len(head))]
-    spec = "".join("r" if n else ("l" if max(len(r[i]) for r in body) < 22 else "Y") for i, n in enumerate(num))
-    if "Y" not in spec:
-        spec = spec[:-1] + "Y"
-    out = [r"\begin{table}[htbp]", r"\centering", r"\small", rf"\caption{{{CAPTION[letter]}}}", rf"\label{{tab:{letter}}}",
-           rf"\begin{{tabularx}}{{\textwidth}}{{{spec}}}", r"\toprule", " & ".join(rf"\textbf{{{esc(h)}}}" for h in head) + r" \\", r"\midrule"]
-    out += [" & ".join(esc(c) for c in r) + r" \\" for r in body]
-    out += [r"\bottomrule", r"\end{tabularx}", r"\end{table}", ""]
-    open(f"{PAPER}/tables/tabel_{letter}.tex", "w", encoding="utf-8").write("\n".join(out))
+def make(letter, rows):
+    caption, cols, src = SPEC[letter]
+    head = [h.strip() for h in rows[0]]
+    idx = [head.index(c) for c, _ in cols]
+    body = [[cell(r[i]) for i in idx] for r in rows[2:]]
+    grid_table(f"{PAPER}/tables/tabel_{letter}.tex", f"tab:{letter}", caption, [n for _, n in cols], body, source=src, wide=letter in "CEG")
 
 
 lines = open(f"{ROOT}/Hasil/tabel_artikel.md", encoding="utf-8").read().splitlines()
@@ -62,10 +52,10 @@ for ln in lines + [""]:
         letter = m.group(1)
         continue
     if ln.startswith("|") and letter:
-        buf.append([c for c in ln.strip().strip("|").split("|")])
+        buf.append(ln.strip().strip("|").split("|"))
     elif buf:
         if letter:
-            table(letter, buf)
+            make(letter, buf)
             made.append(letter)
         buf, letter = [], None
 print("tabel dibuat:", made)

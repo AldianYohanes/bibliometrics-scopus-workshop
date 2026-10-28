@@ -145,9 +145,20 @@ cc = louvain(C); ctl = kuat(C)
 clab = {n: i for i, c in enumerate(cc, 1) for n in c}
 
 
+def nama_belakang(nama):
+    bagian = nama.replace(",", " ").split()
+    return next((b for b in reversed(bagian) if len(b.rstrip(".")) > 1), bagian[-1] if bagian else "?")
+
+
+# Koreksi manual atas nama penulis pertama yang terpotong di OpenAlex ("Tom B." untuk Brown dkk., NeurIPS 2020).
+PENULIS_KOREKSI = {"Language Models are Few-Shot Learners": "Brown"}
+
+
 def rf(n):
     x = tipe.get(n, {})
-    return f"{x.get('pen', '?').split()[-1]} ({x.get('tahun')}), {cut(x.get('judul', n), 80)}"
+    judul_ = x.get("judul", n)
+    nama = next((v for k, v in PENULIS_KOREKSI.items() if judul_.startswith(k)), nama_belakang(x.get("pen", "?")))
+    return f"{nama} ({x.get('tahun')}), {cut(judul_, 80)}"
 
 
 teks += ["## Co-citation\n", f"Dari {len(cit)} referensi unik, {len(keep)} memenuhi ambang 3 sitasi oleh dokumen kita (setelah {len(bad)} artefak dibuang), membentuk {len(cc)} kluster (ukuran: {[len(c) for c in cc]}).\n"]
