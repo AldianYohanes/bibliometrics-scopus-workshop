@@ -30,7 +30,9 @@ python -I tabel_template.py   # tabel dan gambar dari dataset_lolos.csv
 python -I md2tex.py           # tabel ke LaTeX di paper/tables (gaya template), gambar ke paper/figures
 python -I csv2tex.py          # tabel penulis, sumber, sensitivitas, tren, peta tema
 python -I gambar_ringkasan.py # Gambar 1 (ringkasan publikasi, sitasi, h-index)
-python -I peta_gambar.py      # gambar peta co-word, co-citation, tren (dari Hasil/graf.json)
+python -I peta_gambar.py      # gambar peta cadangan buatan Python (dari Hasil/graf.json)
+powershell -File vos_export.ps1   # ekspor peta dari VOSviewer asli (butuh VOSviewer; ~1 menit per peta)
+python -I redimensi_vos.py    # potong tepi putih dan kecilkan ke paper/figures
 python -I ambil_rujukan.py    # paper/refs_tambahan.bib dari OpenAlex
 ```
 `unduh_openalex.py` dan `lengkapi_referensi.py` butuh kunci API OpenAlex di `~/Tools/openalex.key` (jangan dimasukkan ke repo).
@@ -39,5 +41,5 @@ Hasil pengelompokan diulang dengan urutan simpul yang diurutkan dan seed tetap, 
 ## Catatan
 - Catatan kerja lengkap (keputusan, angka, masalah) ada di vault Obsidian, folder `SCOPUS Bibliometrics`.
 - Rujukan: `paper/refs.bib` (metode) dan `paper/refs_tambahan.bib` (Introduction dan Literature Review, dibuat dari OpenAlex; daftar penulis dipotong 6 + others, lengkapi sebelum submit). Baru dicek ada (judul, penulis pertama, DOI), belum dicek volume dan halaman.
-- Gambar peta di `paper/figures` dibuat dengan Python; ganti dengan ekspor VOSviewer sebelum submit.
+- Gambar peta di naskah adalah **ekspor VOSviewer asli** (`vos_*.png`), dibuat lewat baris perintah VOSviewer (`analysis/Skrip/vos_export.ps1`, lalu `redimensi_vos.py`). Resolusi penuh (4284 x 2854) ada di `analysis/Hasil/vos_full/` (tidak ikut git). Versi Python (`fig_*.png`) hanya cadangan.
 - Penyaringan dibantu model bahasa (Claude); pengungkapan AI ada di bagian Declarations.

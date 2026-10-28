@@ -18,3 +18,4 @@ __pycache__/
 !analysis/**/*.pdf
 paper/main.bcf
 paper/main.run.xml
+analysis/Hasil/vos_full/
