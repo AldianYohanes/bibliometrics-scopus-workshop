@@ -41,6 +41,13 @@ def make(letter, rows):
     head = [h.strip() for h in rows[0]]
     idx = [head.index(c) for c, _ in cols]
     body = [[cell(r[i]) for i in idx] for r in rows[2:]]
+    # tabel 12 pt harus muat: satu publikasi representatif (C, E) dan lima kata kunci (G)
+    for r in body:
+        for j, (c_, _) in enumerate(cols):
+            if c_ == "Publikasi representatif":
+                r[j] = r[j].split("; ")[0]
+            if c_ == "Kata kunci representatif":
+                r[j] = ", ".join(r[j].split(", ")[:5])
     grid_table(f"{PAPER}/tables/tabel_{letter}.tex", f"tab:{letter}", caption, [n for _, n in cols], body, source=src, wide=letter in "CEG")
 
 
@@ -59,6 +66,6 @@ for ln in lines + [""]:
             made.append(letter)
         buf, letter = [], None
 print("tabel dibuat:", made)
-for f in ["gambar1_tren_publikasi.png", "peta_coword.png", "peta_cocitation.png", "peta_tren.png", "peta_kolaborasi_negara.png"]:
+for f in ["fig_coword.png", "fig_cocitation.png", "fig_tren.png"]:
     shutil.copy(f"{ROOT}/Hasil/{f}", f"{PAPER}/figures/{f}")
 print("gambar disalin ke paper/figures")

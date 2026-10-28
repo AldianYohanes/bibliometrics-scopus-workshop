@@ -152,13 +152,15 @@ def nama_belakang(nama):
 
 # Koreksi manual atas nama penulis pertama yang terpotong di OpenAlex ("Tom B." untuk Brown dkk., NeurIPS 2020).
 PENULIS_KOREKSI = {"Language Models are Few-Shot Learners": "Brown"}
+TAHUN_KOREKSI = {"Attention Is All You Need": 2017}  # OpenAlex mencatat 2025 (rekaman ulang); terbit NeurIPS 2017
 
 
 def rf(n):
     x = tipe.get(n, {})
     judul_ = x.get("judul", n)
     nama = next((v for k, v in PENULIS_KOREKSI.items() if judul_.startswith(k)), nama_belakang(x.get("pen", "?")))
-    return f"{nama} ({x.get('tahun')}), {cut(judul_, 80)}"
+    tahun = next((v for k, v in TAHUN_KOREKSI.items() if judul_.startswith(k)), x.get("tahun"))
+    return f"{nama} ({tahun}), {cut(judul_, 80)}"
 
 
 teks += ["## Co-citation\n", f"Dari {len(cit)} referensi unik, {len(keep)} memenuhi ambang 3 sitasi oleh dokumen kita (setelah {len(bad)} artefak dibuang), membentuk {len(cc)} kluster (ukuran: {[len(c) for c in cc]}).\n"]
@@ -231,3 +233,11 @@ for seed in list(range(20)) + ["greedy"]:
 hb = pd.DataFrame(hasil)
 hb.to_csv(f"{OUT}/ketahanan_coupling.csv", index=False, encoding="utf-8-sig")
 print(f"coupling ketahanan | dokumen bisnis terhubung: {len(bis)} dari {B.number_of_nodes()} | persen di kluster bisnis: min {hb.persen.min()}, median {hb.persen.median()}, maks {hb.persen.max()} | jumlah kluster: {sorted(hb.jumlah_kluster.unique())}")
+
+# ---------- graf untuk gambar peta (dibaca peta_gambar.py) ----------
+json.dump({
+    "coword": {"nodes": [{"id": k, "n": cnt[k], "cluster": klab[k]} for k in G], "edges": [[a, b, w] for a, b, w in G.edges(data="weight")],
+               "names": [nama_kluster("coword", kc, i) for i in range(1, len(kc) + 1)]},
+    "cocit": {"nodes": [{"id": n, "label": rf(n), "n": cit[n], "cluster": clab[n]} for n in C], "edges": [[a, b, w] for a, b, w in C.edges(data="weight")],
+              "names": [nama_kluster("cocit", cc, i) for i in range(1, len(cc) + 1)]},
+}, open(f"{OUT}/graf.json", "w", encoding="utf-8"), ensure_ascii=False)

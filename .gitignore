@@ -16,3 +16,5 @@ openalex.key
 __pycache__/
 *.pdf
 !analysis/**/*.pdf
+paper/main.bcf
+paper/main.run.xml
