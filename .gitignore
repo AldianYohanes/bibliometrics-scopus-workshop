@@ -19,3 +19,9 @@ __pycache__/
 paper/main.bcf
 paper/main.run.xml
 analysis/Hasil/vos_full/
+# hasil ADCAIJ yang bisa dibuat ulang (buat_word.py, ekspor_gambar.py) dan arsip unduhan template
+journal/adcaij/naskah_adcaij.docx
+journal/adcaij/reference.docx
+journal/adcaij/gambar/
+journal/adcaij/ADCAIJ_template.zip
+paper/_naskah_word.tex

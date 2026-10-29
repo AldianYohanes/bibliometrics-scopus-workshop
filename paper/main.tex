@@ -1,5 +1,7 @@
-% Mengikuti "Template Bibliometric_citation, co-citation, co-word" (workshop): A4, margin 2,54 cm, Times New Roman 12 pt,
-% teks rata kiri-kanan, judul bagian tebal 12 pt, tabel kisi penuh, keterangan tabel tebal di atas, keterangan gambar di bawah, daftar pustaka APA 7.
+% Naskah untuk ADCAIJ (Advances in Distributed Computing and Artificial Intelligence Journal), template 2026 V6:
+% bagian dan subbagian bernomor (1., 1.1.), abstrak tanpa nomor, maks. 10 kata kunci, tabel tanpa garis vertikal,
+% Acknowledgements sebelum References, References APA 7 di halaman baru. Versi Word dibuat dari berkas ini (lihat README.md).
+% Tata letak dasar masih dari template workshop (A4, Times 12 pt).
 % Kompilasi: xelatex main; biber main; xelatex main; xelatex main  (lihat README.md)
 \documentclass[12pt,a4paper]{article}
 
@@ -27,10 +29,10 @@
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \renewcommand{\arraystretch}{1.1}
 
-% Judul bagian: Times 12 pt tebal; "1. Introduction", "3.1<spasi>Bibliometric approach"; judul tingkat 3 tanpa nomor
+% Judul bagian: Times 12 pt tebal; "1. Introduction", "3.1. Bibliometric Approach" (gaya ADCAIJ); judul tingkat 3 tanpa nomor
 \titleformat{\section}{\normalfont\bfseries}{\thesection.}{0.5em}{}
 \titlespacing*{\section}{0pt}{12pt}{0pt}
-\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection.}{0.5em}{}
 \titlespacing*{\subsection}{0pt}{2pt}{0pt}
 \titleformat{\subsubsection}{\normalfont\bfseries}{}{0pt}{}
 \titlespacing*{\subsubsection}{0pt}{2pt}{0pt}
@@ -51,6 +53,16 @@
 
 \begin{center}
     \textbf{Mapping the Thematic Structure and Emerging Trends of Large Language Model Research Across Multi-Agent Systems, On-Device Deployment, and Inventory Management: A Bibliometric Analysis}
+
+    Aldian Yohanes\textsuperscript{a} [0009-0001-5223-2319], Viny Christanti Mawardi\textsuperscript{a,*} [0000-0001-6260-406X], and Daniel Jahja Surjawan\textsuperscript{b} [0009-0007-2405-4846]
+
+    \textsuperscript{a}Informatics Engineering Study Program, Faculty of Information Technology, Universitas Tarumanagara, Jl. Letjen S. Parman No. 1, Jakarta, 11440, Indonesia
+
+    \textsuperscript{b}Informatics Engineering Study Program, Faculty of Smart Technology and Engineering, Maranatha Christian University, Bandung, 40164, Indonesia
+
+    aldianyhs@gmail.com, vinym@fti.untar.ac.id
+
+    \textsuperscript{*}Corresponding author. \todo{telephone number of the corresponding author with country code; e-mail of the third author; confirm the ORCIDs of the second and third authors (taken from OpenAlex) and the postal address of affiliation b}
 \end{center}
 
 \begin{center}
@@ -77,8 +89,8 @@ study offers a first joint science map of these streams, shows that the
 evidence on LLMs for inventory management is thin, and outlines a research
 agenda.
 
-Keywords: large language models, multi-agent systems, on-device inference,
-inventory management, bibliometric analysis
+Keywords: large language model; multi-agent system; on-device inference;
+inventory management; bibliometric analysis
 
 \input{sections/01_introduction}
 \input{sections/02_literature_review}
@@ -86,7 +98,8 @@ inventory management, bibliometric analysis
 \input{sections/04_results}
 \input{sections/05_discussion}
 
-\section*{Reference}
+\clearpage
+\section*{References}
 \printbibliography[heading=none]
 
 \end{document}

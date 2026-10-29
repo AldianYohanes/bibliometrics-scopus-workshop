@@ -2,9 +2,18 @@
 
 Artikel bibliometrik (LaTeX) tentang penelitian LLM di tiga arus: agen multi-agent, LLM di browser/perangkat, dan inventori usaha kecil. Data dari OpenAlex (artikel jurnal 2023-2026, dicari 28 Okt 2026). Proyek dari workshop publikasi Scopus dengan bibliometrik.
 
-Format mengikuti `Template Bibliometric_citation, co-citation, co-word.docx` dari workshop (A4, margin 2,54 cm, Times New Roman 12 pt, tabel kisi penuh, keterangan tabel di atas, keterangan gambar di bawah, APA 7). Bagian tambahan di luar template: Methodology 3.3-3.4, Result 4.4-4.6, Limitations, Future research, Conclusion, Declarations.
+Format awal mengikuti `Template Bibliometric_citation, co-citation, co-word.docx` dari workshop (A4, Times New Roman 12 pt, APA 7). Sejak 29 Okt 2026 struktur mengikuti jurnal tujuan ADCAIJ: 1 Introduction, 2 Literature Review, 3 Material and Methods, 4 Results, 5 Discussion (implikasi, keterbatasan, agenda), 6 Conclusions, lalu Acknowledgements (termasuk pernyataan AI), Author Contributions, Conflict of Interest, Data and Code Availability, References di halaman baru; tabel tanpa garis vertikal.
 
-Status: **draf awal**. Yang selesai: metode, hasil dengan angka dari skrip, tabel. Yang belum: konfirmasi label kluster oleh penulis, validasi manusia atas penyaringan, cek ulang di Scopus/WoS, dan baca penuh semua rujukan. Semua yang belum selesai ditandai `\todo{...}` (merah di PDF).
+Status: **draf**, data utama 489 artikel, nama kluster dipilih penulis. Yang belum: baca penuh rujukan, isian penulis korespondensi, agenda riset dan kontribusi, halaman pertama Word. Semua yang belum selesai ditandai `\todo{...}` (merah di PDF).
+
+## Versi Word untuk ADCAIJ
+ADCAIJ (Advances in Distributed Computing and Artificial Intelligence Journal) minta Word, jadi LaTeX tetap sumber utama dan Word dibuat otomatis. Template resmi dan gaya APA ada di `journal/adcaij/` (`template/`, `apa.csl`).
+```bash
+cd journal/adcaij
+python -I buat_word.py      # naskah_adcaij.docx (butuh pandoc 3.x; kompilasi XeLaTeX dulu supaya nomor tabel/gambar dari main.aux benar)
+python -I ekspor_gambar.py  # gambar/Figure_N.tif (300 dpi), versi hitam-putih, figure_captions.txt
+```
+Halaman pertama (logo, kotak abstrak dan kata kunci, running head) dirapikan manual di template resmi.
 
 ## Struktur
 ```
