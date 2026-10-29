@@ -1,0 +1,21 @@
+﻿id,label2,topik2,alasan2,no
+https://openalex.org/W7223377790,ya,B,Dynamic LLM inference efficiency aimed at edge devices and cloud; edge deployment is a stated target.,1
+https://openalex.org/W7212291431,tidak,-,"Tinjauan AI untuk rantai pasok; LLM hanya satu dari banyak teknik (ML, DL, RL), bukan inti. Diputuskan Claude langsung.",2
+https://openalex.org/W7204772114,tidak,-,Requirements extraction mainly vision and OCR; GPT agent only generates user stories; software engineering topic.,3
+https://openalex.org/W7203673843,ya,A,LangGraph-based enterprise dialogue agent with goal tracking across retail and service business domains.,4
+https://openalex.org/W7122642664,ya,A,Multi-agent LLM collaboration framework tested partly on business process automation; general-purpose design.,5
+https://openalex.org/W4414281829,tidak,-,"GPT-based multi-agent system for language learning; education, not business setting.",6
+https://openalex.org/W4413095123,tidak,-,No abstract; LLM dialogue agent with no stated business or enterprise setting.,7
+https://openalex.org/W7164403246,ya,C,"LLM evaluated on retail demand forecasting from grocery transactions, though paper also covers finance tasks.",8
+https://openalex.org/W7153121170,ya,A,"LLM and agent-based workflow orchestration across insurance sales processes, among other AI methods.",9
+https://openalex.org/W7161625497,ya,A,LLM-based AI agents conducting retail and e-commerce payments; conceptual analysis of agentic payments.,10
+https://openalex.org/W4413880852,tidak,-,"General personalization survey; LLM, agents and on-device only brief future mentions.",11
+https://openalex.org/W7161234693,tidak,-,"No abstract; INT4 GEMM kernel for datacenter Ascend NPUs, no clear edge or local LLM deployment or business link.",12
+https://openalex.org/W7203820363,tidak,-,"No abstract; LLM task planning for construction robots; edge keyword only, no clear business setting.",13
+https://openalex.org/W4416131621,tidak,-,Survey of LLM browser assistants and MCP; models are not run in browser and no business setting.,14
+https://openalex.org/W7206156669,ya,B,"In-browser LLM feedback pipeline for programming hints; browser-run LLM, though LLM described as optional.",15
+https://openalex.org/W7155049347,tidak,-,LLM adjusts IoT sensing schedule; no on-device LLM or business link.,16
+https://openalex.org/W4390823894,tidak,-,"Lightweight attention-copy model, not a language model; LLMs only used as comparison baselines.",17
+https://openalex.org/W7213930371,tidak,-,LLM agents for software security testing; no business or enterprise operations link.,18
+https://openalex.org/W7114943271,ya,B,No abstract; title on LLMs in 6G from standard to on-device networks; keywords edge computing.,19
+https://openalex.org/W7211907175,tidak,-,NPU acceleration focused on GNN and SSM models; LLMs are only background.,20

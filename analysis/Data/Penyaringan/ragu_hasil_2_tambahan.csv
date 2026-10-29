@@ -1,0 +1,4 @@
+id,label,topik,keyakinan,alasan
+W7171963735,ragu,-,rendah,"Tanpa abstrak; judul RAG Arab-Inggris, kata kunci menyebut resource-constrained devices; peran model kecil di perangkat tidak jelas. Diputuskan Claude langsung."
+W7214724021,ya,A+C,rendah,Kata kunci LLM agents dan supply chain optimization; tinjauan optimasi industri. Batas tipis. Diputuskan Claude langsung.
+W7212291431,tidak,-,rendah,"Tinjauan AI untuk rantai pasok; LLM hanya satu dari banyak teknik (ML, DL, RL), bukan inti. Diputuskan Claude langsung."

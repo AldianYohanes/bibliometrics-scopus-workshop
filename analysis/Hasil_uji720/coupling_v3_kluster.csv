@@ -1,0 +1,13 @@
+﻿kluster,jumlah_dokumen,blok,contoh_judul
+1,64,"{'B': 50, 'A': 11, 'A+C': 1, 'C': 2}","LLM-Based Edge Intelligence: A Comprehensive Survey on Architectures,  || Large Generative AI Models for Telecom: The Next Big Thing? || Large Language Models (LLMs) Inference Offloading and Resource Allocat"
+2,51,"{'B': 50, 'A': 1}","AWQ: Activation-aware Weight Quantization for On-Device LLM Compressio || EdgeShard: Efficient LLM Inference via Collaborative Edge Computing || A Review on Edge Large Language Models: Design, Execution, and Applica"
+3,49,"{'A': 1, 'B': 47, 'C': 1}","Pushing Large Language Models to the 6G Edge: Vision, Challenges, and  || Sustainable LLM Inference for Edge AI: Evaluating Quantized LLMs for E || Toward Edge General Intelligence via Large Language Models: Opportunit"
+4,38,{'B': 38},Mobile Edge Intelligence for Large Language Models: A Contemporary Sur || Federated and edge learning for large language models || Empirical Guidelines for Deploying LLMs onto Resource-constrained Edge
+5,37,"{'B': 36, 'A': 1}",Efficient GPT-4V level multimodal large language model for deployment  || FedFMSL: Federated Learning of Foundation Models With Sparsely Activat || Federated Transfer Learning for On-Device LLMs Efficient Fine Tuning O
+6,18,{'B': 18},HAPE: Hardware-Aware LLM Pruning For Efficient On-Device Inference Opt || Mosaic: Composite projection pruning for resource-efficient LLMs || Toward Privacy-Preserving and Personalized Smart Homes via Tailored Sm
+7,6,{'B': 6},Materials Dual-Source Knowledge Retrieval-Augmented Generation for Loc || Profile-aided distillation framework for personalized sleep analysis w || Navigating the Seas of AI: Effectiveness of Small Language Models on E
+8,5,"{'C': 3, 'A': 1, 'A+C': 1}",IIoT-enabled digital twin for legacy and smart factory machines with L || Agentic LLMs in the supply chain: towards autonomous multi-agent conse || Full automation or just a copilot? A study of large language models on
+9,3,"{'C': 1, 'B': 1, 'A+C': 1}",Multivariant Time-Series Forecasting Methodology for Product Demand Us || Inventory Management with Transformer: Automated Decision Making for O || A Framework for Finished Goods Safety Stock Estimation Using Local LLM
+10,2,{'C': 2},A conformal LLM-guided random forest–LSTM forecaster for uncertainty-a || LLM Sentiment Analysis-Integrated Sales Forecasting for E-Commerce—A C
+11,2,{'B': 2},CPU-Only Self Enhancing Authoring Copilot Design-Based Markov Decision || A Deterministic State Machine Orchestrator with Local LLM Improving Pe
+12,2,{'B': 2},Associations Between Systemic Diseases and Dental Pulp Diagnoses: A Re || Privacy-preserving augmentation of structured telehealth activity data

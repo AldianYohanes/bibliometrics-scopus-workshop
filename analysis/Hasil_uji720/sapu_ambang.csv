@@ -1,0 +1,28 @@
+﻿peta,ambang,item,kluster,ukuran,kluster_<6,memenuhi_aturan
+co-citation (min. sitasi referensi),2,1246,8,"[493, 181, 177, 150, 89, 75, 64, 17]",0,False
+co-citation (min. sitasi referensi),3,530,5,"[175, 147, 96, 72, 40]",0,True
+co-citation (min. sitasi referensi),4,295,6,"[74, 73, 53, 43, 34, 18]",0,False
+co-citation (min. sitasi referensi),5,187,6,"[50, 47, 30, 27, 26, 7]",0,False
+co-citation (min. sitasi referensi),6,134,5,"[43, 32, 27, 18, 14]",0,True
+co-citation (min. sitasi referensi),7,95,5,"[31, 28, 16, 12, 8]",0,True
+co-citation (min. sitasi referensi),8,73,4,"[23, 20, 18, 12]",0,True
+co-word (min. kemunculan kata kunci),5,183,4,"[69, 55, 39, 20]",0,True
+co-word (min. kemunculan kata kunci),6,140,3,"[80, 53, 7]",0,True
+co-word (min. kemunculan kata kunci),7,123,4,"[47, 45, 25, 6]",0,True
+co-word (min. kemunculan kata kunci),8,100,3,"[48, 39, 13]",0,True
+co-word (min. kemunculan kata kunci),9,82,2,"[51, 31]",0,False
+co-word (min. kemunculan kata kunci),10,70,3,"[29, 29, 12]",0,True
+co-word (min. kemunculan kata kunci),11,64,2,"[38, 26]",0,False
+co-word (min. kemunculan kata kunci),12,61,2,"[36, 25]",0,False
+co-word (min. kemunculan kata kunci),13,57,2,"[34, 23]",0,False
+co-word (min. kemunculan kata kunci),14,52,2,"[30, 22]",0,False
+co-word (min. kemunculan kata kunci),15,48,2,"[30, 18]",0,False
+bibliographic coupling (min. sitasi dokumen),0,277,12,"[78, 67, 47, 41, 22, 6, 5, 3, 2, 2]",6,False
+bibliographic coupling (min. sitasi dokumen),1,163,8,"[50, 33, 27, 25, 20, 4, 2, 2]",3,False
+bibliographic coupling (min. sitasi dokumen),2,130,6,"[41, 30, 25, 22, 8, 4]",1,False
+bibliographic coupling (min. sitasi dokumen),3,103,5,"[28, 25, 25, 22, 3]",1,False
+bibliographic coupling (min. sitasi dokumen),5,85,5,"[22, 21, 21, 18, 3]",1,False
+bibliographic coupling (min. sitasi dokumen),8,67,5,"[21, 17, 12, 9, 8]",0,True
+bibliographic coupling (min. sitasi dokumen),10,60,5,"[16, 16, 10, 9, 9]",0,True
+bibliographic coupling (min. sitasi dokumen),15,43,5,"[14, 14, 8, 5, 2]",2,False
+bibliographic coupling (min. sitasi dokumen),20,30,2,"[18, 12]",0,False

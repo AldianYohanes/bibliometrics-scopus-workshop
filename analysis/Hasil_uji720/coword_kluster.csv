@@ -1,0 +1,4 @@
+﻿kluster,jumlah_kata,kata_teratas
+1,48,edge computing (109); edge deployment (64); on-device inference (63); model compression (61); small language models (59); resource-constrained devices (52); energy efficiency (50); knowledge distillation (34)
+2,39,retrieval-augmented generation (78); local large language models (48); multi-agent systems (44); generative ai (42); data privacy (40); agentic ai (36); llm agents (27); inventory management (24)
+3,13,edge devices (42); federated learning (37); low-rank adaptation (23); parameter-efficient fine-tuning (21); privacy preservation (20); multimodal large language models (12); differential privacy (11); communication efficiency (10)
