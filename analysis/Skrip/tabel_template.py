@@ -31,10 +31,10 @@ tt = d.set_index("id")
 # Label kluster usulan (pembacaan abstrak artikel representatif oleh model, lalu diperiksa; HARUS disetujui penulis).
 # Kunci = tuple ukuran kluster; jika ukuran berubah (data atau algoritma berubah) label tidak dipakai lagi supaya tidak salah tempel.
 LABEL = {
-    "coupling": {(43, 38, 35, 24, 14, 8, 5, 5): [
-        "Surveys of LLM-based edge intelligence", "Edge-cloud collaborative inference and deployment reviews", "On-device LLM compression and system optimisation",
-        "On-device fine-tuning and federated personalisation", "Pruning-based compression for edge devices", "Reliability and governance of LLM decision agents",
-        "Security and threat detection for LLM-IoT systems", "LLM agents for supply chain and demand forecasting"]},
+    # coupling (ambang sitasi dokumen >=3, kluster >=6): label dari judul 9 dokumen dengan TLS tertinggi per kluster (lebih tipis daripada pembacaan abstrak sebelumnya)
+    "coupling": {(19, 18, 18, 14): [
+        "Edge-cloud collaborative inference and surveys of edge LLM deployment", "Edge intelligence surveys, collaborative inference, and hardware acceleration",
+        "On-device deployment, inference optimisation, and small language models", "Pruning and on-device (federated) fine-tuning"]},
     "cocit": {(128, 95, 58, 57, 6): [
         "Edge LLM surveys, collaborative serving, and NLP benchmarks", "Quantisation, pruning, and serving efficiency, with foundation models",
         "Mixed background: efficient inference, federated and parameter-efficient tuning, early applications", "General background: reasoning, edge computing visions, LLM agents, compression basics",
@@ -107,20 +107,31 @@ for a, b in itertools.combinations(list(refs), 2):
     if s >= 2:
         B.add_edge(a, b, weight=s)
 B.remove_nodes_from([n for n in list(B) if B.degree(n) == 0])
-bc = louvain(B); tls = kuat(B)
+B0 = B.copy()  # graf penuh tanpa ambang sitasi dokumen; dipakai uji ketahanan dan keterangan bagian yang dibuang
+bc0 = louvain(B0)
+# Aturan pembimbing: 3-5 kluster, tiap kluster >=6 item. Ambang sitasi dokumen >=3 (OpenAlex), lalu kluster <6 dokumen dibuang (lihat sapu_ambang.py).
+DOK_MIN_SITASI, KLUSTER_MIN = 3, 6
+pilih = sorted(n for n in B0 if tt.loc[n, "cited_by"] >= DOK_MIN_SITASI)
+B = nx.Graph(); B.add_nodes_from(pilih)  # simpul dan garis diurutkan supaya hasil Louvain tetap sama (sama dengan sapu_ambang.py)
+for a, b in itertools.combinations(pilih, 2):
+    if B0.has_edge(a, b):
+        B.add_edge(a, b, weight=B0[a][b]["weight"])
+B.remove_nodes_from([n for n in list(B) if B.degree(n) == 0])
+bc_semua = louvain(B)
+bc = [c for c in bc_semua if len(c) >= KLUSTER_MIN]
+B = B.subgraph(set().union(*bc)).copy(); tls = kuat(B)
 lab = {n: i for i, c in enumerate(bc, 1) for n in c}
-teks += [f"## Bibliographic coupling\n", f"Dari {len(d)} dokumen, {len(refs)} punya data referensi; {B.number_of_nodes()} terhubung (≥2 referensi sama) dan membentuk {len(bc)} kluster (ukuran: {[len(c) for c in bc]}).\n"]
+teks += [f"## Bibliographic coupling\n", f"Dari {len(d)} dokumen, {len(refs)} punya data referensi; {B0.number_of_nodes()} terhubung (≥2 referensi sama) dan membentuk {len(bc0)} kluster (ukuran: {[len(c) for c in bc0]}) tanpa ambang. "
+         f"Dengan ambang sitasi dokumen ≥{DOK_MIN_SITASI}: {len(bc_semua)} kluster (ukuran: {[len(c) for c in bc_semua]}); kluster <{KLUSTER_MIN} dokumen dibuang, sisa {B.number_of_nodes()} dokumen dalam {len(bc)} kluster (ukuran: {[len(c) for c in bc]}).\n"]
 tb = sorted(B, key=lambda n: -tls[n])[:10]
 t = pd.DataFrame({"Peringkat": range(1, 11), "Publikasi": [pub(n) for n in tb], "Sitasi": [tt.loc[n, "cited_by"] for n in tb], "TLS": [tls[n] for n in tb], "Kluster": [lab[n] for n in tb]})
 teks += ["### Tabel B. Top 10 dokumen dalam analisis bibliographic coupling (menurut TLS)\n", md(t), ""]
 rows = []
 for i, c in enumerate(bc, 1):
-    if len(c) < 5:
-        continue
     rep = sorted(c, key=lambda n: -tls[n])[:2]
     rows.append({"Kluster (warna)": f"{i} ({WARNA.get(i, '?')})", "Label kluster": nama_kluster("coupling", bc, i), "Jumlah publikasi": len(c),
                  "Blok asal": dict(Counter(tt.loc[n, 'blok'] for n in c)), "Publikasi representatif": "; ".join(pub(n) for n in rep)})
-teks += ["### Tabel C. Ringkasan kluster bibliographic coupling (kluster ≥5 dokumen)\n", md(pd.DataFrame(rows)), ""]
+teks += ["### Tabel C. Ringkasan kluster bibliographic coupling (kluster ≥6 dokumen)\n", md(pd.DataFrame(rows)), ""]
 
 # ---------- Co-citation ----------
 cit = Counter(r for s in refs.values() for r in s)
@@ -223,16 +234,16 @@ print("co-citation ketahanan | referensi rantai pasok:", sorted(rf(n)[:45] for n
 print(hh.groupby("jumlah_kluster").size().to_dict(), "| semua rantai pasok satu kluster di", int((hh.dalam_satu_kluster == hh.ref_rantai_pasok).sum()), "dari", len(hh), "| ukuran kluster rantai pasok:", sorted(hh.ukuran_kluster_itu.unique()))
 
 # ---------- ketahanan coupling: dokumen blok A/C (bisnis) tetap berkelompok sendiri? ----------
-bis = {n for n in B if tt.loc[n, "blok"] in ("A", "C", "A+C")}
+bis = {n for n in B0 if tt.loc[n, "blok"] in ("A", "C", "A+C")}
 hasil = []
-for seed in list(range(20)) + ["greedy"]:
-    parts = list(nx.community.greedy_modularity_communities(B, weight="weight")) if seed == "greedy" else nx.community.louvain_communities(B, weight="weight", seed=seed)
+for seed in list(range(20)) + ["greedy"]:  # graf penuh B0 (tanpa ambang sitasi dokumen)
+    parts = list(nx.community.greedy_modularity_communities(B0, weight="weight")) if seed == "greedy" else nx.community.louvain_communities(B0, weight="weight", seed=seed)
     di_bisnis = sum(len(bis & p) for p in parts if len(bis & p) / len(p) >= 0.5)
     hasil.append({"seed": seed, "jumlah_kluster": len(parts), "dokumen_bisnis": len(bis), "di_kluster_bisnis": di_bisnis,
                   "persen": round(100 * di_bisnis / len(bis), 1), "kluster_terbesar": len(max(parts, key=len))})
 hb = pd.DataFrame(hasil)
 hb.to_csv(f"{OUT}/ketahanan_coupling.csv", index=False, encoding="utf-8-sig")
-print(f"coupling ketahanan | dokumen bisnis terhubung: {len(bis)} dari {B.number_of_nodes()} | persen di kluster bisnis: min {hb.persen.min()}, median {hb.persen.median()}, maks {hb.persen.max()} | jumlah kluster: {sorted(hb.jumlah_kluster.unique())}")
+print(f"coupling ketahanan | dokumen bisnis terhubung: {len(bis)} dari {B0.number_of_nodes()} (graf penuh) | dokumen bisnis yang lolos ambang sitasi dan kluster >=6: {len({n for n in B if tt.loc[n, 'blok'] in ('A', 'C', 'A+C')})} | persen di kluster bisnis: min {hb.persen.min()}, median {hb.persen.median()}, maks {hb.persen.max()} | jumlah kluster: {sorted(hb.jumlah_kluster.unique())}")
 
 # ---------- graf untuk gambar peta (dibaca peta_gambar.py) ----------
 json.dump({

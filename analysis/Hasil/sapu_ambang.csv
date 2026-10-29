@@ -1,0 +1,28 @@
+﻿peta,ambang,item,kluster,ukuran,kluster_<6,memenuhi_aturan
+co-citation (min. sitasi referensi),2,836,6,"[316, 193, 138, 102, 71, 16]",0,False
+co-citation (min. sitasi referensi),3,344,5,"[128, 95, 58, 57, 6]",0,True
+co-citation (min. sitasi referensi),4,184,4,"[65, 57, 52, 10]",0,True
+co-citation (min. sitasi referensi),5,126,5,"[48, 41, 19, 9, 9]",0,True
+co-citation (min. sitasi referensi),6,80,4,"[31, 26, 16, 7]",0,True
+co-citation (min. sitasi referensi),7,58,4,"[27, 18, 10, 3]",1,False
+co-citation (min. sitasi referensi),8,47,4,"[21, 12, 11, 3]",1,False
+co-word (min. kemunculan kata kunci),5,121,3,"[56, 42, 23]",0,True
+co-word (min. kemunculan kata kunci),6,102,4,"[35, 30, 19, 18]",0,True
+co-word (min. kemunculan kata kunci),7,83,4,"[35, 26, 18, 4]",1,False
+co-word (min. kemunculan kata kunci),8,68,3,"[24, 23, 21]",0,True
+co-word (min. kemunculan kata kunci),9,58,3,"[25, 20, 13]",0,True
+co-word (min. kemunculan kata kunci),10,48,3,"[23, 14, 11]",0,True
+co-word (min. kemunculan kata kunci),11,43,4,"[13, 12, 9, 9]",0,True
+co-word (min. kemunculan kata kunci),12,40,4,"[12, 11, 9, 8]",0,True
+co-word (min. kemunculan kata kunci),13,35,4,"[11, 9, 8, 7]",0,True
+co-word (min. kemunculan kata kunci),14,28,3,"[12, 9, 7]",0,True
+co-word (min. kemunculan kata kunci),15,27,3,"[12, 8, 7]",0,True
+bibliographic coupling (min. sitasi dokumen),0,183,13,"[50, 38, 34, 19, 13, 8, 5, 5, 3, 2]",7,False
+bibliographic coupling (min. sitasi dokumen),1,117,8,"[36, 29, 24, 13, 7, 4, 2, 2]",3,False
+bibliographic coupling (min. sitasi dokumen),2,94,6,"[35, 24, 19, 10, 4, 2]",2,False
+bibliographic coupling (min. sitasi dokumen),3,71,5,"[19, 18, 18, 14, 2]",1,False
+bibliographic coupling (min. sitasi dokumen),5,58,5,"[16, 15, 13, 12, 2]",1,False
+bibliographic coupling (min. sitasi dokumen),8,45,5,"[15, 13, 11, 4, 2]",2,False
+bibliographic coupling (min. sitasi dokumen),10,38,4,"[14, 12, 9, 3]",1,False
+bibliographic coupling (min. sitasi dokumen),15,28,4,"[10, 9, 7, 2]",1,False
+bibliographic coupling (min. sitasi dokumen),20,21,3,"[9, 8, 4]",1,False

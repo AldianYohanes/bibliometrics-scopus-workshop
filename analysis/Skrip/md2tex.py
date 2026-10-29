@@ -20,7 +20,7 @@ SRC_A = r"Source: Authors' analysis of OpenAlex data."
 SPEC = {
     "A": ("Top 10 document citation analysis", [("Peringkat", "Rank"), ("Penulis", "Author"), ("Judul", "Title"), ("Sitasi", "Citation")], SRC_A),
     "B": ("Top 10 documents in the bibliographic coupling analysis", [("Peringkat", "Rank"), ("Publikasi", "Publication"), ("Sitasi", "Citation"), ("TLS", "Total link strength")], SRC_V),
-    "C": ("Bibliographic coupling analysis (clusters with at least five documents)", [("Kluster (warna)", "Cluster No and colour"), ("Label kluster", "Cluster label"), ("Jumlah publikasi", "Number of publications"), ("Publikasi representatif", "Representative publication")], SRC_V),
+    "C": ("Bibliographic coupling analysis (clusters with at least six documents)", [("Kluster (warna)", "Cluster No and colour"), ("Label kluster", "Cluster label"), ("Jumlah publikasi", "Number of publications"), ("Publikasi representatif", "Representative publication")], SRC_V),
     "D": ("Top 10 documents with the highest co-citation and total link strength", [("Dokumen", "Documents"), ("Sitasi (oleh dokumen kita)", "Citation"), ("TLS", "Total link strength")], SRC_V),
     "E": ("Co-citation clusters on LLM research", [("Kluster (warna)", "Cluster No and colour"), ("Label kluster", "Cluster label"), ("Jumlah artikel", "Number of articles"), ("Publikasi representatif", "Representative publication")], SRC_V),
     "F": ("Top 15 keywords in the co-occurrence of keywords analysis", [("Peringkat", "Rank"), ("Kata kunci", "Keyword"), ("Kemunculan", "Occurrences"), ("TLS", "Total link strength")], SRC_V),
