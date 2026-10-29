@@ -1,345 +1,348 @@
 id	label	x	y	cluster	weight<Citations>
-1	Marcus 1993, Building a Large Annotated Corpus of English: T	0.4080	0.1499	1	5
-2	Hinton 2015, Distilling the Knowledge in a Neural Network	-0.1918	0.0967	3	7
-3	Horowitz 2014, 1.1 Computing's energy problem (and what we c	-0.4196	-0.6811	2	3
-4	Williams 2009, Roofline	0.0005	0.4123	1	5
-5	Hochreiter 1997, Long Short-Term Memory	-0.3327	0.2009	3	9
-6	Papineni 2001, BLEU	-0.4893	0.2832	1	3
-7	Deng 2009, ImageNet: A large-scale hierarchical image databa	0.2380	-0.4445	4	4
-8	Han 2015, Deep Compression: Compressing Deep Neural Networks	-0.1682	-0.4001	2	4
-9	He 2016, Deep Residual Learning for Image Recognition	-0.0705	-0.3554	2	5
-10	Socher 2013, Recursive Deep Models for Semantic Compositiona	-0.2793	-0.2198	1	4
-11	Shi 2016, Edge Computing: Vision and Challenges	-0.2033	-0.0992	4	14
-12	Abadi 2016, Deep Learning with Differential Privacy	0.0381	-0.3506	1	5
-13	Hubara 2016, Quantized Neural Networks: Training Neural Netw	0.3003	0.2813	4	3
-14	Merity 2016, Pointer Sentinel Mixture Models	0.1174	-0.1979	2	5
-15	McMahan 2016, Communication-Efficient Learning of Deep Netwo	-0.2636	-0.1486	4	4
-16	Satyanarayanan 2017, The Emergence of Edge Computing	0.0197	-0.4992	2	3
-17	Johnson 2019, Billion-Scale Similarity Search with GPUs	-0.3602	0.6193	4	3
-18	Kang 2017, Neurosurgeon	0.5573	0.0800	4	3
-19	Jouppi 2017, In-Datacenter Performance Analysis of a Tensor 	-0.0032	-0.5728	1	3
-20	Joshi 2017, TriviaQA: A Large Scale Distantly Supervised Cha	0.5382	-0.2097	1	4
-21	Mao 2017, A Survey on Mobile Edge Computing: The Communicati	-1.0000	0.0157	4	3
-22	Vaswani 2025, Attention Is All You Need	0.0228	-0.0633	2	12
-23	Voigt 2017, The EU General Data Protection Regulation (GDPR)	0.0935	0.4999	1	4
-24	Bonawitz 2017, Practical Secure Aggregation for Privacy-Pres	-0.3278	-0.2470	1	3
-25	Jacob 2018, Quantization and Training of Neural Networks for	-0.2538	-0.1974	4	9
-26	Mihaylov 2018, Can a Suit of Armor Conduct Electricity? A Ne	0.4538	0.2281	1	6
-27	Zhao 2018, DeepThings: Distributed Adaptive Deep Learning In	-0.1192	0.4291	4	3
-28	Dionysios 2018, AI-Assisted Pipeline for Dynamic Generation 	-0.2084	0.0507	3	11
-29	Huang 2018, GPipe: Efficient Training of Giant Neural Networ	-0.6652	-0.1612	4	3
-30	Lee 2019, BioBERT: a pre-trained biomedical language represe	-0.4102	-0.0858	4	3
-31	Breiman 2001, Random Forests	-0.3660	-0.8662	1	3
-32	Yang 2019, Federated Machine Learning	0.5939	-0.0965	1	3
-33	Trevor 2019, The State of Sparsity in Deep Neural Networks	-0.2751	-0.1057	3	3
-34	LeCun 2015, Deep learning	-0.2646	-0.0050	4	4
-35	Hu 2019, Dynamic Adaptive DNN Surgery for Inference Accelera	-0.3088	0.3078	1	3
-36	Wang 2018, GLUE: A Multi-Task Benchmark and Analysis Platfor	0.2040	0.3068	1	9
-37	Zellers 2019, HellaSwag: Can a Machine Really Finish Your Se	0.2500	0.1132	1	13
-38	Clark 2019, BoolQ: Exploring the Surprising Difficulty of Na	0.5802	0.2745	1	3
-39	Strubell 2019, Energy and Policy Considerations for Deep Lea	-0.1391	-0.3720	2	4
-40	Zhou 2019, Edge Intelligence: Paving the Last Mile of Artifi	-0.4096	0.0953	4	4
-41	Tillet 2019, Triton: an intermediate language and compiler f	0.7670	0.4459	1	3
-42	Teerapittayanon 2016, BranchyNet: Fast inference via early e	-0.1081	-0.5493	4	3
-43	Wang 2020, Convergence of Edge Computing and Deep Learning: 	-0.1328	-0.1665	4	3
-44	Devlin 2019, BERT: Pre-training of Deep Bidirectional Transf	-0.0429	-0.1025	4	13
-45	Rajpurkar 2016, SQuAD: 100,000+ Questions for Machine Compre	0.3451	0.1311	1	5
-46	Yinhan 2019, HISTORIAE, History of Socio-Cultural Transforma	-0.0962	0.0427	3	3
-47	Brysbaert 2019, How many words do we read per minute? A revi	0.8528	0.2951	4	3
-48	Narayanan 2019, PipeDream	0.2096	-0.1402	1	5
-49	Sun 2019, Patient Knowledge Distillation for BERT Model Comp	-0.2016	0.0085	3	4
-50	Reimers 2019, Sentence-BERT: Sentence Embeddings using Siame	-0.2310	-0.6197	4	5
-51	Deng 2020, Edge Intelligence: The Confluence of Edge Computi	-0.3321	-0.0013	4	4
-52	Lan 2019, ALBERT-Base v2 (albert_base_v2.tar.gz): preservati	-0.1730	-0.0711	3	5
-53	Schmidt 2019, DistilBERT, a distilled version of BERT: small	-0.2197	-0.2201	4	6
-54	Wolf 2020, Transformers: State-of-the-Art Natural Language P	-0.0016	0.0397	3	11
-55	Li 2019, Edge AI: On-Demand Accelerating Deep Neural Network	-0.3015	-0.1700	4	4
-56	Raffel 2019, Exploring the Limits of Transfer Learning with 	0.1318	-0.1539	2	9
-57	Lewis 2020, BART: Denoising Sequence-to-Sequence Pre-trainin	-0.1084	0.2163	3	5
-58	Wang 2019, HAQ: Hardware-Aware Automated Quantization With M	0.2456	-0.0303	2	3
-59	Kairouz 2020, Advances and Open Problems in Federated Learni	-0.2162	-0.5008	4	5
-60	Bisk 2020, PIQA: Reasoning about Physical Commonsense in Nat	0.3504	0.3622	1	6
-61	A 2020, Scaling Laws for Neural Language Models	0.2484	-0.2505	2	4
-62	Wang 2020, MiniLM: Deep Self-Attention Distillation for Task	-0.0607	0.0766	3	4
-63	Beltagy 2020, Longformer: The Long-Document Transformer	-0.0899	-0.3801	2	3
-64	Mo 2020, DarkneTZ	0.5669	0.1714	1	3
-65	Wei 2020, Federated Learning With Differential Privacy: Algo	-0.4589	-0.4503	4	3
-66	Thapa 2022, SplitFed: When Federated Learning Meets Split Le	0.2072	0.0987	1	4
-67	Li 2020, Federated Learning: Challenges, Methods, and Future	-0.4612	-0.1011	4	4
-68	Cao 2020, An Overview on Edge Computing Research	0.0688	-0.5336	4	4
-69	Pfeiffer 2021, AdapterFusion: Non-Destructive Task Compositi	0.2385	0.4524	1	3
-70	Lewis 2020, Affordance-Compiled Intelligence: Observable-Onl	-0.2878	0.7930	1	3
-71	B. 2020, Language Models are Few-Shot Learners	0.0045	-0.0404	2	16
-72	Gou 2021, Knowledge Distillation: A Survey	-0.1372	-0.2722	4	6
-73	Sun 2020, MobileBERT: a Compact Task-Agnostic BERT for Resou	-0.0774	-0.0837	3	8
-74	Xin 2020, DeeBERT: Dynamic Early Exiting for Accelerating BE	0.0395	0.5090	1	3
-75	Strubell 2020, Energy and Policy Considerations for Modern D	-0.1486	0.1454	1	4
-76	Laskaridis 2020, SPINN	0.3139	-0.1006	2	3
-77	Jiao 2020, TinyBERT: Distilling BERT for Natural Language Un	0.0091	0.0143	2	10
-78	Aghajanyan 2021, Intrinsic Dimensionality Explains the Effec	0.3734	0.2677	1	5
-79	Rajbhandari 2020, ZeRO: Memory optimizations Toward Training	0.0785	0.3002	1	4
-80	Choquette 2021, NVIDIA A100 Tensor Core GPU: Performance and	-0.0599	0.6718	1	3
-81	Bender 2021, On the Dangers of Stochastic Parrots	-0.3431	-0.1653	4	4
-82	Siriwardhana 2021, A Survey on Mobile Augmented Reality With	0.3386	-0.4949	4	3
-83	Matsubara 2022, Split Computing and Early Exiting for Deep L	-0.1564	0.5081	1	3
-84	Gholami 2022, A Survey of Quantization Methods for Efficient	-0.1470	-0.1977	4	6
-85	Lester 2021, The Power of Scale for Parameter-Efficient Prom	0.0134	0.1467	1	11
-86	Wang 2021, SpAtten: Efficient Sparse Attention Architecture 	0.1699	-0.1919	2	5
-87	Jin 2021, What Disease Does This Patient Have? A Large-Scale	-0.4749	-0.3857	1	4
-88	Hu 2021, LoRA Fine-Tuning of a 3B Code LLM for Algorithmic E	0.0855	-0.3998	2	3
-89	Xue 2021, mT5: A Massively Multilingual Pre-trained Text-to-	0.2626	0.1372	1	3
-90	Guo 2021, Parameter-Efficient Transfer Learning with Diff Pr	0.1283	0.3349	1	3
-91	Li 2021, Prefix-Tuning: Optimizing Continuous Prompts for Ge	0.1018	-0.3369	1	3
-92	Zaken 2022, BitFit: Simple Parameter-efficient Fine-tuning f	0.3031	0.4407	1	3
-93	Liang 2021, Pruning and quantization for deep neural network	-0.2192	-0.1524	4	4
-94	Liu 2022, Pre-train, Prompt, and Predict: A Systematic Surve	0.3031	0.1711	1	4
-95	Narayanan 2021, Efficient large-scale language model trainin	-0.3339	-0.0382	3	3
-96	Lee 2021, Hardware Architecture and Software Stack for PIM B	-0.7867	0.5933	2	3
-97	Sakaguchi 2021, WinoGrande	0.3045	0.2250	1	11
-98	Lin 2022, TruthfulQA: Measuring How Models Mimic Human False	0.2897	-0.2354	1	4
-99	Lin 2022, FedNLP: Benchmarking Federated Learning Methods fo	0.2533	0.6225	1	3
-100	Xu 2021, Edge Intelligence: Empowering Intelligence to the E	-0.2552	0.2150	4	4
-101	Dwork 2014, The Algorithmic Foundations of Differential Priv	0.4176	-0.2880	1	3
-102	Kurtic 2022, The Optimal BERT Surgeon: Scalable and Accurate	-0.0454	0.2024	3	4
-103	Chowdhery 2022, PaLM: Scaling Language Modeling with Pathway	-0.2721	-0.0661	3	4
-104	Ouyang 2022, Discernment and Social Learning as a Companion 	-0.1910	-0.0260	3	3
-105	Susan 2022, Analysing Off-The-Shelf Options for Question Ans	-0.1111	-0.0493	3	5
-106	Zhou 2022, TransPIM: A Memory-based Acceleration via Softwar	0.3929	0.0722	2	3
-107	Wang 2022, Melon	0.2139	-0.3447	2	3
-108	Jason 2022, Emergent Abilities of Large Language Models	-0.0186	-0.0923	2	4
-109	Liu 2022, P-Tuning: Prompt Tuning Can Be Comparable to Fine-	-0.0888	0.1936	1	5
-110	Du 2022, GLM: General Language Model Pretraining with Autore	0.3102	0.0052	2	3
-111	Hua 2022, Edge Computing with Artificial Intelligence: A Mac	0.6794	-0.1562	1	3
-112	Chen 2022, Less is More: Task-aware Layer-wise Distillation 	-0.0793	-0.1296	2	3
-113	Xu 2022, Mandheling	-0.5319	0.0475	1	3
-114	Chung 2022, Scaling Instruction-Finetuned Language Models	-0.0841	0.3485	3	3
-115	Frantar 2022, GPTQ: Accurate Post-Training Quantization for 	-0.0835	-0.1547	2	11
-116	Wang 2022, ViA: A Novel Vision-Transformer Accelerator Based	0.5227	-0.4039	2	3
-117	Xiao 2022, SmoothQuant: Accurate and Efficient Post-Training	-0.0099	-0.1209	2	8
-118	Ji 2022, Survey of Hallucination in Natural Language Generat	-0.0691	0.5247	4	5
-119	Leviathan 2022, Fast Inference from Transformers via Specula	0.2424	-0.1226	2	3
-120	Le 2023, BLOOM: A 176B-Parameter Open-Access Multilingual La	-0.0817	-0.0553	2	4
-121	Huang 2022, In-context Learning Distillation: Transferring F	0.1230	-0.2555	2	3
-122	Shuvo 2022, Efficient Acceleration of Deep Learning Inferenc	-0.0308	-0.3732	4	5
-123	Frantar 2023, SparseGPT: Massive Language Models Can Be Accu	-0.0324	-0.1679	2	5
-124	Hu 2022, PipeEdge: Pipeline Parallelism for Large-Scale Mode	0.3117	0.0440	2	3
-125	Guo 2023, STI: Turbocharge NLP Inference at the Edge via Ela	0.1375	-0.0300	2	7
-126	Aminabadi 2022, DeepSpeed- Inference: Enabling Efficient Inf	0.1765	0.1088	2	5
-127	Touvron 2023, LLaMA: Open and Efficient Foundation Language 	-0.0486	-0.0456	2	13
-128	Ding 2023, Parameter-efficient fine-tuning of large-scale pr	-0.0168	0.2156	3	12
-129	Kasneci 2023, ChatGPT for good? On opportunities and challen	0.3747	-0.3539	1	3
-130	Sheng 2023, FlexGen: High-Throughput Generative Inference of	0.1702	-0.1495	2	3
-131	Zhao 2026, A Survey of Large Language Models	-0.2297	-0.0365	3	6
-132	Guo 2023, OliVe: Accelerating Large Language Models via Hard	0.0970	-0.1514	2	4
-133	Zhao 2023, FedPrompt: Communication-Efficient and Privacy-Pr	0.1720	0.5625	1	3
-134	Lin 2023, AWQ: Activation-aware Weight Quantization for LLM 	-0.1425	-0.0438	3	5
-135	Dettmers 2023, SpQR: A Sparse-Quantized Representation for N	-0.0170	-0.0500	2	4
-136	Li 2023, LoSparse: Structured Compression of Large Language 	0.0609	-0.1706	2	4
-137	Sun 2023, A Simple and Effective Pruning Approach for Large 	-0.0483	-0.1320	2	6
-138	Min 2023, Recent Advances in Natural Language Processing via	-0.2434	0.1635	3	5
-139	Huang 2023, Visual Language Maps for Robot Navigation	0.7634	0.3856	2	3
-140	Singhal 2023, Large language models encode clinical knowledg	-0.4314	0.1012	4	3
-141	Chen 2023, NetGPT: A Native-AI Network Architecture Beyond P	-0.3490	0.0351	3	3
-142	Thirunavukarasu 2023, Large language models in medicine	-0.1579	-0.0031	3	12
-143	Dong 2023, Towards Next-Generation Intelligent Assistants Le	-0.3653	0.1042	3	3
-144	Hsieh 2023, Distilling Step-by-Step! Outperforming Larger La	0.0629	-0.1031	2	5
-145	Ho 2023, Large Language Models Are Reasoning Teachers	0.0622	-0.1997	2	3
-146	Li 2023, Symbolic Chain-of-Thought Distillation: Small Model	0.1817	-0.2527	2	3
-147	Wang 2023, SCOTT: Self-Consistent Chain-of-Thought Distillat	0.0267	-0.2351	2	4
-148	Wang 2022, AdaMix: Mixture-of-Adaptations for Parameter-effi	-0.0326	0.3228	1	3
-149	He 2022, SparseAdapter: An Easy Approach for Improving the P	0.4899	-0.0011	1	3
-150	Guo 2023, PromptFL: Let Federated Participants Cooperatively	0.3496	-0.2646	1	3
-151	Hong 2023, MetaGPT: Meta Programming for A Multi-Agent Colla	-0.5355	-0.3144	2	3
-152	Fang 2023, DepGraph: Towards Any Structural Pruning	0.0896	0.2692	1	6
-153	Tang 2023, FusionAI: Decentralized Training and Deploying LL	-0.2871	0.0080	3	3
-154	Xu 2023, LLMCad: Fast and Scalable On-device Large Language 	-0.1158	0.0165	3	4
-155	Chitty-Venkata 2023, A survey of techniques for optimizing t	0.4712	-0.3988	2	3
-156	Ye 2023, Heterogeneous Federated Learning: State-of-the-art 	-0.3675	-0.4506	4	3
-157	Cai 2023, Efficient Federated Learning for Modern NLP	0.0455	0.3143	1	7
-158	Kwon 2023, Efficient Memory Management for Large Language Mo	0.0389	0.0219	2	19
-159	Xia 2023, Sheared LLaMA: Accelerating Language Model Pre-tra	0.1066	-0.1099	2	4
-160	Demszky 2023, Using large language models in psychology	-0.3127	-0.0852	3	3
-161	Fan 2023, FATE-LLM: A Industrial Grade Federated Learning Fr	-0.2791	0.1099	3	3
-162	Liu 2023, Deja Vu: Contextual Sparsity for Efficient LLMs at	0.0561	-0.2401	2	5
-163	Jackson 2023, From natural language to simulations: applying	0.6370	-0.1388	5	3
-164	Wang 2023, Tabi: An Efficient Multi-Level Inference System f	0.0880	0.1101	2	5
-165	Kosasih 2023, A review of explainable artificial intelligenc	-0.2978	-0.9025	5	3
-166	Su 2023, RoFormer: Enhanced transformer with Rotary Position	0.1797	0.1547	2	4
-167	Wang 2023, PrivateLoRA For Efficient Privacy Preserving LLM	-0.3602	0.0572	3	3
-168	Ainslie 2023, GQA: Training Generalized Multi-Query Transfor	0.0977	-0.0804	2	9
-169	Jiang 2023, LLMLingua: Compressing Prompts for Accelerated I	0.0870	0.1958	1	5
-170	Timiryasov 2023, Baby Llama: knowledge distillation from an 	0.2382	0.0842	2	5
-171	Zhang 2023, Video-LLaMA: An Instruction-tuned Audio-Visual L	-0.4035	0.3020	3	3
-172	Chen 2023, MCC-KD: Multi-CoT Consistent Knowledge Distillati	0.1221	-0.2861	2	3
-173	Che 2023, Federated Learning of Large Language Models with P	-0.2281	0.3370	3	3
-174	Hu 2023, LLM-Adapters: An Adapter Family for Parameter-Effic	0.2800	-0.3015	1	3
-175	Wei 2023, Outlier Suppression+: Accurate quantization of lar	0.2826	-0.0410	2	4
-176	Peng 2023, RWKV: Reinventing RNNs for the Transformer Era	0.1728	0.1913	2	3
-177	Xia 2023, Flash-LLM: Enabling Cost-Effective and Highly-Effi	0.0210	-0.1883	2	4
-178	Team 2023, Gemini: A Family of Highly Capable Multimodal Mod	-0.0201	0.0084	2	6
-179	Wamba 2023, ChatGPT and generative artificial intelligence: 	-0.7983	-0.1280	5	3
-180	Peiyuan 2024, TinyLlama: An Open-Source Small Language Model	0.0769	-0.2782	2	3
-181	Shen 2024, Large Language Models Empowered Autonomous Edge A	-0.0951	0.1547	1	11
-182	Xu 2024, Unleashing the Power of Edge-Cloud Generative AI in	-0.1129	0.0725	1	6
-183	Song 2023, LLM-Planner: Few-Shot Grounded Planning for Embod	-0.1378	-0.2546	4	3
-184	Xu 2024, A Survey of Resource-efficient LLM and Multimodal F	-0.0721	-0.1910	2	3
-185	Chang 2024, A Survey on Evaluation of Large Language Models	0.0597	0.1679	1	14
-186	Jackson 2024, Generative artificial intelligence in supply c	-0.1864	-0.8147	5	4
-187	Ferrag 2024, Revolutionizing Cyber Threat Detection With Lar	-0.3309	0.0755	3	6
-188	Raiaan 2024, A Review on Large Language Models: Architecture	-0.3902	-0.3965	1	5
-189	Liu 2024, Lost in the Middle: How Language Models Use Long C	0.0415	-0.5594	1	4
-190	Zhong 2024, CASIT: Collective Intelligent Agent System for I	0.0145	0.2949	3	3
-191	Veen 2024, Adapted large language models can outperform medi	-0.3933	0.5633	4	3
-192	Yao 2024, A survey on large language model (LLM) security an	-0.1473	-0.1007	4	7
-193	Patil 2024, A Review of Current Trends, Techniques, and Chal	0.0517	0.3843	1	4
-194	Heo 2024, NeuPIMs: NPU-PIM Heterogeneous Acceleration for Ba	-0.0522	-0.2788	2	4
-195	King 2024, Sasha	-0.0370	0.3908	1	6
-196	Chen 2024, NetGPT: An AI-Native Network Architecture for Pro	0.0784	0.4460	1	4
-197	Zhang 2024, Towards Building The Federatedgpt: Federated Ins	-0.2380	0.1353	3	6
-198	Shao 2024, One-Shot Sensitivity-Aware Mixed Sparsity Pruning	0.0172	0.0640	2	5
-199	Rahman 2023, Quantized Transformer Language Model Implementa	-0.2087	-0.2445	4	5
-200	Wang 2024, A survey on large language model based autonomous	-0.3163	-0.0415	4	11
-201	Gholami 2024, AI and Memory Wall	0.1797	0.4513	4	3
-202	Yao 2024, Exploring Post-training Quantization in LLMs from 	0.2122	0.6130	1	3
-203	Chen 2024, Benchmarking Large Language Models in Retrieval-A	-0.1770	0.5785	1	3
-204	Zeng 2024, ConsistentEE: A Consistent and Hardness-Guided Ea	0.2086	-0.1884	2	3
-205	Lee 2024, OWQ: Outlier-Aware Weight Quantization for Efficie	0.2140	-0.1118	2	5
-206	An 2024, Fluctuation-Based Adaptive Structured Pruning for L	0.2274	0.2142	1	6
-207	Shen 2024, Agile-Quant: Activation-Guided Quantization for F	-0.0482	0.0310	3	10
-208	Chen 2024, Dynamic Task Offloading in Edge Computing Based o	0.2968	-0.3960	1	3
-209	Zeng 2024, FlightLLM: Efficient Large Language Model Inferen	0.2254	-0.3724	2	5
-210	Chen 2024, Understanding the Potential of FPGA-based Spatial	0.3865	0.2264	1	3
-211	Cui 2024, A Survey on Multimodal Large Language Models for A	-0.3720	0.2013	4	5
-212	Wang 2024, End-Edge-Cloud Collaborative Computing for Deep L	-0.1150	0.2580	1	3
-213	Miao 2024, SpecInfer: Accelerating Large Language Model Serv	0.2340	0.1606	2	5
-214	Abdin 2024, Phi-3 Technical Report: A Highly Capable Languag	0.3458	0.0139	2	3
-215	Dhar 2024, An Empirical Analysis and Resource Footprint Stud	-0.1128	-0.0091	3	5
-216	Lin 2024, Split Learning in 6G Edge Networks	-0.1965	0.2321	1	4
-217	Zhang 2024, Interactive AI With Retrieval-Augmented Generati	0.2533	0.0659	1	3
-218	Woisetschläger 2024, Federated Fine-Tuning of LLMs on the Ve	-0.2947	0.1556	3	3
-219	Wen 2024, AutoDroid: LLM-powered Task Automation in Android	0.1865	0.0216	2	7
-220	Yuan 2024, Mobile Foundation Model as Firmware	0.0507	0.0745	2	7
-221	Li 2024, Large Language Models on Mobile Devices: Measuremen	-0.0376	-0.0656	2	7
-222	Hao 2024, Hybrid SLM and LLM for Edge-Cloud Collaborative In	0.1361	0.0060	1	11
-223	Du 2024, Distributed Foundation Models for Multi-Modal Learn	-0.0159	0.1833	3	3
-224	Bhardwaj 2024, A Survey on the Integration and Optimization 	0.3929	0.0309	1	3
-225	He 2024, Large Language Models (LLMs) Inference Offloading a	0.0507	0.1310	3	10
-226	Yuan 2024, Generative Inference of Large Language Models in 	-0.1092	0.3002	3	5
-227	He 2024, REST: Retrieval-Based Speculative Decoding	0.4024	0.2779	2	3
-228	Zhu 2024, Towards an On-device Agent for Text Rewriting	-0.1376	0.1755	3	3
-229	Huang 2024, Large Language Models for Networking: Applicatio	-0.4022	0.4367	1	3
-230	Patel 2024, Splitwise: Efficient Generative LLM Inference Us	0.0180	-0.2965	1	6
-231	Ouyang 2024, Pluto and Charon: A Time and Memory Efficient C	-0.1413	0.2929	3	4
-232	Su 2024, Titanic: Towards Production Federated Learning with	-0.1632	0.3758	3	3
-233	Ye 2024, Galaxy: A Resource-Efficient Collaborative Edge AI 	0.5662	-0.0342	1	3
-234	Pan 2024, Cloud-Edge Collaborative Large Model Services: Cha	-0.3717	0.8703	1	3
-235	Qu 2024, TrimCaching: Parameter-Sharing AI Model Caching in 	-0.2617	0.3438	3	3
-236	Fan 2024, A Survey on RAG Meeting LLMs: Towards Retrieval-Au	-0.2299	0.5522	1	4
-237	Ye 2024, OpenFedLLM: Training Large Language Models on Decen	-0.1789	0.0447	3	7
-238	Kuang 2024, FederatedScope-LLM: A Comprehensive Package for 	-0.0646	0.2624	3	7
-239	Wu 2024, FedBiOT: LLM Local Fine-tuning in Federated Learnin	-0.3161	0.2668	3	3
-240	Friha 2024, LLM-Based Edge Intelligence: A Comprehensive Sur	0.1494	0.1363	1	14
-241	Zhang 2024, Generative AI Agents With Large Language Model f	0.4443	0.5095	1	3
-242	Zhao 2024, LinguaLinked: Distributed Large Language Model In	0.0160	0.2249	3	3
-243	Zhang 2024, Quantized Side Tuning: Fast and Memory-Efficient	0.2427	0.3339	1	3
-244	Yao 2024, GKT: A Novel Guidance-Based Knowledge Transfer Fra	-0.2379	0.3007	1	3
-245	Liu 2024, LLM-QAT: Data-Free Quantization Aware Training for	-0.0384	-0.0207	2	10
-246	Zhang 2024, LoRAPrune: Structured Pruning Meets Low-Rank Par	0.2045	-0.0597	2	6
-247	Alizadeh 2024, LLM in a flash: Efficient Large Language Mode	-0.0277	0.0543	3	12
-248	Lv 2024, Full Parameter Fine-tuning for Large Language Model	0.3457	-0.1626	1	3
-249	Peng 2024, PocketLLM: Enabling On-Device Fine-Tuning for Per	-0.3661	-0.0142	3	3
-250	Liu 2024, IntactKV: Improving Large Language Model Quantizat	0.3178	-0.2213	2	3
-251	Xia 2024, Unlocking Efficiency in Large Language Model Infer	0.5069	0.2645	1	3
-252	Kong 2024, SwapMoE: Serving Off-the-shelf MoE-based Large La	0.1077	0.6381	1	3
-253	Liu 2024, Improved Baselines with Visual Instruction Tuning	-0.2706	-0.4163	2	3
-254	Zhou 2024, Large Language Model (LLM) for Telecommunications	0.5626	0.3327	1	3
-255	Cui 2024, LLMind: Orchestrating AI and IoT with LLM for Comp	-0.1388	0.3327	3	5
-256	Xiao 2024, Efficient Prompting for LLM-Based Generative Inte	0.5642	0.0300	1	3
-257	Zhao 2024, Edge and Terminal Cooperation Enabled LLM Deploym	0.3701	0.3716	1	4
-258	Li 2024, A survey on LLM-based multi-agent systems: workflow	-0.7290	-0.8151	4	4
-259	Cai 2024, Edge-LLM: A Collaborative Framework for Large Lang	0.1648	0.0796	1	11
-260	Rivkin 2024, AIoT Smart Home via Autonomous LLM Agents	0.4929	0.1399	1	4
-261	Yu 2024, EDGE-LLM: Enabling Efficient Large Language Model A	0.1907	0.1391	1	12
-262	Qin 2024, Enabling On-Device Large Language Model Personaliz	0.0171	0.1977	3	5
-263	Yin 2024, A survey on multimodal large language models	-0.2363	-0.3189	4	3
-264	Song 2024, PowerInfer: Fast Large Language Model Serving wit	0.1222	-0.0528	2	12
-265	Huang 2024, A Survey on Hallucination in Large Language Mode	-0.6477	-0.0562	1	5
-266	Zhang 2024, Beyond the Cloud: Edge Inference for Generative 	0.2699	-0.0931	1	5
-267	Liang 2024, Encouraging Divergent Thinking in Large Language	-0.1130	-0.2262	4	3
-268	Zhu 2024, A Survey on Model Compression for Large Language M	0.1394	0.0389	2	9
-269	Yu 2024, Cambricon-LLM: A Chiplet-Based Hybrid Architecture 	0.4982	0.2377	1	3
-270	Laskaridis 2024, MELTing Point: Mobile Evaluation of Languag	0.3146	-0.1393	2	5
-271	Xu 2024, EdgeLLM: Fast On-Device LLM Inference With Speculat	0.2223	-0.0319	1	9
-272	Ren 2024, Industrial Internet of Things With Large Language 	0.1082	0.3871	1	5
-273	Huang 2024, An empirical study of LLaMA3 quantization: from 	0.5458	-0.1668	1	3
-274	Zhang 2024, EdgeShard: Efficient LLM Inference via Collabora	0.1061	0.0685	1	22
-275	Tang 2025, LLM-Assisted Reinforcement Learning: Leveraging L	0.0576	0.9292	1	3
-276	Qu 2025, Mobile Edge Intelligence for Large Language Models:	0.0703	0.0313	1	13
-277	Kachris 2025, A Survey on Hardware Accelerators for Large La	0.0908	0.1474	1	3
-278	Ray 2024, LLMEdge: A Novel Framework for Localized LLM Infer	0.1904	-0.5081	1	3
-279	Das 2025, Security and Privacy Challenges of Large Language 	-0.4092	0.0030	4	3
-280	Lin 2025, AWQ: Activation-aware Weight Quantization for On-D	0.0931	-0.0343	2	20
-281	Xi 2025, The rise and potential of large language model base	-0.4214	-0.2743	4	4
-282	Xu 2025, Fast On-device LLM Inference with NPUs	-0.1296	-0.6133	1	3
-283	Jeon 2025, ChatCNC: Conversational machine monitoring via la	-0.8848	0.2761	5	3
-284	Lamaakal 2025, Tiny Language Models for Automation and Contr	-0.6909	-0.0961	4	3
-285	Zheng 2025, A Review on Edge Large Language Models: Design, 	0.1645	-0.0864	1	15
-286	Yi 2025, EdgeMoE: Empowering Sparse Large Language Models on	-0.0628	0.1221	3	9
-287	Huang 2025, EdgeLLM: A Highly Efficient CPU-FPGA Heterogeneo	-0.1620	-0.1523	1	6
-288	Cai 2025, A Survey on Mixture of Experts in Large Language M	0.3245	0.7365	1	3
-289	Pan 2025, InstAttention: In-Storage Attention Offloading for	-0.1630	0.6668	1	3
-290	Picano 2025, A Matching Game for LLM Layer Deployment in Het	0.4889	-0.0978	1	4
-291	Boateng 2025, A Survey on Large Language Models for Communic	0.2688	0.5273	1	3
-292	Shen 2025, GPIoT: Tailoring Small Language Models for IoT Pr	0.0896	-0.7494	1	3
-293	Qin 2025, Empirical Guidelines for Deploying LLMs onto Resou	0.5559	-0.4601	1	3
-294	Sharshar 2025, Vision-Language Models for Edge Networks: A C	-0.3663	-0.8161	1	3
-295	Naveed 2025, A Comprehensive Overview of Large Language Mode	-0.2366	0.0898	1	5
-296	Es 2024, RAGAs: Automated Evaluation of Retrieval Augmented 	-0.6771	0.1156	1	3
-297	Shen 2025, Efficient LLM Inference on CPUs	-0.3466	0.1428	4	3
-298	Corradini 2025, State of the Art and Future Directions of Sm	0.4364	0.4439	4	3
-299	Men 2025, ShortGPT: Layers in Large Language Models are More	0.4700	0.0738	1	4
-300	Zhong 2025, BlockPruner: Fine-grained Pruning for Large Lang	0.3102	-0.4358	1	3
-301	Miao 2025, Towards Efficient Generative Large Language Model	0.0224	0.1027	2	6
-302	Zhang 2025, Towards the Law of Capacity Gap in Distilling La	0.2353	-0.2217	2	3
-303	Chen 2025, EfficientQAT: Efficient Quantization-Aware Traini	0.0094	-0.3308	1	3
-304	Li 2025, TPI-LLM: Serving 70B-Scale LLMs Efficiently on Low-	-0.3009	-0.5335	1	3
-305	Lin 2025, Pushing Large Language Models to the 6G Edge: Visi	-0.0917	0.1127	3	9
-306	Guo 2025, DeepSeek-R1 incentivizes reasoning in LLMs through	-0.6595	0.5183	1	3
-307	Husom 2025, Sustainable LLM Inference for Edge AI: Evaluatin	0.1914	-0.8183	1	3
-308	Wang 2025, A Comprehensive Survey of Small Language Models i	0.3730	-0.1285	2	4
-309	Luo 2025, Toward Edge General Intelligence With Multiple-Lar	-0.4656	0.2225	1	3
-310	Nezami 2025, Generative AI on the Edge: Architecture and Per	0.6343	-0.0965	1	3
-311	Jin 2025, CE-CoLLM: Efficient and Adaptive Large Language Mo	0.1672	-0.4233	1	4
-312	Douze 2025, The Faiss Library	-0.7845	-0.2896	1	3
-313	Ashkboos 2024, QuaRot: Outlier-Free 4-Bit Inference in Rotat	0.2067	-0.4389	2	3
-314	Hooper 2024, KVQuant: Towards 10 Million Context Length LLM 	0.2591	-0.0598	2	6
-315	Fang 2025, Knowledge distillation and dataset distillation o	-0.1479	-0.5660	1	3
-316	Jang 2025, Edge-First Language Model Inference: Models, Metr	0.2762	0.2806	2	3
-317	Lyu 2025, The Larger the Merrier? Efficient Large AI Model I	0.4226	0.5398	1	3
-318	Cai 2025, Efficient Inference for Edge Large Language Models	-0.4343	-0.4969	1	5
-319	https://openalex.org/W6796581206	0.2032	-0.0061	2	6
-320	https://openalex.org/W6852800892	-0.3185	-0.2669	4	3
-321	https://openalex.org/W6854866820	-0.3793	-0.1763	4	3
-322	https://openalex.org/W6893809404	-0.3981	0.1585	1	3
-323	https://openalex.org/W6898724837	-0.3757	-0.1309	4	4
-324	https://openalex.org/W7084103428	0.1715	0.4221	1	3
-325	AlMahri 2025, Enhancing supply chain visibility with knowled	0.8076	-0.3538	5	3
-326	Ge 2023, OpenAGI: When LLM Meets Domain Experts	-0.1995	0.3625	3	3
-327	Liu 2023, Visual Instruction Tuning	-0.4736	0.0414	4	4
-328	Dettmers 2022, LLM.int8(): 8-Bit Matrix Multiplication for T	0.2579	-0.1573	2	5
-329	Wei 2022, Outlier Suppression: Pushing the Limit of Low-Bit 	-0.0220	0.1124	3	3
-330	Yao 2023, Tree of Thoughts: Deliberate Problem Solving with 	0.2318	-0.3014	1	5
-331	Ouyang 2022, Training Language Models to Follow Instructions	-0.1587	0.1922	3	6
-332	Schuster 2022, Confident Adaptive Language Modeling	0.3310	-0.0447	2	4
-333	Shinn 2023, Reflexion: language agents with verbal reinforce	-0.6652	-0.4678	4	7
-334	Zhang 2023, H2O: Heavy-Hitter Oracle for Efficient Generativ	0.0991	-0.2215	2	5
-335	Wei 2022, Chain-Of-Thought Prompting Elicits Reasoning in La	-0.1354	-0.1294	4	19
-336	Hoffmann 2022, Training Compute-Optimal Large Language Model	-0.1525	0.0843	3	6
-337	Dao 2022, FlashAttention: Fast and Memory-Efficient Exact At	0.1692	-0.0406	2	10
-338	Yao 2022, ZeroQuant: Efficient and Affordable Post-Training 	0.0317	-0.0225	2	8
-339	Kojima 2022, Large Language Models Are Zero-Shot Reasoners	-0.4960	-0.1571	4	4
-340	Dettmers 2023, QLoRA: Efficient Finetuning of Quantized LLMs	0.0933	0.0163	2	20
-341	Zheng 2023, Judging LLM-as-a-Judge with MT-Bench and Chatbot	0.3605	-0.0152	2	7
-342	Kim 2023, Memory-Efficient Fine-Tuning of Compressed Large L	-0.2091	0.2039	2	3
-343	Liu 2023, Scissorhands: Exploiting the Persistence of Import	0.1558	-0.3283	2	3
-344	Ma 2023, LLM-Pruner: On the Structural Pruning of Large Lang	0.0529	-0.0031	2	15
+1	Marcus 1993, Building a Large Annotated Corpus of English: T	0.2491	0.1905	1	5
+2	Hinton 2015, Distilling the Knowledge in a Neural Network	-0.0595	0.0256	4	7
+3	Horowitz 2014, 1.1 Computing's energy problem (and what we c	-0.4010	-0.7198	2	3
+4	Williams 2009, Roofline	0.0487	0.3274	1	5
+5	Hochreiter 1997, Long Short-Term Memory	-0.1404	0.1866	4	9
+6	Papineni 2001, BLEU	-0.5643	0.2936	1	3
+7	Deng 2009, ImageNet: A large-scale hierarchical image databa	0.1665	-0.4908	3	4
+8	Han 2015, Deep Compression: Compressing Deep Neural Networks	0.0005	-0.5506	2	4
+9	He 2016, Deep Residual Learning for Image Recognition	0.0510	-0.4271	2	5
+10	Socher 2013, Recursive Deep Models for Semantic Compositiona	0.2480	-0.4793	1	4
+11	Shi 2016, Edge Computing: Vision and Challenges	-0.1600	-0.1041	3	14
+12	Abadi 2016, Deep Learning with Differential Privacy	-0.2767	-0.1428	1	5
+13	Hubara 2016, Quantized Neural Networks: Training Neural Netw	0.3421	0.2477	3	3
+14	Merity 2016, Pointer Sentinel Mixture Models	0.0727	-0.3280	2	5
+15	McMahan 2016, Communication-Efficient Learning of Deep Netwo	-0.2556	-0.1244	3	4
+16	Satyanarayanan 2017, The Emergence of Edge Computing	0.1504	-0.6253	2	3
+17	Johnson 2019, Billion-Scale Similarity Search with GPUs	-0.6931	0.4363	3	3
+18	Kang 2017, Neurosurgeon	0.2342	0.4387	3	3
+19	Jouppi 2017, In-Datacenter Performance Analysis of a Tensor 	0.2101	-0.4383	1	3
+20	Joshi 2017, TriviaQA: A Large Scale Distantly Supervised Cha	0.5036	-0.2715	1	4
+21	Mao 2017, A Survey on Mobile Edge Computing: The Communicati	-1.0000	0.1421	3	3
+22	Vaswani 2025, Attention Is All You Need	0.0494	-0.1601	2	12
+23	Voigt 2017, The EU General Data Protection Regulation (GDPR)	0.2386	0.3877	1	4
+24	Bonawitz 2017, Practical Secure Aggregation for Privacy-Pres	-0.4104	-0.2435	1	3
+25	Jacob 2018, Quantization and Training of Neural Networks for	-0.2333	-0.2521	3	9
+26	Mihaylov 2018, Can a Suit of Armor Conduct Electricity? A Ne	0.2552	0.3538	1	6
+27	Zhao 2018, DeepThings: Distributed Adaptive Deep Learning In	0.0474	0.4835	3	3
+28	Devlin 2018, BERT: Pre-training of Deep Bidirectional Transf	-0.1363	-0.0494	4	11
+29	Huang 2018, GPipe: Efficient Training of Giant Neural Networ	-0.6234	-0.0938	3	3
+30	Lee 2019, BioBERT: a pre-trained biomedical language represe	-0.3885	-0.1566	3	3
+31	Breiman 2001, Random Forests	-0.5388	-0.6916	1	3
+32	Yang 2019, Federated Machine Learning	0.6316	0.0269	1	3
+33	Trevor 2019, The State of Sparsity in Deep Neural Networks	-0.1796	-0.1698	4	3
+34	LeCun 2015, Deep learning	-0.1887	-0.0690	3	4
+35	Hu 2019, Dynamic Adaptive DNN Surgery for Inference Accelera	-0.1369	0.3774	1	3
+36	Wang 2018, GLUE: A Multi-Task Benchmark and Analysis Platfor	0.2774	0.1728	1	9
+37	Zellers 2019, HellaSwag: Can a Machine Really Finish Your Se	0.1627	0.0699	1	13
+38	Clark 2019, BoolQ: Exploring the Surprising Difficulty of Na	0.3129	0.4364	1	3
+39	Strubell 2019, Energy and Policy Considerations for Deep Lea	-0.1852	-0.4444	2	4
+40	Zhou 2019, Edge Intelligence: Paving the Last Mile of Artifi	-0.3292	0.1558	3	4
+41	Tillet 2019, Triton: an intermediate language and compiler f	0.7937	0.4266	1	3
+42	Teerapittayanon 2016, BranchyNet: Fast inference via early e	-0.4359	-0.3478	3	3
+43	Wang 2020, Convergence of Edge Computing and Deep Learning: 	-0.1202	-0.2398	3	3
+44	Devlin 2019, BERT: Pre-training of Deep Bidirectional Transf	-0.0761	-0.0884	3	13
+45	Rajpurkar 2016, SQuAD: 100,000+ Questions for Machine Compre	0.3895	-0.0235	1	5
+46	Yinhan 2019, RoBERTa: A Robustly Optimized BERT Pretraining 	-0.0691	-0.1797	4	3
+47	Brysbaert 2019, How many words do we read per minute? A revi	0.8494	0.1051	1	3
+48	Narayanan 2019, PipeDream	0.3587	-0.0808	1	5
+49	Sun 2019, Patient Knowledge Distillation for BERT Model Comp	0.0009	0.0285	4	4
+50	Reimers 2019, Sentence-BERT: Sentence Embeddings using Siame	-0.5703	-0.3099	3	5
+51	Deng 2020, Edge Intelligence: The Confluence of Edge Computi	-0.3136	0.0410	3	4
+52	Lan 2019, ALBERT: A Lite BERT for Self-supervised Learning o	-0.0430	-0.1494	4	5
+53	Sanh 2019, DistilBERT, a distilled version of BERT: smaller,	-0.2949	-0.1800	3	6
+54	Wolf 2020, Transformers: State-of-the-Art Natural Language P	0.0899	-0.0183	4	11
+55	Li 2019, Edge AI: On-Demand Accelerating Deep Neural Network	-0.3941	0.0269	3	4
+56	Raffel 2019, Exploring the Limits of Transfer Learning with 	0.1839	-0.1806	2	9
+57	Lewis 2020, BART: Denoising Sequence-to-Sequence Pre-trainin	0.1440	0.1059	4	5
+58	Wang 2019, HAQ: Hardware-Aware Automated Quantization With M	0.3039	-0.1193	2	3
+59	Kairouz 2020, Advances and Open Problems in Federated Learni	-0.1986	-0.5252	3	5
+60	Bisk 2020, PIQA: Reasoning about Physical Commonsense in Nat	0.4396	0.1119	1	6
+61	A 2020, Scaling Laws for Neural Language Models	0.3195	-0.2845	2	4
+62	Wang 2020, MiniLM: Deep Self-Attention Distillation for Task	0.1879	-0.0557	4	4
+63	Beltagy 2020, Longformer: The Long-Document Transformer	-0.0551	-0.5023	2	3
+64	Mo 2020, DarkneTZ	-0.0126	0.5033	1	3
+65	Wei 2020, Federated Learning With Differential Privacy: Algo	-0.5050	-0.3721	3	3
+66	Thapa 2022, SplitFed: When Federated Learning Meets Split Le	0.2923	0.0814	1	4
+67	Li 2020, Federated Learning: Challenges, Methods, and Future	-0.4238	-0.1321	3	4
+68	Cao 2020, An Overview on Edge Computing Research	0.0573	-0.5346	3	4
+69	Pfeiffer 2021, AdapterFusion: Non-Destructive Task Compositi	0.4145	0.2649	1	3
+70	Lewis 2020, Retrieval-Augmented Generation for Knowledge-Int	0.1429	0.8023	1	3
+71	B. 2020, Language Models are Few-Shot Learners	0.0913	-0.1243	2	16
+72	Gou 2021, Knowledge Distillation: A Survey	-0.1556	-0.2504	3	6
+73	Sun 2020, MobileBERT: a Compact Task-Agnostic BERT for Resou	0.0344	-0.1263	4	8
+74	Xin 2020, DeeBERT: Dynamic Early Exiting for Accelerating BE	0.1241	0.3878	1	3
+75	Strubell 2020, Energy and Policy Considerations for Modern D	-0.2526	0.1917	1	5
+76	Laskaridis 2020, SPINN	0.2758	-0.3535	2	3
+77	Jiao 2020, TinyBERT: Distilling BERT for Natural Language Un	0.1234	-0.1106	2	10
+78	Aghajanyan 2021, Intrinsic Dimensionality Explains the Effec	0.4952	0.0186	1	5
+79	Rajbhandari 2020, ZeRO: Memory optimizations Toward Training	0.2920	0.1299	1	4
+80	Choquette 2021, NVIDIA A100 Tensor Core GPU: Performance and	-0.1823	0.5555	1	3
+81	Bender 2021, On the Dangers of Stochastic Parrots	-0.4063	-0.0775	3	4
+82	Siriwardhana 2021, A Survey on Mobile Augmented Reality With	0.3694	-0.3628	3	3
+83	Matsubara 2022, Split Computing and Early Exiting for Deep L	-0.2423	0.2955	1	3
+84	Gholami 2022, A Survey of Quantization Methods for Efficient	-0.1508	-0.1962	3	6
+85	Lester 2021, The Power of Scale for Parameter-Efficient Prom	0.0005	0.1411	1	11
+86	Wang 2021, SpAtten: Efficient Sparse Attention Architecture 	0.1960	-0.3518	2	5
+87	Jin 2021, What Disease Does This Patient Have? A Large-Scale	-0.4465	-0.4156	3	4
+88	Hu 2021, LoRA: Low-Rank Adaptation of Large Language Models	0.1444	-0.5294	2	3
+89	Xue 2021, mT5: A Massively Multilingual Pre-trained Text-to-	0.2861	0.2342	1	3
+90	Guo 2021, Parameter-Efficient Transfer Learning with Diff Pr	0.1931	0.3467	1	3
+91	Li 2021, Prefix-Tuning: Optimizing Continuous Prompts for Ge	-0.3383	-0.1548	1	3
+92	Zaken 2022, BitFit: Simple Parameter-efficient Fine-tuning f	0.4879	0.2265	1	3
+93	Liang 2021, Pruning and quantization for deep neural network	-0.2001	-0.2420	3	4
+94	Liu 2022, Pre-train, Prompt, and Predict: A Systematic Surve	0.3625	0.0195	1	4
+95	Narayanan 2021, Efficient large-scale language model trainin	0.1210	0.2509	4	3
+96	Lee 2021, Hardware Architecture and Software Stack for PIM B	-0.7273	0.6903	2	3
+97	Sakaguchi 2021, WinoGrande	0.2627	0.0567	1	11
+98	Lin 2022, TruthfulQA: Measuring How Models Mimic Human False	-0.2774	-0.2413	1	4
+99	Lin 2022, FedNLP: Benchmarking Federated Learning Methods fo	0.5100	0.3871	1	3
+100	Xu 2021, Edge Intelligence: Empowering Intelligence to the E	-0.2482	0.1647	3	4
+101	Dwork 2014, The Algorithmic Foundations of Differential Priv	-0.0549	-0.4138	1	3
+102	Kurtic 2022, The Optimal BERT Surgeon: Scalable and Accurate	0.2102	-0.0019	4	4
+103	Chowdhery 2022, PaLM: Scaling Language Modeling with Pathway	-0.1644	0.0097	4	4
+104	Ouyang 2022, Training language models to follow instructions	-0.1043	-0.1390	4	3
+105	Susan 2022, OPT: Open Pre-trained Transformer Language Model	-0.0729	-0.1391	4	5
+106	Zhou 2022, TransPIM: A Memory-based Acceleration via Softwar	0.4858	-0.1044	2	3
+107	Wang 2022, Melon	0.4950	-0.2018	2	3
+108	Jason 2022, Emergent Abilities of Large Language Models	-0.0615	-0.2182	2	4
+109	Liu 2022, P-Tuning: Prompt Tuning Can Be Comparable to Fine-	-0.1869	0.2259	1	5
+110	Du 2022, GLM: General Language Model Pretraining with Autore	0.3579	-0.1842	2	3
+111	Hua 2022, Edge Computing with Artificial Intelligence: A Mac	0.5494	0.3476	1	3
+112	Chen 2022, Less is More: Task-aware Layer-wise Distillation 	-0.0654	-0.2591	2	3
+113	Xu 2022, Mandheling	-0.1322	-0.5155	1	3
+114	Chung 2022, Scaling Instruction-Finetuned Language Models	0.0741	0.2337	4	3
+115	Frantar 2022, GPTQ: Accurate Post-Training Quantization for 	-0.0379	-0.1940	2	11
+116	Wang 2022, ViA: A Novel Vision-Transformer Accelerator Based	0.6066	-0.3724	2	3
+117	Xiao 2022, SmoothQuant: Accurate and Efficient Post-Training	0.0034	-0.1905	2	8
+118	Ji 2022, Survey of Hallucination in Natural Language Generat	-0.3233	0.4650	3	5
+119	Leviathan 2022, Fast Inference from Transformers via Specula	0.2245	-0.3254	2	3
+120	Krahmer 2024, Helping Cancer Patients to Choose the Best Tre	0.0319	-0.2401	2	4
+121	Huang 2022, In-context Learning Distillation: Transferring F	0.2468	-0.3419	2	3
+122	Shuvo 2022, Efficient Acceleration of Deep Learning Inferenc	0.1287	-0.3463	3	5
+123	Frantar 2023, SparseGPT: Massive Language Models Can Be Accu	-0.0225	-0.2435	2	5
+124	Hu 2022, PipeEdge: Pipeline Parallelism for Large-Scale Mode	0.2871	-0.0775	2	3
+125	Guo 2023, STI: Turbocharge NLP Inference at the Edge via Ela	0.2227	-0.2247	2	7
+126	Aminabadi 2022, DeepSpeed- Inference: Enabling Efficient Inf	0.0588	-0.3011	2	5
+127	Touvron 2023, LLaMA: Open and Efficient Foundation Language 	-0.0081	-0.1089	2	13
+128	Ding 2023, Parameter-efficient fine-tuning of large-scale pr	0.0335	0.0965	4	12
+129	Kasneci 2023, ChatGPT for good? On opportunities and challen	0.3772	0.3023	3	3
+130	Sheng 2023, FlexGen: High-Throughput Generative Inference of	0.2820	-0.2810	2	3
+131	Zhao 2026, A Survey of Large Language Models	-0.2144	-0.0849	4	6
+132	Guo 2023, OliVe: Accelerating Large Language Models via Hard	0.1179	-0.3600	2	4
+133	Zhao 2023, FedPrompt: Communication-Efficient and Privacy-Pr	0.2141	0.5089	1	3
+134	Lin 2023, AWQ: Activation-aware Weight Quantization for LLM 	-0.0755	-0.1150	4	5
+135	Dettmers 2023, SpQR: A Sparse-Quantized Representation for N	0.0769	-0.2043	2	4
+136	Li 2023, LoSparse: Structured Compression of Large Language 	0.1569	-0.3150	2	4
+137	Sun 2023, A Simple and Effective Pruning Approach for Large 	0.0015	-0.2208	2	6
+138	Min 2023, Recent Advances in Natural Language Processing via	-0.2172	0.0932	4	5
+139	Huang 2023, Visual Language Maps for Robot Navigation	0.8854	0.3958	2	3
+140	Singhal 2023, Large language models encode clinical knowledg	-0.4531	0.1110	3	3
+141	Chen 2023, NetGPT: A Native-AI Network Architecture Beyond P	-0.2615	0.0305	4	3
+142	Thirunavukarasu 2023, Large language models in medicine	-0.1168	0.0467	4	12
+143	Dong 2023, Towards Next-Generation Intelligent Assistants Le	-0.2621	0.0664	4	3
+144	Hsieh 2023, Distilling Step-by-Step! Outperforming Larger La	0.1888	-0.2356	2	5
+145	Ho 2023, Large Language Models Are Reasoning Teachers	0.1232	-0.3866	2	3
+146	Li 2023, Symbolic Chain-of-Thought Distillation: Small Model	0.2399	-0.4128	2	3
+147	Wang 2023, SCOTT: Self-Consistent Chain-of-Thought Distillat	0.1577	-0.3755	2	4
+148	Zhang 2023, FedPETuning: When Federated Learning Meets the P	-0.3560	0.5124	1	3
+149	Wang 2022, AdaMix: Mixture-of-Adaptations for Parameter-effi	0.4033	0.0598	1	3
+150	He 2022, SparseAdapter: An Easy Approach for Improving the P	-0.1449	-0.3424	1	3
+151	Guo 2023, PromptFL: Let Federated Participants Cooperatively	-0.4274	0.3791	1	3
+152	Hong 2023, MetaGPT: Meta Programming for A Multi-Agent Colla	0.3775	0.5252	3	3
+153	Fang 2023, DepGraph: Towards Any Structural Pruning	0.1835	0.2348	1	6
+154	Tang 2023, FusionAI: Decentralized Training and Deploying LL	-0.1915	-0.1169	4	3
+155	Xu 2023, LLMCad: Fast and Scalable On-device Large Language 	-0.0973	-0.0637	4	4
+156	Chitty-Venkata 2023, A survey of techniques for optimizing t	0.3677	-0.6058	2	3
+157	Ye 2023, Heterogeneous Federated Learning: State-of-the-art 	-0.5487	-0.1460	3	3
+158	Cai 2023, Efficient Federated Learning for Modern NLP	0.3160	0.0862	1	7
+159	Kwon 2023, Efficient Memory Management for Large Language Mo	0.0383	-0.0704	2	19
+160	Xia 2023, Sheared LLaMA: Accelerating Language Model Pre-tra	0.1835	-0.2763	2	4
+161	Demszky 2023, Using large language models in psychology	0.1700	0.1357	4	3
+162	Fan 2023, FATE-LLM: A Industrial Grade Federated Learning Fr	-0.1525	0.0455	4	3
+163	Liu 2023, Deja Vu: Contextual Sparsity for Efficient LLMs at	0.1121	-0.3241	2	5
+164	Jackson 2023, From natural language to simulations: applying	-0.0821	0.7740	3	3
+165	Wang 2023, Tabi: An Efficient Multi-Level Inference System f	0.2192	-0.0675	2	5
+166	Kosasih 2023, A review of explainable artificial intelligenc	-0.5129	0.8490	3	3
+167	Su 2023, RoFormer: Enhanced transformer with Rotary Position	0.2668	-0.3804	2	4
+168	Wang 2023, PrivateLoRA For Efficient Privacy Preserving LLM	-0.2525	-0.0084	4	3
+169	Dong 2023, Tunable Soft Prompts are Messengers in Federated 	-0.1235	0.3020	4	3
+170	Ainslie 2023, GQA: Training Generalized Multi-Query Transfor	0.1261	-0.1496	2	9
+171	Jiang 2023, LLMLingua: Compressing Prompts for Accelerated I	0.2190	0.0557	1	5
+172	Timiryasov 2023, Baby Llama: knowledge distillation from an 	0.2074	-0.1361	2	5
+173	Zhang 2023, Video-LLaMA: An Instruction-tuned Audio-Visual L	-0.1969	0.3072	4	3
+174	Chen 2023, MCC-KD: Multi-CoT Consistent Knowledge Distillati	0.4038	-0.2990	2	3
+175	Che 2023, Federated Learning of Large Language Models with P	-0.0706	0.2555	4	4
+176	Hu 2023, LLM-Adapters: An Adapter Family for Parameter-Effic	0.2292	0.2620	1	3
+177	Wei 2023, Outlier Suppression+: Accurate quantization of lar	0.2453	-0.1186	2	4
+178	Peng 2023, RWKV: Reinventing RNNs for the Transformer Era	-0.1104	-0.4007	2	3
+179	Xia 2023, Flash-LLM: Enabling Cost-Effective and Highly-Effi	0.1288	-0.2452	2	4
+180	Team 2023, Gemini: A Family of Highly Capable Multimodal Mod	0.0704	-0.1119	2	6
+181	Wamba 2023, ChatGPT and generative artificial intelligence: 	-0.6079	0.7217	3	3
+182	Peiyuan 2024, TinyLlama: An Open-Source Small Language Model	-0.0214	-0.2885	2	3
+183	Shen 2024, Large Language Models Empowered Autonomous Edge A	-0.0883	0.1534	1	11
+184	Xu 2024, Unleashing the Power of Edge-Cloud Generative AI in	-0.0762	-0.0254	1	6
+185	Song 2023, LLM-Planner: Few-Shot Grounded Planning for Embod	-0.4539	-0.0754	3	3
+186	Xu 2024, A Survey of Resource-efficient LLM and Multimodal F	-0.1128	-0.2770	2	3
+187	Chang 2024, A Survey on Evaluation of Large Language Models	0.1123	0.1736	1	14
+188	Jackson 2024, Generative artificial intelligence in supply c	-0.9295	0.1078	3	4
+189	Ferrag 2024, Revolutionizing Cyber Threat Detection With Lar	-0.2430	0.0344	4	6
+190	Raiaan 2024, A Review on Large Language Models: Architecture	0.4382	0.2436	1	6
+191	Liu 2024, Lost in the Middle: How Language Models Use Long C	-0.5527	-0.0726	1	4
+192	Zhong 2024, CASIT: Collective Intelligent Agent System for I	0.1377	0.2074	4	3
+193	Veen 2024, Adapted large language models can outperform medi	-0.0251	0.6587	1	3
+194	Yang 2024, Harnessing the Power of LLMs in Practice: A Surve	-0.4956	-0.1662	3	3
+195	Yao 2024, A survey on large language model (LLM) security an	-0.2017	0.0088	3	7
+196	Patil 2024, A Review of Current Trends, Techniques, and Chal	0.3592	0.4689	1	4
+197	Heo 2024, NeuPIMs: NPU-PIM Heterogeneous Acceleration for Ba	-0.1832	-0.2391	2	4
+198	King 2024, Sasha	-0.3711	0.3749	1	6
+199	Chen 2024, NetGPT: An AI-Native Network Architecture for Pro	0.1115	0.4304	1	4
+200	Zhang 2024, Towards Building The Federatedgpt: Federated Ins	-0.1736	0.1099	4	6
+201	Shao 2024, One-Shot Sensitivity-Aware Mixed Sparsity Pruning	0.0992	-0.1614	2	5
+202	Rahman 2023, Quantized Transformer Language Model Implementa	-0.3351	-0.0067	3	5
+203	Wang 2024, A survey on large language model based autonomous	-0.3638	-0.0657	3	11
+204	Gholami 2024, AI and Memory Wall	-0.3152	-0.4092	1	3
+205	Yao 2024, Exploring Post-training Quantization in LLMs from 	0.6341	-0.1086	1	3
+206	Chen 2024, Benchmarking Large Language Models in Retrieval-A	0.1552	0.5442	1	3
+207	Zeng 2024, ConsistentEE: A Consistent and Hardness-Guided Ea	0.2133	-0.3815	2	3
+208	Lee 2024, OWQ: Outlier-Aware Weight Quantization for Efficie	0.2478	-0.2909	2	5
+209	An 2024, Fluctuation-Based Adaptive Structured Pruning for L	0.2136	0.0895	1	6
+210	Shen 2024, Agile-Quant: Activation-Guided Quantization for F	0.0307	-0.0270	4	10
+211	Chen 2024, Dynamic Task Offloading in Edge Computing Based o	-0.0824	0.5642	1	3
+212	Zeng 2024, FlightLLM: Efficient Large Language Model Inferen	-0.0124	-0.4487	2	5
+213	Chen 2024, Understanding the Potential of FPGA-based Spatial	-0.1720	0.3954	1	3
+214	Cui 2024, A Survey on Multimodal Large Language Models for A	-0.2475	0.2187	3	5
+215	Wang 2024, End-Edge-Cloud Collaborative Computing for Deep L	-0.0666	-0.3554	2	3
+216	Miao 2024, SpecInfer: Accelerating Large Language Model Serv	0.0405	-0.2203	2	5
+217	Abdin 2024, Phi-3 Technical Report: A Highly Capable Languag	0.3123	-0.3690	2	3
+218	Dhar 2024, An Empirical Analysis and Resource Footprint Stud	-0.0371	-0.0423	4	5
+219	Lin 2024, Split Learning in 6G Edge Networks	-0.1453	0.2223	1	4
+220	Zhang 2024, Interactive AI With Retrieval-Augmented Generati	0.3402	0.2156	1	3
+221	Woisetschläger 2024, Federated Fine-Tuning of LLMs on the Ve	-0.1579	0.1472	4	3
+222	Wen 2024, AutoDroid: LLM-powered Task Automation in Android	0.2479	-0.1813	2	7
+223	Yuan 2024, Mobile Foundation Model as Firmware	0.1611	-0.0960	2	7
+224	Li 2024, Large Language Models on Mobile Devices: Measuremen	0.0175	-0.1506	2	7
+225	Hao 2024, Hybrid SLM and LLM for Edge-Cloud Collaborative In	0.1392	-0.0034	1	11
+226	Du 2024, Distributed Foundation Models for Multi-Modal Learn	0.0913	0.0572	4	3
+227	Bhardwaj 2024, A Survey on the Integration and Optimization 	0.0342	0.4642	1	3
+228	He 2024, Large Language Models (LLMs) Inference Offloading a	0.0193	0.0545	4	10
+229	Yuan 2024, Generative Inference of Large Language Models in 	-0.1009	0.2657	4	5
+230	He 2024, REST: Retrieval-Based Speculative Decoding	0.0105	-0.4450	2	3
+231	Zhu 2024, Towards an On-device Agent for Text Rewriting	0.0853	0.0938	4	3
+232	Huang 2024, Large Language Models for Networking: Applicatio	0.0632	0.5824	1	3
+233	Patel 2024, Splitwise: Efficient Generative LLM Inference Us	0.3602	0.0763	1	6
+234	Ouyang 2024, Pluto and Charon: A Time and Memory Efficient C	0.0145	0.2247	4	4
+235	Su 2024, Titanic: Towards Production Federated Learning with	0.0737	0.2950	4	3
+236	Ye 2024, Galaxy: A Resource-Efficient Collaborative Edge AI 	-0.0004	0.4168	1	3
+237	Pan 2024, Cloud-Edge Collaborative Large Model Services: Cha	-0.7997	0.6668	1	3
+238	Qu 2024, TrimCaching: Parameter-Sharing AI Model Caching in 	-0.0347	0.3030	4	3
+239	Fan 2024, A Survey on RAG Meeting LLMs: Towards Retrieval-Au	-0.1733	0.4982	1	4
+240	Ye 2024, OpenFedLLM: Training Large Language Models on Decen	-0.1560	0.0843	4	7
+241	Kuang 2024, FederatedScope-LLM: A Comprehensive Package for 	0.0654	0.1757	4	8
+242	Wu 2024, FedBiOT: LLM Local Fine-tuning in Federated Learnin	0.0789	0.2684	4	3
+243	Friha 2024, LLM-Based Edge Intelligence: A Comprehensive Sur	-0.0192	0.1850	1	14
+244	Zhang 2024, Generative AI Agents With Large Language Model f	-0.3332	0.3279	1	3
+245	Zhao 2024, LinguaLinked: Distributed Large Language Model In	0.1178	0.0747	4	3
+246	Zhang 2024, Quantized Side Tuning: Fast and Memory-Efficient	0.3300	0.1747	1	3
+247	Yao 2024, GKT: A Novel Guidance-Based Knowledge Transfer Fra	-0.4358	0.1861	1	3
+248	Liu 2024, LLM-QAT: Data-Free Quantization Aware Training for	0.0162	-0.0915	2	10
+249	Zhang 2024, LoRAPrune: Structured Pruning Meets Low-Rank Par	0.2700	-0.1528	2	6
+250	Alizadeh 2024, LLM in a flash: Efficient Large Language Mode	0.0011	-0.0657	4	12
+251	Lv 2024, Full Parameter Fine-tuning for Large Language Model	0.1492	0.3430	1	3
+252	Peng 2024, PocketLLM: Enabling On-Device Fine-Tuning for Per	-0.0219	0.2486	4	3
+253	Liu 2024, IntactKV: Improving Large Language Model Quantizat	0.1228	-0.4974	2	3
+254	Xia 2024, Unlocking Efficiency in Large Language Model Infer	0.1364	0.4618	1	3
+255	Kong 2024, SwapMoE: Serving Off-the-shelf MoE-based Large La	0.5808	0.1532	1	3
+256	Liu 2024, Improved Baselines with Visual Instruction Tuning	0.1127	-0.6079	2	3
+257	Zhou 2024, Large Language Model (LLM) for Telecommunications	0.5737	0.2310	1	3
+258	Cui 2024, LLMind: Orchestrating AI and IoT with LLM for Comp	-0.1509	0.2899	4	5
+259	Xiao 2024, Efficient Prompting for LLM-Based Generative Inte	-0.2073	0.6734	1	3
+260	Zhao 2024, Edge and Terminal Cooperation Enabled LLM Deploym	0.2879	0.3602	1	4
+261	Li 2024, A survey on LLM-based multi-agent systems: workflow	0.5675	-0.6902	3	4
+262	Cai 2024, Edge-LLM: A Collaborative Framework for Large Lang	0.1501	0.0254	1	11
+263	Rivkin 2024, AIoT Smart Home via Autonomous LLM Agents	0.3528	0.4271	1	4
+264	Yu 2024, EDGE-LLM: Enabling Efficient Large Language Model A	0.0344	0.1742	1	12
+265	Qin 2024, Enabling On-Device Large Language Model Personaliz	-0.0762	0.1859	4	5
+266	Yin 2024, A survey on multimodal large language models	-0.3911	0.1925	3	3
+267	Song 2024, PowerInfer: Fast Large Language Model Serving wit	0.1398	-0.1820	2	12
+268	Huang 2024, A Survey on Hallucination in Large Language Mode	-0.1303	0.7394	3	5
+269	Zhang 2024, Beyond the Cloud: Edge Inference for Generative 	0.3074	-0.0023	1	5
+270	Liang 2024, Encouraging Divergent Thinking in Large Language	-0.4926	-0.0808	3	3
+271	Zhu 2024, A Survey on Model Compression for Large Language M	0.0549	-0.0383	2	9
+272	Yu 2024, Cambricon-LLM: A Chiplet-Based Hybrid Architecture 	-0.2584	0.4199	1	3
+273	Laskaridis 2024, MELTing Point: Mobile Evaluation of Languag	0.3220	-0.3307	2	5
+274	Xu 2024, EdgeLLM: Fast On-Device LLM Inference With Speculat	0.2660	-0.0343	1	9
+275	Ren 2024, Industrial Internet of Things With Large Language 	0.0015	0.3055	1	5
+276	Huang 2024, An empirical study of LLaMA3 quantization: from 	-0.1280	0.5231	1	3
+277	Zhang 2024, EdgeShard: Efficient LLM Inference via Collabora	0.0358	0.1239	1	22
+278	Tang 2025, LLM-Assisted Reinforcement Learning: Leveraging L	0.9205	-0.0335	1	3
+279	Qu 2025, Mobile Edge Intelligence for Large Language Models:	-0.1150	0.1690	1	13
+280	Kachris 2025, A Survey on Hardware Accelerators for Large La	0.2423	0.1473	1	3
+281	Ray 2024, LLMEdge: A Novel Framework for Localized LLM Infer	0.5303	-0.1524	1	3
+282	Das 2025, Security and Privacy Challenges of Large Language 	-0.4131	0.0786	3	3
+283	Lin 2025, AWQ: Activation-aware Weight Quantization for On-D	0.1509	-0.0476	2	21
+284	Xi 2025, The rise and potential of large language model base	-0.5248	-0.0553	3	4
+285	Xu 2025, Fast On-device LLM Inference with NPUs	0.7715	-0.2210	1	3
+286	Jeon 2025, ChatCNC: Conversational machine monitoring via la	0.0110	0.9838	3	3
+287	Lamaakal 2025, Tiny Language Models for Automation and Contr	-0.4885	0.5979	3	3
+288	Zheng 2025, A Review on Edge Large Language Models: Design, 	-0.0627	0.1043	1	15
+289	Yi 2025, EdgeMoE: Empowering Sparse Large Language Models on	-0.0230	0.0098	4	9
+290	Huang 2025, EdgeLLM: A Highly Efficient CPU-FPGA Heterogeneo	0.2759	-0.1961	1	6
+291	Cai 2025, A Survey on Mixture of Experts in Large Language M	0.2222	0.8221	1	3
+292	Pan 2025, InstAttention: In-Storage Attention Offloading for	-0.2696	-0.5222	1	3
+293	Picano 2025, A Matching Game for LLM Layer Deployment in Het	0.4764	0.1537	1	4
+294	Boateng 2025, A Survey on Large Language Models for Communic	-0.3093	0.0940	1	3
+295	Shen 2025, GPIoT: Tailoring Small Language Models for IoT Pr	-0.7030	-0.1078	1	3
+296	Qin 2025, Empirical Guidelines for Deploying LLMs onto Resou	-0.5720	0.5725	1	3
+297	Sharshar 2025, Vision-Language Models for Edge Networks: A C	-0.8244	-0.0222	1	3
+298	Naveed 2025, A Comprehensive Overview of Large Language Mode	-0.1037	-0.1979	1	5
+299	Es 2024, RAGAs: Automated Evaluation of Retrieval Augmented 	0.2103	-0.8193	1	3
+300	Shen 2025, Efficient LLM Inference on CPUs	-0.2765	-0.0515	3	3
+301	Corradini 2025, State of the Art and Future Directions of Sm	-0.5701	0.0697	3	3
+302	Men 2025, ShortGPT: Layers in Large Language Models are More	-0.2319	0.1444	1	4
+303	Zhong 2025, BlockPruner: Fine-grained Pruning for Large Lang	-0.3750	0.4246	1	3
+304	Miao 2025, Towards Efficient Generative Large Language Model	0.0111	-0.0408	2	6
+305	Zhang 2025, Towards the Law of Capacity Gap in Distilling La	0.3407	-0.2252	2	3
+306	Chen 2025, EfficientQAT: Efficient Quantization-Aware Traini	-0.1130	-0.3299	1	3
+307	Li 2025, TPI-LLM: Serving 70B-Scale LLMs Efficiently on Low-	-0.2460	-0.5695	1	3
+308	Lin 2025, Pushing Large Language Models to the 6G Edge: Visi	-0.1017	0.0800	4	9
+309	Guo 2025, DeepSeek-R1 incentivizes reasoning in LLMs through	-0.6672	-0.4613	1	3
+310	Husom 2025, Sustainable LLM Inference for Edge AI: Evaluatin	0.1152	0.6252	1	3
+311	Wang 2025, A Comprehensive Survey of Small Language Models i	0.0727	-0.4734	2	4
+312	Luo 2025, Toward Edge General Intelligence With Multiple-Lar	-0.3926	0.4588	1	3
+313	Nezami 2025, Generative AI on the Edge: Architecture and Per	0.2406	-0.5553	1	3
+314	Jin 2025, CE-CoLLM: Efficient and Adaptive Large Language Mo	0.0721	0.3553	1	4
+315	Douze 2025, The Faiss Library	-0.7534	-0.5133	1	3
+316	Ashkboos 2024, QuaRot: Outlier-Free 4-Bit Inference in Rotat	0.4387	-0.1042	2	3
+317	Hooper 2024, KVQuant: Towards 10 Million Context Length LLM 	-0.0227	-0.3066	2	6
+318	Fang 2025, Knowledge distillation and dataset distillation o	-0.3793	0.3061	1	3
+319	Jang 2025, Edge-First Language Model Inference: Models, Metr	0.4895	-0.3334	2	3
+320	Lyu 2025, The Larger the Merrier? Efficient Large AI Model I	-0.4567	0.2600	1	3
+321	Cai 2025, Efficient Inference for Edge Large Language Models	-0.6251	-0.2503	3	5
+322	https://openalex.org/W6796581206	0.2752	-0.2285	2	6
+323	https://openalex.org/W6852800892	-0.3177	-0.1452	3	3
+324	https://openalex.org/W6854866820	-0.1125	-0.0059	3	3
+325	https://openalex.org/W6893809404	0.6016	0.0004	1	3
+326	https://openalex.org/W6898724837	-0.2641	0.1023	3	4
+327	https://openalex.org/W7084103428	-0.0699	0.4769	1	3
+328	AlMahri 2025, Enhancing supply chain visibility with knowled	-0.3906	-0.7607	3	3
+329	Ge 2023, OpenAGI: When LLM Meets Domain Experts	-0.0353	0.3309	4	3
+330	Liu 2023, Visual Instruction Tuning	-0.1771	0.1313	3	4
+331	Dettmers 2022, LLM.int8(): 8-Bit Matrix Multiplication for T	0.3230	-0.1627	2	5
+332	Wei 2022, Outlier Suppression: Pushing the Limit of Low-Bit 	0.1135	-0.0492	4	3
+333	Yao 2023, Tree of Thoughts: Deliberate Problem Solving with 	-0.3475	0.2141	1	5
+334	Ouyang 2022, Training Language Models to Follow Instructions	0.1782	0.0307	4	6
+335	Schuster 2022, Confident Adaptive Language Modeling	0.0413	-0.3627	2	4
+336	Shinn 2023, Reflexion: language agents with verbal reinforce	-0.6198	0.3210	3	7
+337	Zhang 2023, H2O: Heavy-Hitter Oracle for Efficient Generativ	0.0732	-0.3772	2	5
+338	Wei 2022, Chain-Of-Thought Prompting Elicits Reasoning in La	-0.1727	-0.0293	3	19
+339	Hoffmann 2022, Training Compute-Optimal Large Language Model	0.0495	0.0213	4	6
+340	Dao 2022, FlashAttention: Fast and Memory-Efficient Exact At	0.1061	-0.1876	2	10
+341	Yao 2022, ZeroQuant: Efficient and Affordable Post-Training 	0.0761	-0.1463	2	8
+342	Kojima 2022, Large Language Models Are Zero-Shot Reasoners	-0.4767	0.0060	3	4
+343	Dettmers 2023, QLoRA: Efficient Finetuning of Quantized LLMs	0.0770	-0.0740	2	20
+344	Zheng 2023, Judging LLM-as-a-Judge with MT-Bench and Chatbot	0.4468	-0.1387	2	7
+345	Kim 2023, Memory-Efficient Fine-Tuning of Compressed Large L	0.3772	-0.2290	2	3
+346	Liu 2023, Scissorhands: Exploiting the Persistence of Import	0.1268	-0.4576	2	3
+347	Ma 2023, LLM-Pruner: On the Structural Pruning of Large Lang	0.1355	-0.0845	2	15

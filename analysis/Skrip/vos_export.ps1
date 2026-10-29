@@ -28,7 +28,7 @@ function Export-Peta($nama, $peta, $jaringan, $tambahan) {
   }
   # hentikan hanya proses yang membawa nama berkas keluaran ini
   Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -and $_.CommandLine.Contains($nama) } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }
-  if ($selesai) { "{0}: {1:N1} MB" -f $nama, ((Get-Item $png).Length / 1MB) } else { "$nama: GAGAL (tidak ada berkas)" }
+  if ($selesai) { "{0}: {1:N1} MB" -f $nama, ((Get-Item $png).Length / 1MB) } else { "${nama}: GAGAL (tidak ada berkas)" }
 }
 
 Export-Peta 'vos_coword.png' 'vos_coword_map.txt' 'vos_coword_network.txt' @()

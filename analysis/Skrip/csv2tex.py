@@ -27,17 +27,19 @@ tulis("H", ["Rank", "Author (OpenAlex author ID)", "Articles", "Citation"], [(i 
 s = pd.read_csv(f"{H}/kinerja_id_sumber.csv").head(10)
 tulis("I", ["Rank", "Source (OpenAlex source ID)", "Articles", "Citation"], [(i + 1, r.sumber, r.dokumen, r.sitasi) for i, r in enumerate(s.itertuples())],
       "Top 10 sources, counted by OpenAlex source identifier")
-v = pd.read_csv(f"{H}/sensibilitas_string.csv")
+d = pd.read_csv(f"{ROOT}/Data/dataset_lolos.csv", encoding="utf-8-sig")
+N, TH = len(d), d.year.value_counts()
+v = pd.read_csv(f"{H}/sensibilitas_string.csv", encoding="utf-8-sig")
 ren = {"dasar": "Baseline", "V1": "V1: broader LLM terms (+generative AI, GPT, ChatGPT, foundation model)", "V2": "V2: block C without the stock-market exclusion",
        "V3": "V3: title only instead of title and abstract", "V4": "V4: broader device terms (+TinyML, local LLM, smartphone, mobile device)", "V5": "V5: broader inventory terms (+SKU, stockout, warehouse management)"}
-tulis("J", ["Variant", "Unique results", "Final 485 retained", "New outside the cleaned baseline"],
-      [(ren[r.varian.split()[0]], r.hasil_unik, r.recall_data_akhir_485.replace(" dari ", " of "), r.paper_baru_di_luar_dasar) for r in v.itertuples()],
+tulis("J", ["Variant", "Unique results", f"Final {N} retained", "New outside the cleaned baseline"],
+      [(ren[r.varian.split()[0]], r.hasil_unik, r.recall_data_akhir.replace(" dari ", " of "), r.paper_baru_di_luar_dasar) for r in v.itertuples()],
       "Sensitivity of the search strings (``new'' includes the 93 records removed in the baseline as duplicates or Zenodo items)")
 p = pd.read_csv(f"{H}/perubahan_porsi_kata.csv")
 sel = pd.concat([p.head(5), p.tail(5)[::-1]])
 tulis("K", ["Keyword", "Articles 2025", "Articles 2026", "Share 2025 (%)", "Share 2026 (%)", "Change (points)"],
       [(r.kata, r.n_2025, r.n_2026, r.porsi_2025_persen, r.porsi_2026_persen, r.selisih_poin) for r in sel.itertuples()],
-      "Keywords with the largest falling (first five rows) and rising (last five rows) share of articles, 2025 (n = 151) and 2026 (n = 293)")
+      f"Keywords with the largest falling (first five rows) and rising (last five rows) share of articles, 2025 (n = {TH[2025]}) and 2026 (n = {TH[2026]})")
 t = pd.read_csv(f"{H}/peta_tema.csv")
 t = t[t.ambang == 8]
 tulis("L", ["Cluster", "Number of keywords", "Centrality", "Density", "Leading keywords"], [(r.kluster, r.kata, r.centrality, r.density, r.kata_teratas) for r in t.itertuples()],

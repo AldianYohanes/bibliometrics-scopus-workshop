@@ -56,7 +56,7 @@ for nama, (blok, field) in VARIAN.items():
         titles.update(t)
     ids = set(titles)
     baru = ids - base_all
-    rows.append({"varian": nama, "hasil_unik": len(ids), "recall_data_akhir_485": f"{len(ids & incl)} dari {len(incl)} ({100*len(ids & incl)/len(incl):.0f}%)",
+    rows.append({"varian": nama, "hasil_unik": len(ids), "recall_data_akhir": f"{len(ids & incl)} dari {len(incl)} ({100*len(ids & incl)/len(incl):.0f}%)",
                  "irisan_dengan_dasar_708": len(ids & base_all), "paper_baru_di_luar_dasar": len(baru)})
     contoh[nama] = [titles[i] for i in random.sample(sorted(baru), min(8, len(baru)))]
     print(rows[-1], flush=True)

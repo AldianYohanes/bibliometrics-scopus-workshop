@@ -31,17 +31,17 @@ tt = d.set_index("id")
 # Label kluster usulan (pembacaan abstrak artikel representatif oleh model, lalu diperiksa; HARUS disetujui penulis).
 # Kunci = tuple ukuran kluster; jika ukuran berubah (data atau algoritma berubah) label tidak dipakai lagi supaya tidak salah tempel.
 LABEL = {
-    # coupling (ambang sitasi dokumen >=3, kluster >=6): label dari judul 9 dokumen dengan TLS tertinggi per kluster (lebih tipis daripada pembacaan abstrak sebelumnya)
-    "coupling": {(19, 18, 18, 14): [
-        "Edge-cloud collaborative inference and surveys of edge LLM deployment", "Edge intelligence surveys, collaborative inference, and hardware acceleration",
-        "On-device deployment, inference optimisation, and small language models", "Pruning and on-device (federated) fine-tuning"]},
-    "cocit": {(128, 95, 58, 57, 6): [
-        "Edge LLM surveys, collaborative serving, and NLP benchmarks", "Quantisation, pruning, and serving efficiency, with foundation models",
-        "Mixed background: efficient inference, federated and parameter-efficient tuning, early applications", "General background: reasoning, edge computing visions, LLM agents, compression basics",
-        "Generative AI in supply chain and operations management"]},
-    "coword": {(24, 23, 21): [
-        "Agentic AI and RAG for enterprise applications (with an inventory sub-theme)", "Compression and optimisation for edge LLM deployment",
-        "Small language models and privacy-preserving on-device learning"]},
+    # Nama dipilih penulis 29 Okt 2026 dari daftar judul anggota (data 489 paper setelah penilaian ketiga).
+    # coupling (ambang sitasi dokumen >=3, kluster >=6): nama hanya dari judul, lebih tipis daripada dua peta lain
+    "coupling": {(20, 20, 17, 13): [
+        "Efficient on-device inference on mobile hardware", "Edge LLM surveys and distributed fine-tuning",
+        "Applied edge intelligence across domains", "Privacy-preserving and personalised LLMs for IoT"]},
+    "cocit": {(127, 95, 66, 59): [
+        "Collaborative edge-cloud LLM serving and its evaluation", "Model compression and efficient inference foundations",
+        "Shared foundations: reasoning, agents, and supply chain AI", "Mobile inference and decentralised adaptation"]},
+    "coword": {(24, 23, 22): [
+        "Agentic and retrieval-augmented LLMs for business operations", "Model compression and optimisation for edge deployment",
+        "Small language models and privacy-preserving on-device AI"]},
 }
 
 

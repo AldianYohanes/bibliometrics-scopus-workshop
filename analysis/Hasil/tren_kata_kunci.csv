@@ -3,57 +3,58 @@ internet of things,13,2024.92
 ai governance,13,2025.0
 knowledge graphs,9,2025.0
 reinforcement learning,9,2025.11
+in-memory computing,8,2025.12
 resource-constrained edge devices,8,2025.12
 on-device ai,11,2025.18
-large language model inference,10,2025.2
+large language model inference,11,2025.18
 inventory optimization,9,2025.22
 privacy-preserving inference,13,2025.23
-privacy preservation,16,2025.25
-chatbots,8,2025.25
-federated learning,24,2025.25
 demand forecasting,16,2025.25
+chatbots,8,2025.25
 inventory management,22,2025.27
+federated learning,26,2025.27
 generative ai,18,2025.28
-differential privacy,10,2025.3
-low-rank adaptation,13,2025.31
+privacy preservation,17,2025.29
 quantization,16,2025.31
+low-rank adaptation,13,2025.31
+energy consumption,9,2025.33
 resource-constrained devices,37,2025.35
+differential privacy,11,2025.36
 model quantization,11,2025.36
 model compression,51,2025.37
-energy consumption,8,2025.38
 edge devices,40,2025.38
 regulatory compliance,8,2025.38
 explainable ai,10,2025.4
 mobile devices,15,2025.4
-on-device inference,55,2025.42
 privacy-preserving ai,12,2025.42
-edge deployment,51,2025.43
+on-device inference,55,2025.42
 vision-language models,9,2025.44
+edge deployment,52,2025.44
 customer service automation,9,2025.44
-privacy,13,2025.46
-cloud-edge collaboration,13,2025.46
+energy efficiency,39,2025.46
 edge inference,13,2025.46
+privacy,13,2025.46
 inference latency,26,2025.46
+cloud-edge collaboration,13,2025.46
 raspberry pi,15,2025.47
-energy efficiency,38,2025.47
 edge computing,86,2025.47
 edge ai,19,2025.47
+parameter-efficient fine-tuning,18,2025.5
 hallucinations,8,2025.5
 transformer models,10,2025.5
-parameter-efficient fine-tuning,17,2025.53
 data privacy,24,2025.54
 small language models,55,2025.55
-anomaly detection,9,2025.56
-on-device large language models,18,2025.56
 supply chain management,9,2025.56
+on-device large language models,18,2025.56
 prompt engineering,12,2025.58
 agentic ai,26,2025.58
 llm agents,24,2025.58
-post-training quantization,8,2025.62
+anomaly detection,10,2025.6
 multimodal large language models,8,2025.62
+post-training quantization,8,2025.62
 multi-agent systems,36,2025.64
-knowledge distillation,22,2025.64
 ai agents,14,2025.64
+knowledge distillation,23,2025.65
 human-ai collaboration,9,2025.67
 on-device deployment,15,2025.67
 retrieval-augmented generation,47,2025.7

@@ -1,0 +1,28 @@
+﻿peta,ambang,item,kluster,ukuran,kluster_<6,memenuhi_aturan
+co-citation (min. sitasi referensi),2,914,5,"[334, 186, 157, 144, 93]",0,True
+co-citation (min. sitasi referensi),3,362,6,"[125, 118, 67, 23, 17, 12]",0,False
+co-citation (min. sitasi referensi),4,196,5,"[62, 50, 49, 22, 13]",0,True
+co-citation (min. sitasi referensi),5,134,5,"[49, 30, 26, 22, 7]",0,True
+co-citation (min. sitasi referensi),6,84,5,"[31, 27, 16, 7, 3]",1,False
+co-citation (min. sitasi referensi),7,61,4,"[24, 21, 14, 2]",1,False
+co-citation (min. sitasi referensi),8,47,4,"[21, 13, 10, 3]",1,False
+co-word (min. kemunculan kata kunci),5,149,2,"[80, 69]",0,False
+co-word (min. kemunculan kata kunci),6,118,2,"[72, 46]",0,False
+co-word (min. kemunculan kata kunci),7,98,2,"[57, 41]",0,False
+co-word (min. kemunculan kata kunci),8,79,2,"[44, 35]",0,False
+co-word (min. kemunculan kata kunci),9,68,2,"[38, 30]",0,False
+co-word (min. kemunculan kata kunci),10,59,2,"[34, 25]",0,False
+co-word (min. kemunculan kata kunci),11,55,2,"[31, 24]",0,False
+co-word (min. kemunculan kata kunci),12,47,2,"[28, 19]",0,False
+co-word (min. kemunculan kata kunci),13,43,2,"[26, 17]",0,False
+co-word (min. kemunculan kata kunci),14,35,2,"[22, 13]",0,False
+co-word (min. kemunculan kata kunci),15,32,2,"[20, 12]",0,False
+bibliographic coupling (min. sitasi dokumen),0,200,11,"[41, 40, 37, 36, 20, 13, 5, 2, 2, 2]",5,False
+bibliographic coupling (min. sitasi dokumen),1,129,8,"[36, 32, 30, 14, 11, 2, 2, 2]",3,False
+bibliographic coupling (min. sitasi dokumen),2,105,6,"[31, 28, 20, 13, 11, 2]",1,False
+bibliographic coupling (min. sitasi dokumen),3,82,7,"[19, 19, 16, 11, 9, 6, 2]",1,False
+bibliographic coupling (min. sitasi dokumen),5,67,5,"[21, 16, 15, 13, 2]",1,False
+bibliographic coupling (min. sitasi dokumen),8,52,6,"[12, 11, 11, 11, 5, 2]",2,False
+bibliographic coupling (min. sitasi dokumen),10,44,5,"[14, 12, 9, 7, 2]",1,False
+bibliographic coupling (min. sitasi dokumen),15,33,5,"[12, 9, 5, 5, 2]",3,False
+bibliographic coupling (min. sitasi dokumen),20,26,5,"[9, 8, 4, 3, 2]",3,False

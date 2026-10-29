@@ -31,7 +31,7 @@ Table~\ref{tab:search} lists the search strings. Each row holds synonyms joined 
 \subsection{Screening and final dataset}
 The three blocks returned 149, 584, and 87 records, 820 in total, which formed 801 unique records (Table~\ref{tab:flow}). Sixteen records shared a normalised title with another record; in each case the version with a journal source, reference data, and a DOI was kept. A further 77 records hosted on Zenodo were excluded, because Zenodo is a repository without a guaranteed peer-review process. The remaining 708 records were screened on title and abstract.
 
-Screening was assisted by language models in two passes. In the first pass, eight Claude Haiku instances judged about 89 records each as relevant, not relevant, or uncertain. A record counted as relevant when a language model and at least one of the three topics were a main or important part of the work. The pass produced 430 relevant, 150 not relevant, and 128 uncertain records. In the second pass, three Claude Sonnet instances reassessed the 128 uncertain records using longer abstracts and reported a confidence level. They resolved 55 records as relevant and 72 as not relevant and left one uncertain. The final dataset contains 485 records. Generative AI was therefore used in this study for screening, and also for data processing scripts and text drafting (see Declarations). \todo{state the exact model names and versions of the Haiku and Sonnet instances, as MDPI and Frontiers require} The model reported low confidence for 97 of the 128 second-pass decisions. The author therefore judged 20 low-confidence records without seeing the model labels. The author rated all 20 as relevant, whereas the model had rated 8 as relevant and 12 as not relevant. Agreement was 8 of 20 (40\%), and Cohen's kappa was 0 because the author used a single category. The disagreement ran in one direction only: every record that the model excluded was rated relevant by the author. The sample covers only low-confidence decisions and does not estimate the accuracy of the full screening, but it shows that the exclusions made in the second pass are open to dispute.
+Screening was assisted by language models in two passes. In the first pass, eight Claude Haiku instances judged about 89 records each as relevant, not relevant, or uncertain. A record counted as relevant when a language model and at least one of the three topics were a main or important part of the work. The pass produced 430 relevant, 150 not relevant, and 128 uncertain records. In the second pass, three Claude Sonnet instances reassessed the 128 uncertain records using longer abstracts and reported a confidence level. They resolved 55 records as relevant and 72 as not relevant and left one uncertain. Generative AI was therefore used in this study for screening, and also for data processing scripts and text drafting (see Declarations). The model reported low confidence for 97 of the 128 second-pass decisions. The author therefore judged 20 low-confidence records without seeing the model labels. The author rated all 20 as relevant, whereas the model had rated 8 as relevant and 12 as not relevant. Agreement was 8 of 20 (40\%), and Cohen's kappa was 0 because the author used a single category. The disagreement ran in one direction only: every record that the model excluded was rated relevant by the author. The sample covers only low-confidence decisions and does not estimate the accuracy of the full screening, but it shows that the exclusions made in the second pass are open to dispute. All 72 second-pass exclusions were therefore assessed a third time by a larger model, Claude Opus 5.5, which read the full abstracts against the written criteria and recorded a reason for each record. It rated 4 records as relevant and 68 as not relevant. The 68 include the 12 records that the author had rated as relevant in the sample; in them the language model or the topic is a minor part of the work, for example a cloud model that serves edge devices or an agent framework outside business operations. The difference between the sample ratings and the third assessment thus lies in how strictly a ``main or important part'' is read. The author chose to apply the criteria as written and adopted the third assessment, so the final dataset contains 489 records.
 
 \begin{table}[htbp]
 \centering
@@ -45,7 +45,7 @@ Retrieved (blocks A, B, C) & 820 & 149, 584, and 87 records \\ \hline
 Unique records & 801 & 19 records matched more than one block \\ \hline
 After removing duplicate titles & 785 & 16 removed \\ \hline
 After excluding Zenodo & 708 & 77 removed \\ \hline
-Included after screening & 485 & 222 not relevant, 1 unresolved \\ \hline
+Included after screening & 489 & 218 not relevant, 1 unresolved \\ \hline
 \end{tabularx}
 \par\vspace{2pt}Source: Authors' analysis of OpenAlex data.
 \end{table}
@@ -53,11 +53,11 @@ Included after screening & 485 & 222 not relevant, 1 unresolved \\ \hline
 \subsection{Analysis}
 Performance analysis counted publications per year, source, institution, country (from author affiliations), and author, together with citations. Authors, sources, and institutions were counted by OpenAlex identifiers rather than names. Science mapping used three techniques \parencite{donthu2021,zupic2015}.
 
-Co-word analysis used the keywords that OpenAlex assigns to each record. Synonymous forms were merged (for example ``LLM'' and ``large language models''), and ``large language model'' and ``artificial intelligence'' were dropped because they occur in nearly every record. Keywords with at least eight occurrences were kept, which gave 68 keywords.
+Co-word analysis used the keywords that OpenAlex assigns to each record. Synonymous forms were merged (for example ``LLM'' and ``large language models''), and ``large language model'' and ``artificial intelligence'' were dropped because they occur in nearly every record. Keywords with at least eight occurrences were kept, which gave 69 keywords.
 
-Bibliographic coupling and co-citation rely on reference lists. OpenAlex held reference data for 255 of the 485 records. Crossref data, matched through DOIs, raised the total to 278 records (57.3\%). Two records were treated as linked when they shared at least two references. A supervisor's rule asks for three to five clusters per map, each with at least six items. For bibliographic coupling this was met by keeping only articles cited at least three times and removing clusters of fewer than six articles after clustering. For co-citation, references cited by at least three records in the dataset were kept. Ten items were removed as data artefacts. Some were proceedings volumes, which are not single works. Three were references whose OpenAlex titles do not fit the articles that cite them: one is cited by 22 edge-LLM articles although its title concerns intelligent tutoring systems, and two are cited by 9 and 7 edge-LLM articles although their titles concern AI consciousness and behavioural safety. These look like linking errors in OpenAlex, but this was not verified.
+Bibliographic coupling and co-citation rely on reference lists. OpenAlex held reference data for 259 of the 489 records. Crossref data, matched through DOIs, raised the total to 282 records (57.7\%). Two records were treated as linked when they shared at least two references. A supervisor's rule asks for three to five clusters per map, each with at least six items. For bibliographic coupling this was met by keeping only articles cited at least three times and removing clusters of fewer than six articles after clustering. For co-citation, references cited by at least three records in the dataset were kept. Ten items were removed as data artefacts. Some were proceedings volumes, which are not single works. Three were references whose OpenAlex titles do not fit the articles that cite them: one is cited by 22 edge-LLM articles although its title concerns intelligent tutoring systems, and two are cited by 9 and 7 edge-LLM articles although their titles concern AI consciousness and behavioural safety. These look like linking errors in OpenAlex, but this was not verified.
 
-The thresholds of three citations and eight occurrences were chosen so that each map contains a readable number of items (344 references and 68 keywords). Figure~\ref{fig:ambang} shows how many items remain at other thresholds. The curves fall steadily and have no sharp break, so the choice is a judgement, and the robustness checks below vary the co-word threshold.
+The thresholds of three citations and eight occurrences were chosen so that each map contains a readable number of items (347 references and 69 keywords). Figure~\ref{fig:ambang} shows how many items remain at other thresholds. The curves fall steadily and have no sharp break, so the choice is a judgement, and the robustness checks below vary the co-word threshold.
 
 \begin{figure}[htbp]
 \centering
@@ -67,4 +67,53 @@ The thresholds of three citations and eight occurrences were chosen so that each
 \label{fig:ambang}
 \end{figure}
 
-Clusters were found with the Louvain algorithm \parencite{blondel2008}, computed in Python (networkx, fixed random seed) and displayed in VOSviewer 1.6.21 \parencite{vaneck2010} through its map and network file formats. The cluster membership shown in the figures is therefore the one computed in Python. Robustness was tested in several ways. The co-word clustering was repeated with minimum occurrences of 5, 8, and 12, with 20 random seeds, and with a greedy modularity algorithm. The coupling clustering (without the citation threshold) and the co-citation clustering were repeated with 20 seeds and the greedy algorithm. Five variations of the search strings were also run. Cluster labels are proposals made by reading the abstracts of each cluster's representative articles (the reference titles, for co-citation) with language-model assistance, and the author has yet to confirm them. The target of 200 to 1{,}000 records follows the sample-size guidance attributed to \textcite{rogers2020} \todo{read the paper to confirm the range}. The record flow follows the PRISMA statement \parencite{page2021}.
+Clusters were found with the Louvain algorithm \parencite{blondel2008}, computed in Python (networkx, fixed random seed) and displayed in VOSviewer 1.6.21 \parencite{vaneck2010} through its map and network file formats. The cluster membership shown in the figures is therefore the one computed in Python. Robustness was tested in several ways. The co-word clustering was repeated with minimum occurrences of 5, 8, and 12, with 20 random seeds, and with a greedy modularity algorithm. The coupling clustering (without the citation threshold) and the co-citation clustering were repeated with 20 seeds and the greedy algorithm. Five variations of the search strings were also run. Cluster names were chosen by the author from proposals made with language-model assistance, after reading the members of each cluster: keywords and representative articles for co-word, reference titles for co-citation, and article titles for coupling. The target of 200 to 1{,}000 records follows the sample-size guidance attributed to \textcite{rogers2020} \todo{read the paper to confirm the range}. The record flow follows the PRISMA statement \parencite{page2021}.
+
+\subsection{Tools, roles, and dates}
+Table~\ref{tab:tools} states which tool was used at each step, for what, when, and by whom. Dates are in 2026. Every step was run by the author through Claude Code (Anthropic), which executed the scripts and, where marked, delegated the screening to separate model instances. The author set the research questions, the search blocks, the screening criteria, and the thresholds, and made every decision about inclusion rules, clustering, and wording. Scopus, Web of Science, Zotero, and Biblioshiny were not used for any reported result. R 4.6.1 with the bibliometrix package was installed but produced no result in this article; the thematic map follows the centrality and density definitions of Biblioshiny but was computed in Python.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Tools, tasks, dates, and actors}
+\label{tab:tools}
+\begin{tabularx}{\textwidth}{|p{0.13\textwidth}|Y|Y|p{0.08\textwidth}|p{0.14\textwidth}|}
+\hline
+\textbf{Step} & \textbf{Tool and version} & \textbf{Task and method} & \textbf{Date} & \textbf{Actor} \\ \hline
+Search and download & OpenAlex REST API (api.openalex.org), cursor paging, free API key & Title and abstract search of blocks A, B, and C; type ``article''; 2023 to 2026; 820 records retrieved (801 unique) & 28 Oct & Author; script run by Claude Code \\ \hline
+Cleaning & Python 3.11.7, pandas 2.2.2 & Removed 16 duplicate titles and 77 Zenodo records; 708 records left & 28 Oct & Author's rules; script by Claude Code \\ \hline
+Screening, first pass & Claude Haiku 5.5 (\texttt{claude-haiku-5-5}), 8 instances of about 89 records each, run as subagents in Claude Code & Judged title and abstract as relevant, not relevant, or uncertain & 28 Oct & Model; criteria set by the author \\ \hline
+Screening, second pass & Claude Sonnet 5.5 (\texttt{claude-sonnet-5-5}), 3 instances & Re-judged the 128 uncertain records with longer abstracts and a confidence level & 28 Oct & Model; criteria set by the author \\ \hline
+Human check & The author's own reading of title and abstract & Blind rating of 20 low-confidence records (model labels hidden) & 29 Oct & Author \\ \hline
+Screening, third pass & Claude Opus 5.5 (\texttt{claude-opus-5-5}) in Claude Code & Re-judged the 72 second-pass exclusions and the 14 low-confidence inclusions of the wider-search check with full abstracts and a reason per record & 29 Oct & Model; criteria set and result adopted by the author \\ \hline
+Reference completion & Crossref REST API (public pool), OpenAlex DOI matching & Added reference lists for 23 records whose OpenAlex reference data were empty & 29 Oct & Author; script run by Claude Code \\ \hline
+Performance analysis & Python, pandas 2.2.2; OpenAlex identifiers & Counts of publications and citations by year, source, institution, country, and author; h-index & 28 to 29 Oct & Author; script run by Claude Code \\ \hline
+Science mapping & Python, networkx 3.6.1 (Louvain algorithm, fixed seed; greedy modularity as check), matplotlib 3.8.3 & Co-word, co-citation, and bibliographic coupling networks; thresholds and robustness runs & 28 to 29 Oct & Author's thresholds; script run by Claude Code \\ \hline
+Map display & VOSviewer 1.6.21 on Java 1.8.0\_481 & Opened the map and network files and exported the images from the command line & 28 to 29 Oct & Author; Claude Code started the export \\ \hline
+Wider-search check & OpenAlex REST API; Claude Sonnet 5.5, 2 instances & Screened 127 added records (blocks A and C); kept as a sensitivity check only & 29 Oct & Author's decision; model screening \\ \hline
+Reference check & Reference lookup tool over OpenAlex and arXiv & Checked that cited works exist (title, first author, DOI) & 28 to 29 Oct & Claude Code; author to read each work \\ \hline
+Writing and typesetting & Claude Code (Claude Sonnet 5.5 and Claude Opus 5.5) for drafting; XeLaTeX (MiKTeX 25.12, XeTeX 3.141592653-2.6-0.999997), biblatex 3.21, Biber 2.21 & Drafted the text and tables from script output; APA 7 references & 28 to 29 Oct & Claude Code drafted; the author reviews and edits \\ \hline
+\end{tabularx}
+\par\vspace{2pt}Source: Authors' record of the workflow.
+\end{table}
+
+Table~\ref{tab:data} describes the final dataset of 489 articles.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Characteristics of the final dataset (489 articles)}
+\label{tab:data}
+\begin{tabularx}{\textwidth}{|Y|Y|}
+\hline
+\textbf{Item} & \textbf{Value} \\ \hline
+Articles by year & 2023: 4; 2024: 37; 2025: 153; 2026: 295 (partial) \\ \hline
+Articles by search block & B: 351; A: 83; C: 41; A and C: 14; none matched A, B, and C together \\ \hline
+Screening route & 430 relevant in the first pass; 55 in the second pass; 4 in the third pass \\ \hline
+Metadata present & Title 489 (100\%); abstract 448 (91.6\%); DOI 462 (94.5\%); OpenAlex keywords 488 (99.8\%); source 483 (98.8\%); country 372 (76.1\%) \\ \hline
+Reference lists & OpenAlex 259 (53.0\%); with Crossref 282 (57.7\%) \\ \hline
+Citations (OpenAlex counts) & Total 2{,}910; mean 5.95 per article; median 0; 291 articles (59.5\%) uncited; h-index 24 \\ \hline
+Journals flagged for checking & 23 articles; flagged by publisher-name patterns, not by a quality judgement \\ \hline
+\end{tabularx}
+\par\vspace{2pt}Source: Authors' analysis of OpenAlex data.
+\end{table}
